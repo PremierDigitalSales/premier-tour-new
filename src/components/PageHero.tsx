@@ -50,7 +50,7 @@ export const PageHero: React.FC<PageHeroProps> = ({
   const imageAlt = altText || title || 'Premier Tours Sri Lanka Banner';
 
   return (
-    <section className="relative w-full h-[clamp(360px,46vh,540px)] min-h-[360px] flex items-center justify-center overflow-hidden bg-[#031812]">
+    <section className="lux-grain relative w-full h-[clamp(400px,56vh,620px)] min-h-[400px] flex items-center justify-center overflow-hidden bg-[#0C0B0A]">
       {/* Background Image Container */}
       <div className="absolute inset-0 z-0">
         <img
@@ -60,11 +60,10 @@ export const PageHero: React.FC<PageHeroProps> = ({
           decoding="async"
           onError={handleImageError}
           style={{ objectPosition: bgPosition }}
-          className="w-full h-full object-cover filter brightness-[0.72] contrast-[1.05]"
+          className="w-full h-full object-cover filter brightness-[0.7] contrast-[1.05] saturate-[0.9] animate-[lux-kenburns_24s_ease-in-out_infinite_alternate]"
         />
-        {/* Multi-stop Luxury Dark Gradient Overlay for Readability */}
-        <div className="absolute inset-0 bg-gradient-to-t from-[#031812] via-[#031812]/60 to-black/40" />
-        <div className="absolute inset-0 bg-radial-at-c from-transparent via-[#031812]/20 to-[#031812]/70 pointer-events-none" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#0C0B0A] via-[#0C0B0A]/45 to-black/50" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_30%,rgba(12,11,10,0.65)_100%)] pointer-events-none" />
       </div>
 
       {/* Hero Content - Exactly ONE visible H1 */}
@@ -76,24 +75,27 @@ export const PageHero: React.FC<PageHeroProps> = ({
           className="flex flex-col items-center w-full max-w-4xl"
         >
           {badge && (
-            <div className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-emerald-500/20 backdrop-blur-md border border-emerald-400/30 text-emerald-300 font-heading font-bold text-[11px] sm:text-xs uppercase tracking-widest mb-3 sm:mb-4 shadow-sm">
-              <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
+            <span className="lux-eyebrow lux-eyebrow-center !text-[#E6CF9B] mb-5">
               {badge}
-            </div>
+            </span>
           )}
 
           {/* Single H1 Title */}
-          <h1 className="font-heading text-[clamp(1.85rem,4.2vw,3.5rem)] font-extrabold tracking-tight text-white leading-[1.15] max-w-3xl drop-shadow-md break-words">
+          <h1 className="font-heading text-[clamp(2.25rem,5vw,4.5rem)] font-medium tracking-[-0.01em] text-white leading-[1.05] max-w-4xl drop-shadow-md break-words">
             {title}{' '}
             {titleHighlight && (
-              <span className="text-[#39D39B]">
+              <em className="text-gradient-gold font-heading italic">
                 {titleHighlight}
-              </span>
+              </em>
             )}
           </h1>
 
+          <div className="lux-divider w-40 mt-6 text-[#D4B477]">
+            <span className="w-1.5 h-1.5 rotate-45 bg-current" />
+          </div>
+
           {subtitle && (
-            <p className="mt-3 sm:mt-4 max-w-2xl text-sm sm:text-base md:text-lg text-slate-200 font-normal leading-relaxed px-2 drop-shadow-sm">
+            <p className="mt-5 max-w-2xl text-sm sm:text-base md:text-lg text-white/80 font-light leading-relaxed px-2 drop-shadow-sm">
               {subtitle}
             </p>
           )}

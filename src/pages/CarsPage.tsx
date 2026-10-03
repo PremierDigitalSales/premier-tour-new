@@ -101,7 +101,7 @@ export const CarsPage: React.FC = () => {
 
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 -mt-10 mb-8">
         {/* Interactive Chauffeur Travel Configurator */}
-        <div className="bg-white/98 dark:bg-[#031812]/95 border border-emerald-100/70 dark:border-[var(--border-subtle)] shadow-xl shadow-[var(--primary)]/5 p-5 sm:p-6 rounded-2xl grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 text-[var(--text)] dark:text-[var(--text)]">
+        <div className="bg-white/98 dark:bg-[#0C0B0A]/95 border border-emerald-100/70 dark:border-[var(--border-subtle)] shadow-xl shadow-[var(--primary)]/5 p-5 sm:p-6 rounded-2xl grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 text-[var(--text)] dark:text-[var(--text)]">
           {/* Chauffeur Service Type */}
           <div>
             <label className="block text-[11px] font-bold uppercase tracking-wider text-[var(--muted)] dark:text-[var(--muted)] mb-1.5 flex items-center gap-1.5">
@@ -110,7 +110,7 @@ export const CarsPage: React.FC = () => {
             <select
               value={serviceType}
               onChange={(e) => setServiceType(e.target.value)}
-              className="w-full px-3.5 py-2.5 bg-[var(--background)] dark:bg-[#073126] border border-slate-200 dark:border-[var(--border-subtle)] text-[var(--text)] dark:text-white rounded-xl text-xs font-semibold focus:outline-none focus:border-[var(--primary)] transition-colors cursor-pointer"
+              className="w-full px-3.5 py-2.5 bg-[var(--background)] dark:bg-[#161412] border border-slate-200 dark:border-[var(--border-subtle)] text-[var(--text)] dark:text-white rounded-xl text-xs font-semibold focus:outline-none focus:border-[var(--primary)] transition-colors cursor-pointer"
             >
               <option value="Private Chauffeur Tour">Private Chauffeur Tour</option>
               <option value="Airport VIP Transfer">Airport VIP Transfer</option>
@@ -127,7 +127,7 @@ export const CarsPage: React.FC = () => {
             <select
               value={pickupLocation}
               onChange={(e) => setPickupLocation(e.target.value)}
-              className="w-full px-3.5 py-2.5 bg-[var(--background)] dark:bg-[#073126] border border-slate-200 dark:border-[var(--border-subtle)] text-[var(--text)] dark:text-white rounded-xl text-xs font-semibold focus:outline-none focus:border-[var(--primary)] transition-colors cursor-pointer"
+              className="w-full px-3.5 py-2.5 bg-[var(--background)] dark:bg-[#161412] border border-slate-200 dark:border-[var(--border-subtle)] text-[var(--text)] dark:text-white rounded-xl text-xs font-semibold focus:outline-none focus:border-[var(--primary)] transition-colors cursor-pointer"
             >
               <option value="Bandaranaike International Airport (CMB)">Colombo Airport (CMB)</option>
               <option value="Colombo City / Hotel">Colombo City</option>
@@ -144,7 +144,7 @@ export const CarsPage: React.FC = () => {
               <span className="flex items-center gap-1.5"><Calendar className="w-3.5 h-3.5 text-emerald-500" /> Duration</span>
               <span className="text-xs font-bold text-emerald-600 dark:text-emerald-400">{rentalDays} {rentalDays === 1 ? 'Day' : 'Days'}</span>
             </label>
-            <div className="flex items-center gap-2 bg-[var(--background)] dark:bg-[#073126] px-3 py-2 rounded-xl border border-slate-200 dark:border-[var(--border-subtle)]">
+            <div className="flex items-center gap-2 bg-[var(--background)] dark:bg-[#161412] px-3 py-2 rounded-xl border border-slate-200 dark:border-[var(--border-subtle)]">
               <input
                 type="range"
                 min="1"
@@ -164,7 +164,7 @@ export const CarsPage: React.FC = () => {
             <select
               value={selectedCategory}
               onChange={(e) => setSelectedCategory(e.target.value)}
-              className="w-full px-3.5 py-2.5 bg-[var(--background)] dark:bg-[#073126] border border-slate-200 dark:border-[var(--border-subtle)] text-[var(--text)] dark:text-white rounded-xl text-xs font-semibold focus:outline-none focus:border-[var(--primary)] transition-colors cursor-pointer"
+              className="w-full px-3.5 py-2.5 bg-[var(--background)] dark:bg-[#161412] border border-slate-200 dark:border-[var(--border-subtle)] text-[var(--text)] dark:text-white rounded-xl text-xs font-semibold focus:outline-none focus:border-[var(--primary)] transition-colors cursor-pointer"
             >
               {categories.map((c) => (
                 <option key={c} value={c}>

@@ -128,7 +128,7 @@ export const ReviewFormModal: React.FC<ReviewFormModalProps> = ({
                 </div>
 
                 {/* Category Ratings */}
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 bg-[var(--background)] dark:bg-[#073126]/50 p-5 rounded-2xl border border-slate-100 dark:border-[var(--border-subtle)]">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 bg-[var(--background)] dark:bg-[#161412]/50 p-5 rounded-2xl border border-slate-100 dark:border-[var(--border-subtle)]">
                   {serviceType === 'tours' && ['Experience', 'Guide', 'Transportation', 'Itinerary', 'Value'].map(cat => (
                     <div key={cat} className="flex items-center justify-between">
                       <span className="text-sm font-medium text-slate-700 dark:text-[var(--text-secondary)]">{cat}</span>

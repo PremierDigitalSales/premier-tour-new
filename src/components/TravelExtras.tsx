@@ -126,15 +126,14 @@ export const TravelExtras: React.FC = () => {
           {/* Header Area */}
           <div className="px-4 sm:px-6 lg:px-8 mb-12 flex flex-col md:flex-row md:items-end justify-between max-w-7xl mx-auto gap-6">
              <div>
-                <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full border border-emerald-100 text-[10px] font-bold text-[var(--primary)] dark:text-[var(--accent)] tracking-widest uppercase mb-4 glass-panel">
+                <span className="lux-eyebrow mb-5">
                    {t('extras_badge') || 'Premier Guarantees & Travel Extras'}
-                </div>
-                <h2 className="text-4xl font-heading font-black text-[var(--text)] dark:text-white leading-tight">
-                   {t('extras_title_1') || 'ESSENTIAL PROTECTION &'} <br className="hidden sm:block"/>
-                   <span className="text-[var(--primary)] dark:text-[var(--accent)]">{t('extras_title_2') || 'TRAVEL EXTRAS'}</span>
+                </span>
+                <h2 className="font-heading text-[clamp(2.2rem,4vw,3.5rem)] font-medium text-[var(--text)] dark:text-white leading-[1.05]">
+                   {t('extras_title_1') || 'Essential Protection &'} <br className="hidden sm:block"/>
+                   <em className="italic text-[var(--primary)] dark:text-[var(--accent)]">{t('extras_title_2') || 'Travel Extras'}</em>
                 </h2>
-                <div className="w-16 h-1 bg-gradient-to-r from-[var(--primary)] to-[var(--primary-dark)] rounded-full mt-4 mb-4"></div>
-                <p className="text-[var(--muted)] font-medium max-w-xl">
+                <p className="text-[var(--muted)] font-light text-lg max-w-xl mt-5">
                    {t('extras_subtitle') || 'Book with absolute confidence & 100% financial protection'}
                 </p>
              </div>
@@ -248,7 +247,7 @@ const Card: React.FC<{ item: typeof EXTRAS_DATA[0] }> = ({ item }) => {
 
        {/* Content Area */}
        <div className="flex flex-col flex-1 px-1">
-          <h3 className="font-bold text-[var(--text)] dark:text-white text-lg mb-2 group-hover:text-[var(--primary)] dark:text-[var(--accent)] transition-colors">
+          <h3 className="font-heading font-semibold text-[var(--text)] dark:text-white text-2xl leading-tight mb-2 group-hover:text-[var(--primary)] transition-colors">
             {title}
           </h3>
           <p className="text-xs text-[var(--muted)] dark:text-[var(--muted)] leading-relaxed mb-4 flex-1">

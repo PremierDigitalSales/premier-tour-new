@@ -44,7 +44,7 @@ export default function App() {
           <LanguageProvider>
             <CurrencyProvider>
               <Router>
-                <div className="flex flex-col min-h-screen bg-[var(--color-bg-primary)] font-sans text-slate-900 dark:text-[var(--text)] antialiased selection:bg-emerald-500 selection:text-white transition-colors duration-300">
+                <div className="flex flex-col min-h-screen bg-[var(--color-bg-primary)] font-sans text-[var(--text)] antialiased selection:bg-[#C5A059] selection:text-[#0C0B0A] transition-colors duration-300">
                   <Navbar />
                   <main className="flex-1">
                     <ErrorBoundary>

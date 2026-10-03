@@ -88,7 +88,7 @@ export const BlogFormModal: React.FC<BlogFormModalProps> = ({ post, isOpen, onCl
   return (
     <div className="fixed inset-0 bg-slate-900/60 backdrop-blur-sm z-[100] flex items-center justify-center p-4">
       <div className="bg-white dark:bg-[var(--background)] w-full max-w-4xl rounded-3xl shadow-2xl flex flex-col max-h-[90vh] border border-slate-200 dark:border-[var(--border-subtle)]">
-        <div className="flex items-center justify-between p-6 border-b border-slate-200 dark:border-[var(--border-subtle)] bg-white/90 dark:bg-[#031812]/90 backdrop-blur-md rounded-t-3xl">
+        <div className="flex items-center justify-between p-6 border-b border-slate-200 dark:border-[var(--border-subtle)] bg-white/90 dark:bg-[#0C0B0A]/90 backdrop-blur-md rounded-t-3xl">
           <div>
             <h2 className="text-xl font-bold text-[var(--text)] dark:text-white">
               {post ? 'Edit Article' : 'Create New Article'}
@@ -209,7 +209,7 @@ export const BlogFormModal: React.FC<BlogFormModalProps> = ({ post, isOpen, onCl
           </form>
         </div>
 
-        <div className="p-6 border-t border-slate-200 dark:border-[var(--border-subtle)] flex justify-end gap-3 bg-slate-50 dark:bg-[#073126]/50 rounded-b-3xl">
+        <div className="p-6 border-t border-slate-200 dark:border-[var(--border-subtle)] flex justify-end gap-3 bg-slate-50 dark:bg-[#161412]/50 rounded-b-3xl">
           <button type="button" onClick={onClose} className="px-5 py-2.5 text-sm font-bold text-[var(--muted)] hover:text-[var(--text)] transition-colors">
             Cancel
           </button>

@@ -27,7 +27,7 @@ export const ReviewCard: React.FC<ReviewCardProps> = ({ review, onHelpful, onRep
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.5 }}
-      className="glass-card package-glow-card rounded-2xl p-6 relative group bg-white dark:bg-[#073126]/80 border border-emerald-100 dark:border-emerald-800/40 shadow-[0_4px_20px_rgba(16,185,129,0.05)] dark:shadow-[0_4px_25px_rgba(16,185,129,0.08)]"
+      className="glass-card package-glow-card rounded-2xl p-6 relative group bg-white dark:bg-[#161412]/80 border border-emerald-100 dark:border-emerald-800/40 shadow-[0_4px_20px_rgba(197,160,89,0.05)] dark:shadow-[0_4px_25px_rgba(197,160,89,0.08)]"
     >
       <div className="flex justify-between items-start mb-4">
         <div className="flex items-center gap-3">
@@ -58,7 +58,7 @@ export const ReviewCard: React.FC<ReviewCardProps> = ({ review, onHelpful, onRep
               ) : review.verified_purchase ? (
                 <>
                   <span>•</span>
-                  <span className="flex items-center gap-1 text-[#0F9D72] dark:text-emerald-400 font-semibold bg-emerald-50 dark:bg-[#073126]/40 px-2 py-0.5 rounded-full text-[10px] border border-emerald-200 dark:border-emerald-800/40">
+                  <span className="flex items-center gap-1 text-[#A97F3E] dark:text-emerald-400 font-semibold bg-emerald-50 dark:bg-[#161412]/40 px-2 py-0.5 rounded-full text-[10px] border border-emerald-200 dark:border-emerald-800/40">
                     <CheckCircle2 className="w-3 h-3" />
                     Verified Traveler
                   </span>
@@ -100,7 +100,7 @@ export const ReviewCard: React.FC<ReviewCardProps> = ({ review, onHelpful, onRep
             className={`w-4 h-4 ${
               star <= review.rating
                 ? 'fill-amber-400 text-amber-400'
-                : 'fill-slate-200 text-slate-200 dark:fill-[#104D39] dark:text-[#104D39]'
+                : 'fill-slate-200 text-slate-200 dark:fill-[#2C2720] dark:text-[#2C2720]'
             }`}
           />
         ))}
@@ -120,7 +120,7 @@ export const ReviewCard: React.FC<ReviewCardProps> = ({ review, onHelpful, onRep
       </p>
       
       {review.category_ratings && typeof review.category_ratings === 'object' && (
-        <div className="flex flex-wrap gap-x-4 gap-y-2 mb-4 bg-[var(--background)] dark:bg-[#073126]/50 p-3 rounded-xl border border-slate-100 dark:border-[var(--border-subtle)]">
+        <div className="flex flex-wrap gap-x-4 gap-y-2 mb-4 bg-[var(--background)] dark:bg-[#161412]/50 p-3 rounded-xl border border-slate-100 dark:border-[var(--border-subtle)]">
           {Object.entries(review.category_ratings).map(([key, val]) => {
             if (typeof val === 'object' && val !== null) {
               return Object.entries(val).map(([subKey, subVal]) => (

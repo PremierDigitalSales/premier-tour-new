@@ -148,7 +148,7 @@ export const BlogPostPage: React.FC = () => {
       />
 
       {/* Top Breadcrumb & Share Bar */}
-      <div className="bg-[#061510] text-white border-b border-[var(--border-subtle)] py-3">
+      <div className="bg-[#0E0D0B] text-white border-b border-[var(--border-subtle)] py-3">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 flex items-center justify-between">
           <Link
             to="/blog"
@@ -171,10 +171,10 @@ export const BlogPostPage: React.FC = () => {
       <article className="max-w-4xl mx-auto px-4 sm:px-6 mt-8">
         {/* Category & Title */}
         <div className="mb-6">
-          <span className="px-3.5 py-1.5 bg-emerald-50 dark:bg-[#031812]/60 text-[#087A5A] dark:text-[#39D39B] rounded-full text-xs font-bold uppercase tracking-wider border border-emerald-200/80 dark:border-[var(--border-subtle)] shadow-xs inline-block">
+          <span className="px-3.5 py-1.5 bg-emerald-50 dark:bg-[#0C0B0A]/60 text-[#8A6530] dark:text-[#D9BC7E] rounded-full text-xs font-bold uppercase tracking-wider border border-emerald-200/80 dark:border-[var(--border-subtle)] shadow-xs inline-block">
             {post.category}
           </span>
-          <h1 className="font-sans font-bold text-3xl sm:text-4xl text-[#10231D] dark:text-white mt-3 leading-tight">
+          <h1 className="font-sans font-bold text-3xl sm:text-4xl text-[#1A1814] dark:text-white mt-3 leading-tight">
             {post.title}
           </h1>
 
@@ -187,14 +187,14 @@ export const BlogPostPage: React.FC = () => {
                 className="w-11 h-11 rounded-full object-cover border-2 border-emerald-400 dark:border-emerald-600 shadow-sm"
               />
               <div>
-                <p className="text-sm font-bold text-[#10231D] dark:text-white">{post.author.name}</p>
+                <p className="text-sm font-bold text-[#1A1814] dark:text-white">{post.author.name}</p>
                 <p className="text-xs text-[var(--muted)] dark:text-[var(--muted)]">{post.author.role}</p>
               </div>
             </div>
 
             <div className="flex items-center gap-3 text-xs text-[var(--muted)] dark:text-[var(--muted)] font-mono font-medium">
               <span className="flex items-center gap-1">
-                <Clock className="w-3.5 h-3.5 text-[#0F9D72] dark:text-[#39D39B]" /> {post.read_time}
+                <Clock className="w-3.5 h-3.5 text-[#A97F3E] dark:text-[#D9BC7E]" /> {post.read_time}
               </span>
               <span>•</span>
               <span>Published {post.published_at}</span>
@@ -213,14 +213,14 @@ export const BlogPostPage: React.FC = () => {
             const trimmed = paragraph.trim();
             if (trimmed.startsWith('### ')) {
               return (
-                <h3 key={index} className="font-sans font-bold text-xl text-[#10231D] dark:text-white mt-6 mb-2">
+                <h3 key={index} className="font-sans font-bold text-xl text-[#1A1814] dark:text-white mt-6 mb-2">
                   {trimmed.replace('### ', '')}
                 </h3>
               );
             }
             if (trimmed.startsWith('1. ') || trimmed.startsWith('- ')) {
               return (
-                <div key={index} className="bg-emerald-50/40 dark:bg-[#073126]/70 p-5 rounded-2xl border border-emerald-200/60 dark:border-[var(--border-subtle)] text-sm my-3 space-y-1.5">
+                <div key={index} className="bg-emerald-50/40 dark:bg-[#161412]/70 p-5 rounded-2xl border border-emerald-200/60 dark:border-[var(--border-subtle)] text-sm my-3 space-y-1.5">
                   {trimmed.split('\n').map((line, liIdx) => (
                     <p key={liIdx} className="leading-relaxed">
                       {line}
@@ -239,13 +239,13 @@ export const BlogPostPage: React.FC = () => {
 
         {/* Tags */}
         <div className="flex flex-wrap items-center gap-2 mt-8 pt-6 border-t border-emerald-100 dark:border-[var(--border-subtle)]">
-          <span className="text-xs font-bold text-[#10231D] dark:text-[var(--text-secondary)] uppercase tracking-wider mr-2">Tags:</span>
+          <span className="text-xs font-bold text-[#1A1814] dark:text-[var(--text-secondary)] uppercase tracking-wider mr-2">Tags:</span>
           {(post.tags || []).map((tag) => (
             <span
               key={tag}
-              className="px-3.5 py-1 bg-emerald-50/70 dark:bg-[#031812]/60 text-emerald-900 dark:text-[var(--text-secondary)] rounded-xl text-xs font-semibold flex items-center gap-1.5 border border-emerald-200/80 dark:border-[var(--border-subtle)] shadow-xs"
+              className="px-3.5 py-1 bg-emerald-50/70 dark:bg-[#0C0B0A]/60 text-emerald-900 dark:text-[var(--text-secondary)] rounded-xl text-xs font-semibold flex items-center gap-1.5 border border-emerald-200/80 dark:border-[var(--border-subtle)] shadow-xs"
             >
-              <Tag className="w-3 h-3 text-[#0F9D72] dark:text-[#39D39B]" />
+              <Tag className="w-3 h-3 text-[#A97F3E] dark:text-[#D9BC7E]" />
               {tag}
             </span>
           ))}
@@ -253,7 +253,7 @@ export const BlogPostPage: React.FC = () => {
 
         {/* Related Tour Booking Widget Card */}
         {relatedTour && (
-          <div className="mt-12 bg-gradient-to-br from-[#061510] via-[#0D281F] to-[#082017] text-white rounded-[24px] p-6 sm:p-8 border border-emerald-500/30 shadow-2xl relative overflow-hidden">
+          <div className="mt-12 bg-gradient-to-br from-[#0E0D0B] via-[#1A1815] to-[#131210] text-white rounded-[24px] p-6 sm:p-8 border border-emerald-500/30 shadow-2xl relative overflow-hidden">
             <div className="flex items-center gap-2 text-emerald-400 text-xs font-bold uppercase tracking-wider mb-2">
               <Sparkles className="w-4 h-4" /> Experience This Journey In Real Life
             </div>

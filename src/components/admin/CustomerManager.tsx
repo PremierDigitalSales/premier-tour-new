@@ -56,32 +56,32 @@ export const CustomerManager: React.FC = () => {
     <div className="p-4 sm:p-6 lg:p-8 max-w-7xl mx-auto space-y-6">
       <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
         <div>
-          <h1 className="text-2xl sm:text-3xl font-black text-[#10231D] dark:text-white">Customer Directory</h1>
-          <p className="text-sm text-[#71817B] dark:text-[#8FA9A0]">Manage registered travelers, account roles, and concierge access privileges</p>
+          <h1 className="text-2xl sm:text-3xl font-black text-[#1A1814] dark:text-white">Customer Directory</h1>
+          <p className="text-sm text-[#857D70] dark:text-[#A39A8B]">Manage registered travelers, account roles, and concierge access privileges</p>
         </div>
 
         <div className="relative w-full sm:w-64">
-          <Search className="w-4 h-4 text-[#71817B] absolute left-3 top-1/2 -translate-y-1/2" />
+          <Search className="w-4 h-4 text-[#857D70] absolute left-3 top-1/2 -translate-y-1/2" />
           <input
             type="text"
             placeholder="Search travelers..."
             value={search}
             onChange={(e) => setSearch(e.target.value)}
-            className="w-full bg-white dark:bg-[var(--surface)] border border-[#DDEBE5] dark:border-[var(--border-subtle)] rounded-xl py-2 pl-9 pr-3 text-xs text-[#10231D] dark:text-white focus:outline-none focus:border-[#0F9D72]"
+            className="w-full bg-white dark:bg-[var(--surface)] border border-[#E8E0D2] dark:border-[var(--border-subtle)] rounded-xl py-2 pl-9 pr-3 text-xs text-[#1A1814] dark:text-white focus:outline-none focus:border-[#A97F3E]"
           />
         </div>
       </div>
 
-      <div className="bg-white dark:bg-[var(--surface)] rounded-2xl border border-[#DDEBE5] dark:border-[var(--border-subtle)] overflow-hidden shadow-xs">
+      <div className="bg-white dark:bg-[var(--surface)] rounded-2xl border border-[#E8E0D2] dark:border-[var(--border-subtle)] overflow-hidden shadow-xs">
         {loading ? (
-          <div className="p-8 text-center text-xs text-[#71817B]">Loading travelers...</div>
+          <div className="p-8 text-center text-xs text-[#857D70]">Loading travelers...</div>
         ) : filtered.length === 0 ? (
-          <div className="p-12 text-center text-xs text-[#71817B]">No customers found matching search.</div>
+          <div className="p-12 text-center text-xs text-[#857D70]">No customers found matching search.</div>
         ) : (
           <div className="overflow-x-auto">
             <table className="w-full text-left border-collapse min-w-[650px]">
               <thead>
-                <tr className="bg-[#F8FCFA] dark:bg-[var(--surface)] text-[#71817B] dark:text-[#8FA9A0] text-xs uppercase tracking-wider border-b border-[#DDEBE5] dark:border-[var(--border-subtle)]">
+                <tr className="bg-[#FAF7F2] dark:bg-[var(--surface)] text-[#857D70] dark:text-[#A39A8B] text-xs uppercase tracking-wider border-b border-[#E8E0D2] dark:border-[var(--border-subtle)]">
                   <th className="p-4 font-bold">Traveler</th>
                   <th className="p-4 font-bold">Contact</th>
                   <th className="p-4 font-bold">Role & Permissions</th>
@@ -89,9 +89,9 @@ export const CustomerManager: React.FC = () => {
                   <th className="p-4 font-bold text-center">Toggle Role</th>
                 </tr>
               </thead>
-              <tbody className="divide-y divide-[#DDEBE5] dark:divide-[rgba(73,201,151,0.1)]">
+              <tbody className="divide-y divide-[#E8E0D2] dark:divide-[rgba(212,180,119,0.1)]">
                 {filtered.map(customer => (
-                  <tr key={customer.id} className="hover:bg-[#F2F8F5]/60 dark:hover:bg-[#13372B]/30 transition-colors">
+                  <tr key={customer.id} className="hover:bg-[#F4EFE6]/60 dark:hover:bg-[#211E19]/30 transition-colors">
                     <td className="p-4">
                       <div className="flex items-center gap-3">
                         <img 
@@ -100,18 +100,18 @@ export const CustomerManager: React.FC = () => {
                           className="w-10 h-10 rounded-full object-cover bg-slate-100 dark:bg-[var(--surface)]" 
                         />
                         <div>
-                          <p className="font-bold text-sm text-[#10231D] dark:text-white">{customer.full_name}</p>
-                          <p className="text-xs text-[#71817B] dark:text-[#8FA9A0] font-mono">{customer.id.substring(0, 12)}...</p>
+                          <p className="font-bold text-sm text-[#1A1814] dark:text-white">{customer.full_name}</p>
+                          <p className="text-xs text-[#857D70] dark:text-[#A39A8B] font-mono">{customer.id.substring(0, 12)}...</p>
                         </div>
                       </div>
                     </td>
                     <td className="p-4 space-y-1">
-                      <div className="flex items-center gap-2 text-xs text-[#71817B] dark:text-[#8FA9A0]">
-                        <Mail className="w-3.5 h-3.5 text-[#0F9D72]" /> {customer.email}
+                      <div className="flex items-center gap-2 text-xs text-[#857D70] dark:text-[#A39A8B]">
+                        <Mail className="w-3.5 h-3.5 text-[#A97F3E]" /> {customer.email}
                       </div>
                       {customer.phone && (
-                        <div className="flex items-center gap-2 text-xs text-[#71817B] dark:text-[#8FA9A0]">
-                          <Phone className="w-3.5 h-3.5 text-[#0F9D72]" /> {customer.phone}
+                        <div className="flex items-center gap-2 text-xs text-[#857D70] dark:text-[#A39A8B]">
+                          <Phone className="w-3.5 h-3.5 text-[#A97F3E]" /> {customer.phone}
                         </div>
                       )}
                     </td>
@@ -119,19 +119,19 @@ export const CustomerManager: React.FC = () => {
                       <span className={`inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-bold uppercase ${
                         customer.role === 'admin' 
                           ? 'bg-rose-100 dark:bg-rose-950 text-rose-600 dark:text-rose-400' 
-                          : 'bg-emerald-100 dark:bg-[var(--background)] text-[#0F9D72] dark:text-[#39D39B]'
+                          : 'bg-emerald-100 dark:bg-[var(--background)] text-[#A97F3E] dark:text-[#D9BC7E]'
                       }`}>
                         <Shield className="w-3.5 h-3.5" />
                         {customer.role}
                       </span>
                     </td>
-                    <td className="p-4 text-xs text-[#71817B] dark:text-[#8FA9A0]">
+                    <td className="p-4 text-xs text-[#857D70] dark:text-[#A39A8B]">
                       {customer.created_at ? new Date(customer.created_at).toLocaleDateString() : 'Active Member'}
                     </td>
                     <td className="p-4 text-center">
                       <button 
                         onClick={() => handleRoleToggle(customer)}
-                        className="px-3 py-1.5 text-xs font-bold rounded-xl border border-[#DDEBE5] dark:border-[var(--border-subtle)] hover:bg-[#0F9D72] hover:text-white hover:border-[#0F9D72] text-[#10231D] dark:text-white transition-all shadow-xs"
+                        className="px-3 py-1.5 text-xs font-bold rounded-xl border border-[#E8E0D2] dark:border-[var(--border-subtle)] hover:bg-[#A97F3E] hover:text-white hover:border-[#A97F3E] text-[#1A1814] dark:text-white transition-all shadow-xs"
                       >
                         Set as {customer.role === 'admin' ? 'User' : 'Admin'}
                       </button>

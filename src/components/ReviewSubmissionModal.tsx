@@ -177,7 +177,7 @@ export const ReviewSubmissionModal: React.FC<ReviewSubmissionModalProps> = ({ is
         className="bg-white dark:bg-[var(--background)] rounded-[24px] shadow-2xl w-full max-w-2xl border border-emerald-500/20 my-auto overflow-hidden flex flex-col max-h-full"
       >
         <div className="flex items-center justify-between p-6 border-b border-emerald-500/10">
-          <h2 className="font-sans text-xl font-bold text-[#10231D] dark:text-white">
+          <h2 className="font-sans text-xl font-bold text-[#1A1814] dark:text-white">
             Share Your Story
           </h2>
           <button
@@ -190,13 +190,13 @@ export const ReviewSubmissionModal: React.FC<ReviewSubmissionModalProps> = ({ is
 
         {success ? (
           <div className="p-12 flex flex-col items-center justify-center text-center">
-            <div className="w-20 h-20 bg-emerald-100 dark:bg-[#073126]/50 rounded-full flex items-center justify-center mb-6">
-              <Check className="w-10 h-10 text-[#0F9D72]" />
+            <div className="w-20 h-20 bg-emerald-100 dark:bg-[#161412]/50 rounded-full flex items-center justify-center mb-6">
+              <Check className="w-10 h-10 text-[#A97F3E]" />
             </div>
-            <h3 className="font-sans font-bold text-2xl text-[#10231D] dark:text-white mb-4">
+            <h3 className="font-sans font-bold text-2xl text-[#1A1814] dark:text-white mb-4">
               Thank you for sharing your experience!
             </h3>
-            <p className="text-[#71817B] dark:text-[var(--text-secondary)] max-w-md mx-auto mb-8">
+            <p className="text-[#857D70] dark:text-[var(--text-secondary)] max-w-md mx-auto mb-8">
               Your review has been submitted successfully and is waiting for approval.
               Once approved, it will appear in Traveler Photos & Reviews.
             </p>
@@ -212,10 +212,10 @@ export const ReviewSubmissionModal: React.FC<ReviewSubmissionModalProps> = ({ is
             <div className="w-16 h-16 bg-slate-100 dark:bg-[var(--surface)] rounded-full flex items-center justify-center mb-6">
               <Info className="w-8 h-8 text-slate-400" />
             </div>
-            <h3 className="font-sans font-bold text-xl text-[#10231D] dark:text-white mb-2">
+            <h3 className="font-sans font-bold text-xl text-[#1A1814] dark:text-white mb-2">
               Sign In Required
             </h3>
-            <p className="text-[#71817B] dark:text-[var(--muted)] mb-6">
+            <p className="text-[#857D70] dark:text-[var(--muted)] mb-6">
               Please sign in to your account to share your travel experience with us.
             </p>
             <div className="flex items-center gap-4">
@@ -235,21 +235,21 @@ export const ReviewSubmissionModal: React.FC<ReviewSubmissionModalProps> = ({ is
             )}
 
             {/* Profile Info Summary */}
-            <div className="flex items-center gap-4 p-4 bg-[#F2F8F5] dark:bg-[var(--surface)] rounded-xl border border-emerald-500/10">
+            <div className="flex items-center gap-4 p-4 bg-[#F4EFE6] dark:bg-[var(--surface)] rounded-xl border border-emerald-500/10">
               <img 
                 src={user.avatar_url || 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150&q=80'} 
                 alt="Profile" 
                 className="w-12 h-12 rounded-full object-cover border border-emerald-500/30"
               />
               <div>
-                <p className="font-bold text-[#10231D] dark:text-white">{user.full_name}</p>
-                <p className="text-xs text-[#71817B] dark:text-[var(--muted)]">{user.email}</p>
+                <p className="font-bold text-[#1A1814] dark:text-white">{user.full_name}</p>
+                <p className="text-xs text-[#857D70] dark:text-[var(--muted)]">{user.email}</p>
               </div>
             </div>
 
             <div className="grid grid-cols-1 gap-6">
               <div>
-                <label className="block text-sm font-bold text-[#10231D] dark:text-[var(--text-secondary)] mb-2">
+                <label className="block text-sm font-bold text-[#1A1814] dark:text-[var(--text-secondary)] mb-2">
                   Your Rating
                 </label>
                 <div className="flex items-center gap-1">
@@ -263,7 +263,7 @@ export const ReviewSubmissionModal: React.FC<ReviewSubmissionModalProps> = ({ is
                       className="p-1 focus:outline-none transition-transform hover:scale-110"
                     >
                       <Star 
-                        className={`w-8 h-8 ${(hoverRating || rating) >= star ? 'fill-[#0F9D72] text-[#0F9D72]' : 'text-slate-200 dark:text-[#104D39]'} transition-colors`} 
+                        className={`w-8 h-8 ${(hoverRating || rating) >= star ? 'fill-[#A97F3E] text-[#A97F3E]' : 'text-slate-200 dark:text-[#2C2720]'} transition-colors`} 
                       />
                     </button>
                   ))}
@@ -271,7 +271,7 @@ export const ReviewSubmissionModal: React.FC<ReviewSubmissionModalProps> = ({ is
               </div>
 
               <div>
-                <label className="block text-sm font-bold text-[#10231D] dark:text-[var(--text-secondary)] mb-2">
+                <label className="block text-sm font-bold text-[#1A1814] dark:text-[var(--text-secondary)] mb-2">
                   Which experience did you book?
                 </label>
                 <div className="relative">
@@ -279,7 +279,7 @@ export const ReviewSubmissionModal: React.FC<ReviewSubmissionModalProps> = ({ is
                     value={tourId}
                     onChange={(e) => setTourId(e.target.value)}
                     required
-                    className="w-full px-4 py-3 bg-white dark:bg-[var(--surface)] border border-emerald-500/20 rounded-xl text-sm focus:outline-none focus:border-[#0F9D72] focus:ring-1 focus:ring-[#0F9D72] appearance-none transition-all dark:text-white shadow-sm"
+                    className="w-full px-4 py-3 bg-white dark:bg-[var(--surface)] border border-emerald-500/20 rounded-xl text-sm focus:outline-none focus:border-[#A97F3E] focus:ring-1 focus:ring-[#A97F3E] appearance-none transition-all dark:text-white shadow-sm"
                   >
                     <option value="" disabled>Select a Tour...</option>
                     {tours.map(t => (
@@ -291,7 +291,7 @@ export const ReviewSubmissionModal: React.FC<ReviewSubmissionModalProps> = ({ is
               </div>
 
                             <div>
-                <label className="block text-sm font-bold text-[#10231D] dark:text-[var(--text-secondary)] mb-2">
+                <label className="block text-sm font-bold text-[#1A1814] dark:text-[var(--text-secondary)] mb-2">
                   Your Location (Optional)
                 </label>
                 <input
@@ -300,12 +300,12 @@ export const ReviewSubmissionModal: React.FC<ReviewSubmissionModalProps> = ({ is
                   onChange={(e) => setLocation(e.target.value)}
                   placeholder="e.g., London, United Kingdom"
                   maxLength={50}
-                  className="w-full px-4 py-3 bg-white dark:bg-[var(--surface)] border border-emerald-500/20 rounded-xl text-sm focus:outline-none focus:border-[#0F9D72] focus:ring-1 focus:ring-[#0F9D72] transition-all dark:text-white shadow-sm"
+                  className="w-full px-4 py-3 bg-white dark:bg-[var(--surface)] border border-emerald-500/20 rounded-xl text-sm focus:outline-none focus:border-[#A97F3E] focus:ring-1 focus:ring-[#A97F3E] transition-all dark:text-white shadow-sm"
                 />
               </div>
 
               <div>
-                <label className="block text-sm font-bold text-[#10231D] dark:text-[var(--text-secondary)] mb-2">
+                <label className="block text-sm font-bold text-[#1A1814] dark:text-[var(--text-secondary)] mb-2">
                   Review Title
                 </label>
                 <input
@@ -315,12 +315,12 @@ export const ReviewSubmissionModal: React.FC<ReviewSubmissionModalProps> = ({ is
                   placeholder="Summarize your experience"
                   required
                   maxLength={100}
-                  className="w-full px-4 py-3 bg-white dark:bg-[var(--surface)] border border-emerald-500/20 rounded-xl text-sm focus:outline-none focus:border-[#0F9D72] focus:ring-1 focus:ring-[#0F9D72] transition-all dark:text-white shadow-sm"
+                  className="w-full px-4 py-3 bg-white dark:bg-[var(--surface)] border border-emerald-500/20 rounded-xl text-sm focus:outline-none focus:border-[#A97F3E] focus:ring-1 focus:ring-[#A97F3E] transition-all dark:text-white shadow-sm"
                 />
               </div>
 
               <div>
-                <label className="block text-sm font-bold text-[#10231D] dark:text-[var(--text-secondary)] mb-2">
+                <label className="block text-sm font-bold text-[#1A1814] dark:text-[var(--text-secondary)] mb-2">
                   Your Experience
                 </label>
                 <textarea
@@ -329,17 +329,17 @@ export const ReviewSubmissionModal: React.FC<ReviewSubmissionModalProps> = ({ is
                   placeholder="Tell us what you loved about this journey..."
                   required
                   rows={4}
-                  className="w-full px-4 py-3 bg-white dark:bg-[var(--surface)] border border-emerald-500/20 rounded-xl text-sm focus:outline-none focus:border-[#0F9D72] focus:ring-1 focus:ring-[#0F9D72] transition-all dark:text-white shadow-sm resize-none"
+                  className="w-full px-4 py-3 bg-white dark:bg-[var(--surface)] border border-emerald-500/20 rounded-xl text-sm focus:outline-none focus:border-[#A97F3E] focus:ring-1 focus:ring-[#A97F3E] transition-all dark:text-white shadow-sm resize-none"
                 />
               </div>
 
               {/* Photos Upload */}
               <div>
                 <div className="flex items-center justify-between mb-2">
-                  <label className="block text-sm font-bold text-[#10231D] dark:text-[var(--text-secondary)]">
-                    Traveler Photos <span className="text-[#71817B] font-normal">(Optional)</span>
+                  <label className="block text-sm font-bold text-[#1A1814] dark:text-[var(--text-secondary)]">
+                    Traveler Photos <span className="text-[#857D70] font-normal">(Optional)</span>
                   </label>
-                  <span className="text-xs text-[#71817B]">{photos.length}/5 Photos</span>
+                  <span className="text-xs text-[#857D70]">{photos.length}/5 Photos</span>
                 </div>
                 
                 <div className="grid grid-cols-3 sm:grid-cols-5 gap-3">
@@ -360,7 +360,7 @@ export const ReviewSubmissionModal: React.FC<ReviewSubmissionModalProps> = ({ is
                     <button
                       type="button"
                       onClick={() => fileInputRef.current?.click()}
-                      className="aspect-square rounded-xl border-2 border-dashed border-emerald-500/30 flex flex-col items-center justify-center gap-2 hover:border-[#0F9D72] hover:bg-[#0F9D72]/5 transition-colors"
+                      className="aspect-square rounded-xl border-2 border-dashed border-emerald-500/30 flex flex-col items-center justify-center gap-2 hover:border-[#A97F3E] hover:bg-[#A97F3E]/5 transition-colors"
                     >
                       <ImageIcon className="w-6 h-6 text-emerald-600/60" />
                       <span className="text-xs font-semibold text-emerald-700/80">Add Photo</span>
@@ -375,7 +375,7 @@ export const ReviewSubmissionModal: React.FC<ReviewSubmissionModalProps> = ({ is
                   multiple
                   className="hidden"
                 />
-                <p className="text-xs text-[#71817B] mt-2">
+                <p className="text-xs text-[#857D70] mt-2">
                   Maximum 5 photos. Max 5MB per image (JPG, PNG, WebP).
                 </p>
               </div>
@@ -386,7 +386,7 @@ export const ReviewSubmissionModal: React.FC<ReviewSubmissionModalProps> = ({ is
                 type="button"
                 onClick={onClose}
                 disabled={isSubmitting}
-                className="px-6 py-2.5 rounded-xl font-bold text-[#71817B] hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors text-sm disabled:opacity-50"
+                className="px-6 py-2.5 rounded-xl font-bold text-[#857D70] hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors text-sm disabled:opacity-50"
               >
                 Cancel
               </button>

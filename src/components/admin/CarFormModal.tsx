@@ -386,9 +386,9 @@ export const CarFormModal: React.FC<CarFormModalProps> = ({ isOpen = true, car, 
                           handleFileChange(e.dataTransfer.files[0]);
                         }
                       }}
-                      className="border-2 border-dashed border-slate-200 dark:border-[var(--border-subtle)] rounded-2xl p-6 flex flex-col items-center justify-center text-center cursor-pointer hover:border-[var(--primary)] dark:hover:border-[var(--primary)] bg-slate-50/50 dark:bg-[#073126]/30 transition-all group"
+                      className="border-2 border-dashed border-slate-200 dark:border-[var(--border-subtle)] rounded-2xl p-6 flex flex-col items-center justify-center text-center cursor-pointer hover:border-[var(--primary)] dark:hover:border-[var(--primary)] bg-slate-50/50 dark:bg-[#161412]/30 transition-all group"
                     >
-                      <div className="w-12 h-12 rounded-full bg-emerald-50 dark:bg-[#031812]/40 text-[var(--primary)] flex items-center justify-center mb-3 group-hover:scale-110 transition-transform">
+                      <div className="w-12 h-12 rounded-full bg-emerald-50 dark:bg-[#0C0B0A]/40 text-[var(--primary)] flex items-center justify-center mb-3 group-hover:scale-110 transition-transform">
                         <UploadCloud className="w-6 h-6" />
                       </div>
                       <p className="text-sm font-bold text-[var(--text)] dark:text-white">Click or drag image here to upload</p>

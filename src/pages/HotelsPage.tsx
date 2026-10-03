@@ -156,7 +156,7 @@ export const HotelsPage: React.FC = () => {
 
       {/* Filter and Search Toolbar */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-8">
-        <div className="bg-white/98 dark:bg-[#031812]/95 border border-emerald-100/70 dark:border-[var(--border-subtle)] shadow-xl shadow-[var(--primary)]/5 rounded-2xl p-4 sm:p-5 mb-8">
+        <div className="bg-white/98 dark:bg-[#0C0B0A]/95 border border-emerald-100/70 dark:border-[var(--border-subtle)] shadow-xl shadow-[var(--primary)]/5 rounded-2xl p-4 sm:p-5 mb-8">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             {/* Search Input */}
             <div className="relative md:col-span-2">
@@ -166,7 +166,7 @@ export const HotelsPage: React.FC = () => {
                 placeholder="Search by city (Galle, Kandy, Colombo, Yala) or hotel name..."
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
-                className="w-full pl-10 pr-4 py-2.5 bg-[var(--background)]/90 dark:bg-[#073126]/80 border border-slate-200 dark:border-[var(--border-subtle)] text-[var(--text)] dark:text-white rounded-xl text-xs sm:text-sm focus:outline-none focus:border-[var(--primary)] focus:bg-white dark:focus:bg-slate-800 transition-colors placeholder:text-slate-400"
+                className="w-full pl-10 pr-4 py-2.5 bg-[var(--background)]/90 dark:bg-[#161412]/80 border border-slate-200 dark:border-[var(--border-subtle)] text-[var(--text)] dark:text-white rounded-xl text-xs sm:text-sm focus:outline-none focus:border-[var(--primary)] focus:bg-white dark:focus:bg-slate-800 transition-colors placeholder:text-slate-400"
               />
             </div>
 
@@ -175,7 +175,7 @@ export const HotelsPage: React.FC = () => {
               <select
                 value={selectedAmenity}
                 onChange={(e) => setSelectedAmenity(e.target.value)}
-                className="w-full px-3.5 py-2.5 bg-[var(--background)]/90 dark:bg-[#073126]/80 border border-slate-200 dark:border-[var(--border-subtle)] text-[var(--text)] dark:text-white rounded-xl text-xs sm:text-sm focus:outline-none focus:border-[var(--primary)] transition-colors cursor-pointer"
+                className="w-full px-3.5 py-2.5 bg-[var(--background)]/90 dark:bg-[#161412]/80 border border-slate-200 dark:border-[var(--border-subtle)] text-[var(--text)] dark:text-white rounded-xl text-xs sm:text-sm focus:outline-none focus:border-[var(--primary)] transition-colors cursor-pointer"
               >
                 {allAmenities.map((amenity) => (
                   <option key={amenity} value={amenity}>
@@ -212,7 +212,7 @@ export const HotelsPage: React.FC = () => {
           <div className="flex flex-wrap items-center gap-2 mb-6 text-xs">
             <span className="text-[var(--muted)] dark:text-[var(--muted)] font-medium">{t('tours_active_filters') || 'Active filters:'}</span>
             {searchTerm && (
-              <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-lg bg-emerald-50 dark:bg-[#031812]/50 text-emerald-800 dark:text-[var(--text-secondary)] border border-emerald-200 dark:border-[var(--border-subtle)] font-medium">
+              <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-lg bg-emerald-50 dark:bg-[#0C0B0A]/50 text-emerald-800 dark:text-[var(--text-secondary)] border border-emerald-200 dark:border-[var(--border-subtle)] font-medium">
                 Location: "{searchTerm}"
                 <button onClick={() => setSearchTerm('')} className="hover:text-rose-500 cursor-pointer ml-1">
                   <X className="w-3 h-3" />
@@ -220,7 +220,7 @@ export const HotelsPage: React.FC = () => {
               </span>
             )}
             {selectedAmenity !== 'All' && (
-              <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-lg bg-emerald-50 dark:bg-[#031812]/50 text-emerald-800 dark:text-[var(--text-secondary)] border border-emerald-200 dark:border-[var(--border-subtle)] font-medium">
+              <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-lg bg-emerald-50 dark:bg-[#0C0B0A]/50 text-emerald-800 dark:text-[var(--text-secondary)] border border-emerald-200 dark:border-[var(--border-subtle)] font-medium">
                 Amenity: {selectedAmenity}
                 <button onClick={() => setSelectedAmenity('All')} className="hover:text-rose-500 cursor-pointer ml-1">
                   <X className="w-3 h-3" />
@@ -228,13 +228,13 @@ export const HotelsPage: React.FC = () => {
               </span>
             )}
             {checkIn && (
-              <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-lg bg-emerald-50 dark:bg-[#031812]/50 text-emerald-800 dark:text-[var(--text-secondary)] border border-emerald-200 dark:border-[var(--border-subtle)] font-medium">
+              <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-lg bg-emerald-50 dark:bg-[#0C0B0A]/50 text-emerald-800 dark:text-[var(--text-secondary)] border border-emerald-200 dark:border-[var(--border-subtle)] font-medium">
                 <Calendar className="w-3 h-3 text-[var(--primary)]" />
                 Check-in: {checkIn} {nights ? `(${nights} Nights)` : ''}
               </span>
             )}
             {guests && (
-              <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-lg bg-emerald-50 dark:bg-[#031812]/50 text-emerald-800 dark:text-[var(--text-secondary)] border border-emerald-200 dark:border-[var(--border-subtle)] font-medium">
+              <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-lg bg-emerald-50 dark:bg-[#0C0B0A]/50 text-emerald-800 dark:text-[var(--text-secondary)] border border-emerald-200 dark:border-[var(--border-subtle)] font-medium">
                 <Users className="w-3 h-3 text-[var(--primary)]" />
                 Guests: {guests}
               </span>
@@ -261,7 +261,7 @@ export const HotelsPage: React.FC = () => {
         {loadingHotels ? (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-7">
             {[1, 2, 3, 4, 5, 6].map((n) => (
-              <div key={n} className="rounded-3xl bg-white dark:bg-[#073126] p-4 border border-slate-200 dark:border-emerald-950/40 animate-pulse">
+              <div key={n} className="rounded-3xl bg-white dark:bg-[#161412] p-4 border border-slate-200 dark:border-emerald-950/40 animate-pulse">
                 <div className="h-56 bg-slate-200 dark:bg-emerald-900/30 rounded-2xl mb-4" />
                 <div className="h-4 bg-slate-200 dark:bg-emerald-900/30 rounded w-1/3 mb-2" />
                 <div className="h-6 bg-slate-200 dark:bg-emerald-900/30 rounded w-3/4 mb-4" />

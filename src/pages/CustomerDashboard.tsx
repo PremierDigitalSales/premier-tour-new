@@ -138,7 +138,7 @@ export const CustomerDashboard: React.FC = () => {
   return (
     <div 
       id="customer-dashboard-page"
-      className="min-h-screen bg-[#FAFCFB] dark:bg-[var(--surface)] text-slate-800 dark:text-[var(--text)] transition-colors pb-24"
+      className="min-h-screen bg-[#FBF9F5] dark:bg-[var(--surface)] text-slate-800 dark:text-[var(--text)] transition-colors pb-24"
     >
       <SEOHelmet
         title="Traveler Dashboard | Premier Luxury Travel Portal"
@@ -278,7 +278,7 @@ export const CustomerDashboard: React.FC = () => {
                   className={`px-3.5 py-1.5 rounded-xl text-xs font-semibold transition-all cursor-pointer ${
                     bookingFilter === 'all'
                       ? 'bg-emerald-700 text-white shadow-xs'
-                      : 'bg-white dark:bg-[var(--surface)] text-slate-600 dark:text-[var(--muted)] border border-slate-200 dark:border-[var(--border-subtle)] hover:bg-emerald-50 dark:hover:bg-[#092218]'
+                      : 'bg-white dark:bg-[var(--surface)] text-slate-600 dark:text-[var(--muted)] border border-slate-200 dark:border-[var(--border-subtle)] hover:bg-emerald-50 dark:hover:bg-[#131210]'
                   }`}
                 >
                   All ({bookings.length})
@@ -309,7 +309,7 @@ export const CustomerDashboard: React.FC = () => {
             {/* Empty State */}
             {filteredBookings.length === 0 ? (
               <div className="rounded-3xl bg-white dark:bg-[var(--surface)] border border-emerald-100/90 dark:border-[var(--border-subtle)] p-10 sm:p-14 text-center shadow-xs">
-                <div className="w-16 h-16 rounded-full bg-emerald-50 dark:bg-[#031812]/60 text-emerald-600 dark:text-emerald-400 flex items-center justify-center mx-auto mb-4 border border-emerald-100 dark:border-[var(--border-subtle)]">
+                <div className="w-16 h-16 rounded-full bg-emerald-50 dark:bg-[#0C0B0A]/60 text-emerald-600 dark:text-emerald-400 flex items-center justify-center mx-auto mb-4 border border-emerald-100 dark:border-[var(--border-subtle)]">
                   <Compass className="w-7 h-7" />
                 </div>
                 <h3 className="text-xl font-sans font-bold text-slate-900 dark:text-white mb-2">
@@ -360,18 +360,18 @@ export const CustomerDashboard: React.FC = () => {
                       className="rounded-3xl bg-white dark:bg-[var(--surface)] border border-emerald-100/90 dark:border-[var(--border-subtle)] overflow-hidden shadow-xs hover:shadow-md transition-all duration-300"
                     >
                       {/* Top Bar */}
-                      <div className="p-5 sm:p-6 border-b border-slate-100 dark:border-[var(--border-subtle)] flex flex-col sm:flex-row sm:items-center justify-between gap-4 bg-gradient-to-r from-emerald-50/30 via-white to-transparent dark:from-[#092218]/40 dark:via-[#071b14] dark:to-transparent">
+                      <div className="p-5 sm:p-6 border-b border-slate-100 dark:border-[var(--border-subtle)] flex flex-col sm:flex-row sm:items-center justify-between gap-4 bg-gradient-to-r from-emerald-50/30 via-white to-transparent dark:from-[#131210]/40 dark:via-[#100F0D] dark:to-transparent">
                         <div className="space-y-1">
                           <div className="flex items-center gap-2 text-xs">
                             <span className="font-mono font-bold text-slate-400 dark:text-[var(--muted)]">
                               Ref: {booking.id}
                             </span>
-                            <span className="text-slate-300 dark:text-[#104D39]">•</span>
+                            <span className="text-slate-300 dark:text-[#2C2720]">•</span>
                             <span className="text-slate-500 dark:text-[var(--muted)] flex items-center gap-1 font-medium">
                               <Calendar className="w-3.5 h-3.5 text-emerald-600 dark:text-emerald-400" />
                               {bookingDate}
                             </span>
-                            <span className="text-slate-300 dark:text-[#104D39]">•</span>
+                            <span className="text-slate-300 dark:text-[#2C2720]">•</span>
                             <span className="capitalize px-2 py-0.5 rounded-md text-[10px] font-bold bg-emerald-50 text-emerald-700 dark:bg-[var(--background)] dark:text-emerald-300 border border-emerald-100 dark:border-[var(--border-subtle)]">
                               {booking.service_type || 'Tour'}
                             </span>
@@ -392,7 +392,7 @@ export const CustomerDashboard: React.FC = () => {
                             </p>
                           </div>
 
-                          <div className="h-8 w-px bg-slate-200 dark:bg-[#073126]/60 hidden sm:block" />
+                          <div className="h-8 w-px bg-slate-200 dark:bg-[#161412]/60 hidden sm:block" />
 
                           <div className="text-left sm:text-right">
                             <p className="text-[10px] uppercase font-bold tracking-wider text-slate-400 dark:text-[var(--muted)]">
@@ -417,7 +417,7 @@ export const CustomerDashboard: React.FC = () => {
                       </div>
 
                       {/* Details & Actions Section */}
-                      <div className="p-5 sm:p-6 bg-slate-50/40 dark:bg-[#073126]/40">
+                      <div className="p-5 sm:p-6 bg-slate-50/40 dark:bg-[#161412]/40">
                         <div className="flex flex-col lg:flex-row gap-6 justify-between items-start">
                           {/* Payment Audit State Details */}
                           <div className="flex-1 w-full space-y-3">
@@ -443,7 +443,7 @@ export const CustomerDashboard: React.FC = () => {
 
                             {/* Case B: Pending with receipt uploaded */}
                             {booking.payment_status === 'Pending' && booking.payment_receipt_url && (
-                              <div className="p-4 rounded-2xl bg-emerald-50/80 dark:bg-[#031812]/30 border border-emerald-200/80 dark:border-[var(--border-subtle)] flex items-start gap-3">
+                              <div className="p-4 rounded-2xl bg-emerald-50/80 dark:bg-[#0C0B0A]/30 border border-emerald-200/80 dark:border-[var(--border-subtle)] flex items-start gap-3">
                                 <FileText className="w-5 h-5 text-emerald-700 dark:text-emerald-400 shrink-0 mt-0.5" />
                                 <div className="space-y-1 text-xs">
                                   <p className="font-bold text-emerald-900 dark:text-emerald-300 flex items-center gap-1.5">
@@ -461,7 +461,7 @@ export const CustomerDashboard: React.FC = () => {
 
                             {/* Case C: Verified */}
                             {booking.payment_status === 'Verified' && (
-                              <div className="p-4 rounded-2xl bg-emerald-50/80 dark:bg-[#031812]/30 border border-emerald-200/80 dark:border-[var(--border-subtle)] flex items-start gap-3">
+                              <div className="p-4 rounded-2xl bg-emerald-50/80 dark:bg-[#0C0B0A]/30 border border-emerald-200/80 dark:border-[var(--border-subtle)] flex items-start gap-3">
                                 <CheckCircle2 className="w-5 h-5 text-emerald-600 dark:text-emerald-400 shrink-0 mt-0.5" />
                                 <div className="space-y-1 text-xs">
                                   <p className="font-bold text-emerald-900 dark:text-emerald-300">
@@ -514,7 +514,7 @@ export const CustomerDashboard: React.FC = () => {
                               <button
                                 id={`write-review-${booking.id}`}
                                 onClick={() => setSelectedBookingForReview(booking)}
-                                className="w-full py-2.5 px-4 rounded-xl text-xs font-semibold bg-emerald-50 dark:bg-[#031812]/60 text-emerald-800 dark:text-emerald-300 border border-emerald-200 dark:border-[var(--border-subtle)] hover:bg-emerald-100 dark:hover:bg-emerald-900/60 flex items-center justify-center gap-1.5 transition-all cursor-pointer"
+                                className="w-full py-2.5 px-4 rounded-xl text-xs font-semibold bg-emerald-50 dark:bg-[#0C0B0A]/60 text-emerald-800 dark:text-emerald-300 border border-emerald-200 dark:border-[var(--border-subtle)] hover:bg-emerald-100 dark:hover:bg-emerald-900/60 flex items-center justify-center gap-1.5 transition-all cursor-pointer"
                               >
                                 <Star className="w-3.5 h-3.5 text-amber-500 fill-amber-500" />
                                 <span>{t('dashboard_write_review') || 'Write Review'}</span>
@@ -554,7 +554,7 @@ export const CustomerDashboard: React.FC = () => {
 
             {reviews.length === 0 ? (
               <div className="rounded-3xl bg-white dark:bg-[var(--surface)] border border-emerald-100/90 dark:border-[var(--border-subtle)] p-12 text-center shadow-xs">
-                <div className="w-16 h-16 rounded-full bg-emerald-50 dark:bg-[#031812]/60 text-emerald-600 dark:text-emerald-400 flex items-center justify-center mx-auto mb-4 border border-emerald-100 dark:border-[var(--border-subtle)]">
+                <div className="w-16 h-16 rounded-full bg-emerald-50 dark:bg-[#0C0B0A]/60 text-emerald-600 dark:text-emerald-400 flex items-center justify-center mx-auto mb-4 border border-emerald-100 dark:border-[var(--border-subtle)]">
                   <MessageSquare className="w-7 h-7" />
                 </div>
                 <h3 className="text-xl font-sans font-bold text-slate-900 dark:text-white mb-2">
@@ -608,7 +608,7 @@ export const CustomerDashboard: React.FC = () => {
                           className={`w-4 h-4 ${
                             star <= review.rating
                               ? 'fill-amber-400 text-amber-400'
-                              : 'fill-slate-200 text-slate-200 dark:fill-[#104D39] dark:text-[#104D39]'
+                              : 'fill-slate-200 text-slate-200 dark:fill-[#2C2720] dark:text-[#2C2720]'
                           }`}
                         />
                       ))}

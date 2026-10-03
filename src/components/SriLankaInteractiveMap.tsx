@@ -145,8 +145,8 @@ export const SriLankaInteractiveMap: React.FC<SriLankaInteractiveMapProps> = ({
       const customHtml = `
         <div class="custom-marker-wrapper group relative flex items-center justify-center cursor-pointer">
           <div class="relative flex items-center justify-center">
-            <span class="absolute ${isSelected ? 'w-10 h-10 bg-emerald-400/60 shadow-[0_0_25px_rgba(52,211,153,1)]' : 'w-7 h-7 bg-emerald-400/30'} rounded-full animate-ping"></span>
-            <div class="${isSelected ? 'w-8 h-8 bg-emerald-400 border-2 border-white shadow-[0_0_20px_rgba(52,211,153,1)] scale-110' : 'w-6 h-6 bg-[#0F9D72] border-2 border-emerald-300 shadow-[0_0_12px_rgba(52,211,153,0.7)]'} rounded-full text-slate-950 font-extrabold flex items-center justify-center transition-all duration-300">
+            <span class="absolute ${isSelected ? 'w-10 h-10 bg-emerald-400/60 shadow-[0_0_25px_rgba(212,180,119,1)]' : 'w-7 h-7 bg-emerald-400/30'} rounded-full animate-ping"></span>
+            <div class="${isSelected ? 'w-8 h-8 bg-emerald-400 border-2 border-white shadow-[0_0_20px_rgba(212,180,119,1)] scale-110' : 'w-6 h-6 bg-[#A97F3E] border-2 border-emerald-300 shadow-[0_0_12px_rgba(212,180,119,0.7)]'} rounded-full text-slate-950 font-extrabold flex items-center justify-center transition-all duration-300">
               <div class="${isSelected ? 'w-3 h-3 bg-slate-950' : 'w-2 h-2 bg-white'} rounded-full"></div>
             </div>
           </div>
@@ -179,7 +179,7 @@ export const SriLankaInteractiveMap: React.FC<SriLankaInteractiveMapProps> = ({
               ${dest.exploreItems.slice(0, 3).join(' • ')}
             </div>
           </div>
-          <button id="popup-btn-${dest.id.replace(/\s+/g, '-')}" class="w-full py-1.5 px-3 bg-[#0F9D72] hover:bg-emerald-700 text-white text-xs font-bold rounded-lg transition-colors cursor-pointer text-center shadow-xs">
+          <button id="popup-btn-${dest.id.replace(/\s+/g, '-')}" class="w-full py-1.5 px-3 bg-[#A97F3E] hover:bg-emerald-700 text-white text-xs font-bold rounded-lg transition-colors cursor-pointer text-center shadow-xs">
             Filter ${dest.name} Stories
           </button>
         </div>
@@ -256,7 +256,7 @@ export const SriLankaInteractiveMap: React.FC<SriLankaInteractiveMapProps> = ({
   const activeDestInfo = DESTINATIONS.find((d) => d.name.toLowerCase() === (selectedDestination || '').toLowerCase());
 
   return (
-    <section className="bg-gradient-to-br from-emerald-950 via-[#0D281F] to-emerald-900 rounded-[28px] sm:rounded-[32px] overflow-hidden relative shadow-2xl border border-emerald-500/20 my-8">
+    <section className="bg-gradient-to-br from-emerald-950 via-[#1A1815] to-emerald-900 rounded-[28px] sm:rounded-[32px] overflow-hidden relative shadow-2xl border border-emerald-500/20 my-8">
       {/* Background ambient lighting */}
       <div className="absolute inset-0 opacity-15 pointer-events-none">
         <svg className="w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none">
@@ -335,7 +335,7 @@ export const SriLankaInteractiveMap: React.FC<SriLankaInteractiveMapProps> = ({
                     }}
                     className={`px-3.5 py-2 rounded-full text-xs font-bold transition-all duration-300 cursor-pointer flex items-center gap-1.5 shadow-xs border ${
                       isActive
-                        ? 'bg-gradient-to-r from-emerald-400 via-teal-400 to-emerald-300 text-slate-950 border-white shadow-[0_0_18px_rgba(52,211,153,0.7)] font-black scale-105'
+                        ? 'bg-gradient-to-r from-emerald-400 via-teal-400 to-emerald-300 text-slate-950 border-white shadow-[0_0_18px_rgba(212,180,119,0.7)] font-black scale-105'
                         : 'bg-emerald-950/60 hover:bg-emerald-800/80 text-emerald-100/90 border-emerald-500/30 hover:border-emerald-400/60 hover:text-white'
                     }`}
                   >

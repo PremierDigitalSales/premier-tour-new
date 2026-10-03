@@ -144,7 +144,7 @@ export const FlightsPage: React.FC = () => {
                 value={fromAirport}
                 onChange={(e) => setFromAirport(e.target.value)}
                 placeholder="e.g. Doha (DOH) / Frankfurt"
-                className="w-full px-3 py-2 text-xs font-semibold rounded-xl border border-slate-200 dark:border-[var(--border-subtle)] bg-slate-50 dark:bg-[#073126]/80 focus:outline-none focus:ring-2 focus:ring-[var(--primary)] dark:text-white"
+                className="w-full px-3 py-2 text-xs font-semibold rounded-xl border border-slate-200 dark:border-[var(--border-subtle)] bg-slate-50 dark:bg-[#161412]/80 focus:outline-none focus:ring-2 focus:ring-[var(--primary)] dark:text-white"
               />
             </div>
 
@@ -158,7 +158,7 @@ export const FlightsPage: React.FC = () => {
                 value={toAirport}
                 onChange={(e) => setToAirport(e.target.value)}
                 placeholder="e.g. Colombo (CMB)"
-                className="w-full px-3 py-2 text-xs font-semibold rounded-xl border border-slate-200 dark:border-[var(--border-subtle)] bg-slate-50 dark:bg-[#073126]/80 focus:outline-none focus:ring-2 focus:ring-[var(--primary)] dark:text-white"
+                className="w-full px-3 py-2 text-xs font-semibold rounded-xl border border-slate-200 dark:border-[var(--border-subtle)] bg-slate-50 dark:bg-[#161412]/80 focus:outline-none focus:ring-2 focus:ring-[var(--primary)] dark:text-white"
               />
             </div>
 
@@ -171,7 +171,7 @@ export const FlightsPage: React.FC = () => {
                 type="date"
                 value={flightDate}
                 onChange={(e) => setFlightDate(e.target.value)}
-                className="w-full px-3 py-2 text-xs font-semibold rounded-xl border border-slate-200 dark:border-[var(--border-subtle)] bg-slate-50 dark:bg-[#073126]/80 focus:outline-none focus:ring-2 focus:ring-[var(--primary)] dark:text-white"
+                className="w-full px-3 py-2 text-xs font-semibold rounded-xl border border-slate-200 dark:border-[var(--border-subtle)] bg-slate-50 dark:bg-[#161412]/80 focus:outline-none focus:ring-2 focus:ring-[var(--primary)] dark:text-white"
               />
             </div>
 
@@ -183,7 +183,7 @@ export const FlightsPage: React.FC = () => {
               <select
                 value={passengers}
                 onChange={(e) => setPassengers(Number(e.target.value))}
-                className="w-full px-3 py-2 text-xs font-semibold rounded-xl border border-slate-200 dark:border-[var(--border-subtle)] bg-slate-50 dark:bg-[#073126]/80 focus:outline-none focus:ring-2 focus:ring-[var(--primary)] dark:text-white"
+                className="w-full px-3 py-2 text-xs font-semibold rounded-xl border border-slate-200 dark:border-[var(--border-subtle)] bg-slate-50 dark:bg-[#161412]/80 focus:outline-none focus:ring-2 focus:ring-[var(--primary)] dark:text-white"
               >
                 <option value={1}>1 Passenger</option>
                 <option value={2}>2 Passengers</option>
@@ -201,7 +201,7 @@ export const FlightsPage: React.FC = () => {
               <select
                 value={cabinClass}
                 onChange={(e) => setCabinClass(e.target.value)}
-                className="w-full px-3 py-2 text-xs font-semibold rounded-xl border border-slate-200 dark:border-[var(--border-subtle)] bg-slate-50 dark:bg-[#073126]/80 focus:outline-none focus:ring-2 focus:ring-[var(--primary)] dark:text-white"
+                className="w-full px-3 py-2 text-xs font-semibold rounded-xl border border-slate-200 dark:border-[var(--border-subtle)] bg-slate-50 dark:bg-[#161412]/80 focus:outline-none focus:ring-2 focus:ring-[var(--primary)] dark:text-white"
               >
                 <option value="Economy">Economy</option>
                 <option value="Premium Economy">Premium Economy</option>
@@ -298,14 +298,14 @@ export const FlightsPage: React.FC = () => {
                   initial={{ opacity: 0, y: 15 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.3, delay: (index % 6) * 0.05 }}
-                  className="glass-card bg-white dark:bg-[#031812]/90 border border-slate-200 dark:border-[var(--border-subtle)]/80 rounded-2xl p-5 sm:p-6 shadow-sm hover:shadow-md transition-all hover:border-[var(--primary)] dark:hover:border-emerald-500/50"
+                  className="glass-card bg-white dark:bg-[#0C0B0A]/90 border border-slate-200 dark:border-[var(--border-subtle)]/80 rounded-2xl p-5 sm:p-6 shadow-sm hover:shadow-md transition-all hover:border-[var(--primary)] dark:hover:border-emerald-500/50"
                 >
                   <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-6">
                     {/* Airline & Route Column */}
                     <div className="flex-1 space-y-4">
                       {/* Airline Header */}
                       <div className="flex items-center gap-3">
-                        <div className="w-10 h-10 rounded-xl bg-emerald-50 dark:bg-[#031812]/50 flex items-center justify-center text-[var(--primary)] font-bold shrink-0">
+                        <div className="w-10 h-10 rounded-xl bg-emerald-50 dark:bg-[#0C0B0A]/50 flex items-center justify-center text-[var(--primary)] font-bold shrink-0">
                           <Plane className="w-5 h-5" />
                         </div>
                         <div>
@@ -322,7 +322,7 @@ export const FlightsPage: React.FC = () => {
                       </div>
 
                       {/* Flight Timings & Route Display */}
-                      <div className="grid grid-cols-1 sm:grid-cols-3 items-center gap-3 bg-slate-50 dark:bg-[#073126]/40 p-4 rounded-xl border border-slate-100 dark:border-[var(--border-subtle)]/60">
+                      <div className="grid grid-cols-1 sm:grid-cols-3 items-center gap-3 bg-slate-50 dark:bg-[#161412]/40 p-4 rounded-xl border border-slate-100 dark:border-[var(--border-subtle)]/60">
                         {/* Departure */}
                         <div>
                           <p className="text-xs font-semibold text-[var(--muted)]">Departure</p>
@@ -332,7 +332,7 @@ export const FlightsPage: React.FC = () => {
 
                         {/* Middle Stops / Flight Indicator */}
                         <div className="text-center flex flex-col items-center">
-                          <span className="text-[11px] font-bold text-[var(--primary)] bg-emerald-50 dark:bg-[#031812]/60 px-2.5 py-0.5 rounded-full mb-1">
+                          <span className="text-[11px] font-bold text-[var(--primary)] bg-emerald-50 dark:bg-[#0C0B0A]/60 px-2.5 py-0.5 rounded-full mb-1">
                             {stops}
                           </span>
                           <div className="w-full flex items-center justify-center gap-1.5 my-1">

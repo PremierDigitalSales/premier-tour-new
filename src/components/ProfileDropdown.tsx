@@ -74,19 +74,19 @@ export const ProfileDropdown: React.FC = () => {
     <div className="relative" ref={dropdownRef}>
       <button 
         onClick={() => setIsOpen(!isOpen)}
-        className="flex items-center gap-2.5 px-2 py-1.5 pr-3.5 bg-white dark:bg-[var(--surface)] rounded-full border border-[#DDEBE5] dark:border-[var(--border-subtle)] shadow-xs hover:border-[#0F9D72] dark:hover:border-[#39D39B] transition-all group focus:outline-none focus:ring-2 focus:ring-[#0F9D72]/20"
+        className="flex items-center gap-2.5 px-2 py-1.5 pr-3.5 bg-white dark:bg-[var(--surface)] rounded-full border border-[#E8E0D2] dark:border-[var(--border-subtle)] shadow-xs hover:border-[#A97F3E] dark:hover:border-[#D9BC7E] transition-all group focus:outline-none focus:ring-2 focus:ring-[#A97F3E]/20"
         aria-expanded={isOpen}
         aria-haspopup="menu"
       >
-        <div className="w-8 h-8 rounded-full border border-[#0F9D72]/30 overflow-hidden bg-[#F2F8F5] dark:bg-[var(--surface)] flex items-center justify-center shrink-0">
+        <div className="w-8 h-8 rounded-full border border-[#A97F3E]/30 overflow-hidden bg-[#F4EFE6] dark:bg-[var(--surface)] flex items-center justify-center shrink-0">
           {user.avatar_url ? (
             <SafeImage src={user.avatar_url} alt={displayName} className="w-full h-full object-cover" />
           ) : (
-            <span className="text-xs font-bold text-[#0F9D72] dark:text-[#39D39B]">{getAvatarInitials()}</span>
+            <span className="text-xs font-bold text-[#A97F3E] dark:text-[#D9BC7E]">{getAvatarInitials()}</span>
           )}
         </div>
-        <span className="text-xs font-bold text-[#10231D] dark:text-[#F2FFFA] max-w-[120px] truncate">{displayName}</span>
-        <ChevronDown className={`w-3.5 h-3.5 text-[#0F9D72] dark:text-[#39D39B] transition-transform duration-200 ${isOpen ? 'rotate-180' : ''}`} />
+        <span className="text-xs font-bold text-[#1A1814] dark:text-[#F7F3EA] max-w-[120px] truncate">{displayName}</span>
+        <ChevronDown className={`w-3.5 h-3.5 text-[#A97F3E] dark:text-[#D9BC7E] transition-transform duration-200 ${isOpen ? 'rotate-180' : ''}`} />
       </button>
 
       <AnimatePresence>
@@ -96,23 +96,23 @@ export const ProfileDropdown: React.FC = () => {
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: -6, scale: 0.98 }}
             transition={{ duration: 0.18, ease: "easeOut" }}
-            className="absolute right-0 mt-2 w-72 bg-white dark:bg-[var(--surface)] border border-[#DDEBE5] dark:border-[var(--border-subtle)] rounded-2xl shadow-xl overflow-hidden z-[100]"
+            className="absolute right-0 mt-2 w-72 bg-white dark:bg-[var(--surface)] border border-[#E8E0D2] dark:border-[var(--border-subtle)] rounded-2xl shadow-xl overflow-hidden z-[100]"
           >
             {/* Header info */}
-            <div className="p-4 flex items-center gap-3 border-b border-[#DDEBE5] dark:border-[var(--border-subtle)] bg-[#F8FCFA] dark:bg-[#073126]/60">
-              <div className="w-11 h-11 rounded-full border-2 border-[#0F9D72]/30 overflow-hidden bg-white dark:bg-[var(--surface)] shrink-0 flex items-center justify-center">
+            <div className="p-4 flex items-center gap-3 border-b border-[#E8E0D2] dark:border-[var(--border-subtle)] bg-[#FAF7F2] dark:bg-[#161412]/60">
+              <div className="w-11 h-11 rounded-full border-2 border-[#A97F3E]/30 overflow-hidden bg-white dark:bg-[var(--surface)] shrink-0 flex items-center justify-center">
                 {user.avatar_url ? (
                   <SafeImage src={user.avatar_url} alt={displayName} className="w-full h-full object-cover" />
                 ) : (
-                  <span className="text-sm font-bold text-[#0F9D72] dark:text-[#39D39B]">{getAvatarInitials()}</span>
+                  <span className="text-sm font-bold text-[#A97F3E] dark:text-[#D9BC7E]">{getAvatarInitials()}</span>
                 )}
               </div>
               <div className="min-w-0 flex-1">
                 <div className="flex items-center gap-1.5">
-                  <h3 className="text-sm font-bold text-[#10231D] dark:text-[#F2FFFA] truncate">{displayName}</h3>
-                  <CheckCircle2 className="w-3.5 h-3.5 text-[#0F9D72] shrink-0" />
+                  <h3 className="text-sm font-bold text-[#1A1814] dark:text-[#F7F3EA] truncate">{displayName}</h3>
+                  <CheckCircle2 className="w-3.5 h-3.5 text-[#A97F3E] shrink-0" />
                 </div>
-                <p className="text-xs text-[#71817B] dark:text-[#8FA9A0] truncate">{user.email}</p>
+                <p className="text-xs text-[#857D70] dark:text-[#A39A8B] truncate">{user.email}</p>
               </div>
             </div>
 
@@ -121,36 +121,36 @@ export const ProfileDropdown: React.FC = () => {
               <Link
                 to="/dashboard?tab=bookings"
                 onClick={() => setIsOpen(false)}
-                className="flex items-center gap-3 px-3 py-2 rounded-xl text-xs font-semibold text-[#10231D] dark:text-[#F2FFFA] hover:bg-[#F2F8F5] dark:hover:bg-[#0D281F] transition-colors"
+                className="flex items-center gap-3 px-3 py-2 rounded-xl text-xs font-semibold text-[#1A1814] dark:text-[#F7F3EA] hover:bg-[#F4EFE6] dark:hover:bg-[#1A1815] transition-colors"
               >
-                <Calendar className="w-4 h-4 text-[#0F9D72] dark:text-[#39D39B]" />
+                <Calendar className="w-4 h-4 text-[#A97F3E] dark:text-[#D9BC7E]" />
                 <span>{t('nav_bookings') || 'My Bookings'}</span>
               </Link>
 
               <Link
                 to="/tours"
                 onClick={() => setIsOpen(false)}
-                className="flex items-center gap-3 px-3 py-2 rounded-xl text-xs font-semibold text-[#10231D] dark:text-[#F2FFFA] hover:bg-[#F2F8F5] dark:hover:bg-[#0D281F] transition-colors"
+                className="flex items-center gap-3 px-3 py-2 rounded-xl text-xs font-semibold text-[#1A1814] dark:text-[#F7F3EA] hover:bg-[#F4EFE6] dark:hover:bg-[#1A1815] transition-colors"
               >
-                <Heart className="w-4 h-4 text-[#0F9D72] dark:text-[#39D39B]" />
+                <Heart className="w-4 h-4 text-[#A97F3E] dark:text-[#D9BC7E]" />
                 <span>{t('nav_wishlist') || 'Wishlist'}</span>
               </Link>
 
               <Link
                 to="/dashboard"
                 onClick={() => setIsOpen(false)}
-                className="flex items-center gap-3 px-3 py-2 rounded-xl text-xs font-semibold text-[#10231D] dark:text-[#F2FFFA] hover:bg-[#F2F8F5] dark:hover:bg-[#0D281F] transition-colors"
+                className="flex items-center gap-3 px-3 py-2 rounded-xl text-xs font-semibold text-[#1A1814] dark:text-[#F7F3EA] hover:bg-[#F4EFE6] dark:hover:bg-[#1A1815] transition-colors"
               >
-                <LayoutDashboard className="w-4 h-4 text-[#0F9D72] dark:text-[#39D39B]" />
+                <LayoutDashboard className="w-4 h-4 text-[#A97F3E] dark:text-[#D9BC7E]" />
                 <span>{t('nav_dashboard') || 'My Dashboard'}</span>
               </Link>
 
               <Link
                 to="/dashboard?tab=settings"
                 onClick={() => setIsOpen(false)}
-                className="flex items-center gap-3 px-3 py-2 rounded-xl text-xs font-semibold text-[#10231D] dark:text-[#F2FFFA] hover:bg-[#F2F8F5] dark:hover:bg-[#0D281F] transition-colors"
+                className="flex items-center gap-3 px-3 py-2 rounded-xl text-xs font-semibold text-[#1A1814] dark:text-[#F7F3EA] hover:bg-[#F4EFE6] dark:hover:bg-[#1A1815] transition-colors"
               >
-                <Settings className="w-4 h-4 text-[#0F9D72] dark:text-[#39D39B]" />
+                <Settings className="w-4 h-4 text-[#A97F3E] dark:text-[#D9BC7E]" />
                 <span>{t('nav_settings') || 'Profile Settings'}</span>
               </Link>
 
@@ -159,28 +159,28 @@ export const ProfileDropdown: React.FC = () => {
                 <Link
                   to="/admin"
                   onClick={() => setIsOpen(false)}
-                  className="flex items-center justify-between px-3 py-2.5 rounded-xl bg-[#0F9D72]/10 dark:bg-[#39D39B]/15 border border-[#0F9D72]/20 dark:border-[#39D39B]/30 hover:bg-[#0F9D72]/15 transition-colors mt-1 group"
+                  className="flex items-center justify-between px-3 py-2.5 rounded-xl bg-[#A97F3E]/10 dark:bg-[#D9BC7E]/15 border border-[#A97F3E]/20 dark:border-[#D9BC7E]/30 hover:bg-[#A97F3E]/15 transition-colors mt-1 group"
                 >
                   <div className="flex items-center gap-2.5">
-                    <ShieldCheck className="w-4 h-4 text-[#0F9D72] dark:text-[#39D39B]" />
-                    <span className="text-xs font-bold text-[#087A5A] dark:text-[#39D39B]">{t('nav_admin') || 'Admin Panel'}</span>
+                    <ShieldCheck className="w-4 h-4 text-[#A97F3E] dark:text-[#D9BC7E]" />
+                    <span className="text-xs font-bold text-[#8A6530] dark:text-[#D9BC7E]">{t('nav_admin') || 'Admin Panel'}</span>
                   </div>
-                  <Sparkles className="w-3.5 h-3.5 text-[#0F9D72] dark:text-[#39D39B]" />
+                  <Sparkles className="w-3.5 h-3.5 text-[#A97F3E] dark:text-[#D9BC7E]" />
                 </Link>
               )}
             </div>
 
             {/* Preferences & Utilities */}
-            <div className="p-2 border-t border-[#DDEBE5] dark:border-[var(--border-subtle)] bg-[#F8FCFA] dark:bg-[#073126]/40 space-y-2">
+            <div className="p-2 border-t border-[#E8E0D2] dark:border-[var(--border-subtle)] bg-[#FAF7F2] dark:bg-[#161412]/40 space-y-2">
               <button
                 onClick={toggleTheme}
-                className="w-full flex items-center justify-between px-3 py-2 rounded-xl hover:bg-white dark:hover:bg-[#081C16] text-xs font-semibold text-[#10231D] dark:text-[#F2FFFA] transition-colors"
+                className="w-full flex items-center justify-between px-3 py-2 rounded-xl hover:bg-white dark:hover:bg-[#12110F] text-xs font-semibold text-[#1A1814] dark:text-[#F7F3EA] transition-colors"
               >
                 <div className="flex items-center gap-2.5">
-                  {theme === 'dark' ? <Moon className="w-4 h-4 text-[#39D39B]" /> : <Sun className="w-4 h-4 text-[#0F9D72]" />}
+                  {theme === 'dark' ? <Moon className="w-4 h-4 text-[#D9BC7E]" /> : <Sun className="w-4 h-4 text-[#A97F3E]" />}
                   <span>{t('profile_theme_dark') || 'Dark Mode'}</span>
                 </div>
-                <div className={`w-8 h-4 rounded-full p-0.5 transition-colors ${theme === 'dark' ? 'bg-[#39D39B]' : 'bg-slate-300'}`}>
+                <div className={`w-8 h-4 rounded-full p-0.5 transition-colors ${theme === 'dark' ? 'bg-[#D9BC7E]' : 'bg-slate-300'}`}>
                   <div className={`w-3 h-3 rounded-full bg-white transition-transform ${theme === 'dark' ? 'translate-x-4' : 'translate-x-0'}`} />
                 </div>
               </button>
@@ -190,22 +190,22 @@ export const ProfileDropdown: React.FC = () => {
                   <select
                     value={currency}
                     onChange={(e) => setCurrency(e.target.value as CurrencyCode)}
-                    className="w-full appearance-none bg-white dark:bg-[var(--surface)] border border-[#DDEBE5] dark:border-[var(--border-subtle)] rounded-lg py-1.5 pl-2.5 pr-6 text-xs font-bold text-[#10231D] dark:text-[#F2FFFA] focus:outline-none focus:border-[#0F9D72] cursor-pointer"
+                    className="w-full appearance-none bg-white dark:bg-[var(--surface)] border border-[#E8E0D2] dark:border-[var(--border-subtle)] rounded-lg py-1.5 pl-2.5 pr-6 text-xs font-bold text-[#1A1814] dark:text-[#F7F3EA] focus:outline-none focus:border-[#A97F3E] cursor-pointer"
                   >
                     {availableCurrencies.map(c => <option key={c.code} value={c.code}>{c.code} — {c.symbol}</option>)}
                   </select>
-                  <ChevronDown className="absolute right-2 top-1/2 -translate-y-1/2 w-3 h-3 text-[#71817B] pointer-events-none" />
+                  <ChevronDown className="absolute right-2 top-1/2 -translate-y-1/2 w-3 h-3 text-[#857D70] pointer-events-none" />
                 </div>
 
                 <div className="relative">
                   <select
                     value={language}
                     onChange={(e) => setLanguage(e.target.value as any)}
-                    className="w-full appearance-none bg-white dark:bg-[var(--surface)] border border-[#DDEBE5] dark:border-[var(--border-subtle)] rounded-lg py-1.5 pl-2.5 pr-6 text-xs font-bold text-[#10231D] dark:text-[#F2FFFA] focus:outline-none focus:border-[#0F9D72] cursor-pointer"
+                    className="w-full appearance-none bg-white dark:bg-[var(--surface)] border border-[#E8E0D2] dark:border-[var(--border-subtle)] rounded-lg py-1.5 pl-2.5 pr-6 text-xs font-bold text-[#1A1814] dark:text-[#F7F3EA] focus:outline-none focus:border-[#A97F3E] cursor-pointer"
                   >
                     {availableLanguages.map(l => <option key={l.code} value={l.code}>{l.label} {l.flag}</option>)}
                   </select>
-                  <ChevronDown className="absolute right-2 top-1/2 -translate-y-1/2 w-3 h-3 text-[#71817B] pointer-events-none" />
+                  <ChevronDown className="absolute right-2 top-1/2 -translate-y-1/2 w-3 h-3 text-[#857D70] pointer-events-none" />
                 </div>
               </div>
 

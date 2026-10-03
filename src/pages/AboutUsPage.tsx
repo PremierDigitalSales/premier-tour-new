@@ -116,8 +116,8 @@ export const AboutUsPage: React.FC = () => {
         >
           {stats.map((stat, idx) => (
             <div key={idx} className="space-y-1.5 p-2 rounded-2xl hover:bg-emerald-50/50 dark:hover:bg-emerald-950/30 transition-colors">
-              <p className="font-sans text-2xl sm:text-4xl font-bold text-[#0F9D72] dark:text-[#39D39B]">{stat.value}</p>
-              <p className="text-xs sm:text-sm font-bold text-[#33453F] dark:text-[var(--text-secondary)]">{stat.label}</p>
+              <p className="font-sans text-2xl sm:text-4xl font-bold text-[#A97F3E] dark:text-[#D9BC7E]">{stat.value}</p>
+              <p className="text-xs sm:text-sm font-bold text-[#4A453D] dark:text-[var(--text-secondary)]">{stat.label}</p>
             </div>
           ))}
         </motion.div>
@@ -133,11 +133,11 @@ export const AboutUsPage: React.FC = () => {
             transition={{ duration: 0.5 }}
             className="lg:col-span-6 space-y-6"
           >
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-50 dark:bg-[#031812]/50 border border-emerald-200/70 dark:border-[var(--border-subtle)] text-emerald-800 dark:text-emerald-300 font-bold text-xs uppercase tracking-wider shadow-xs">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-50 dark:bg-[#0C0B0A]/50 border border-emerald-200/70 dark:border-[var(--border-subtle)] text-emerald-800 dark:text-emerald-300 font-bold text-xs uppercase tracking-wider shadow-xs">
               <Award className="w-4 h-4 text-emerald-600 dark:text-emerald-400" />
               <span>Accreditation & Heritage</span>
             </div>
-            <h2 className="font-sans text-3xl sm:text-4xl font-bold text-[#10231D] dark:text-white leading-tight">
+            <h2 className="font-sans text-3xl sm:text-4xl font-bold text-[#1A1814] dark:text-white leading-tight">
               Licensed by the Sri Lanka Tourism Development Authority (SLTDA)
             </h2>
             <p className="text-[var(--muted)] dark:text-[var(--text-secondary)] leading-relaxed text-sm sm:text-base">
@@ -148,12 +148,12 @@ export const AboutUsPage: React.FC = () => {
             </p>
 
             <div className="pt-2 flex flex-wrap gap-3 text-xs font-bold">
-              <div className="flex items-center gap-2 px-4 py-2.5 rounded-xl bg-emerald-50/70 dark:bg-[#031812]/50 text-emerald-900 dark:text-[var(--text-secondary)] border border-emerald-200/80 dark:border-[var(--border-subtle)] shadow-xs">
-                <CheckCircle2 className="w-4 h-4 text-[#0F9D72] dark:text-[#39D39B]" />
+              <div className="flex items-center gap-2 px-4 py-2.5 rounded-xl bg-emerald-50/70 dark:bg-[#0C0B0A]/50 text-emerald-900 dark:text-[var(--text-secondary)] border border-emerald-200/80 dark:border-[var(--border-subtle)] shadow-xs">
+                <CheckCircle2 className="w-4 h-4 text-[#A97F3E] dark:text-[#D9BC7E]" />
                 <span>SLTDA Class A Tourism Operator</span>
               </div>
-              <div className="flex items-center gap-2 px-4 py-2.5 rounded-xl bg-emerald-50/70 dark:bg-[#031812]/50 text-emerald-900 dark:text-[var(--text-secondary)] border border-emerald-200/80 dark:border-[var(--border-subtle)] shadow-xs">
-                <ShieldCheck className="w-4 h-4 text-[#0F9D72] dark:text-[#39D39B]" />
+              <div className="flex items-center gap-2 px-4 py-2.5 rounded-xl bg-emerald-50/70 dark:bg-[#0C0B0A]/50 text-emerald-900 dark:text-[var(--text-secondary)] border border-emerald-200/80 dark:border-[var(--border-subtle)] shadow-xs">
+                <ShieldCheck className="w-4 h-4 text-[#A97F3E] dark:text-[#D9BC7E]" />
                 <span>Verified Booking Protection</span>
               </div>
             </div>
@@ -172,7 +172,7 @@ export const AboutUsPage: React.FC = () => {
                 alt="Sigiriya Lion Rock Sri Lanka"
                 className="w-full h-80 sm:h-96 object-cover group-hover:scale-104 transition-transform duration-700 ease-out"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#061510]/90 via-transparent to-transparent flex items-end p-6 sm:p-8">
+              <div className="absolute inset-0 bg-gradient-to-t from-[#0E0D0B]/90 via-transparent to-transparent flex items-end p-6 sm:p-8">
                 <div className="text-white space-y-1">
                   <p className="font-sans text-lg font-bold text-white">Sigiriya Citadel at Dawn</p>
                   <p className="text-xs text-emerald-300 font-medium">Exclusive VIP Archaeologist Escort with Premier Tours</p>
@@ -187,11 +187,11 @@ export const AboutUsPage: React.FC = () => {
       <section className="bg-emerald-50/30 dark:bg-[var(--background)] border-y border-emerald-500/15 dark:border-emerald-500/20 py-16 sm:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto mb-12">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-50 dark:bg-[#031812]/50 border border-emerald-200/70 dark:border-[var(--border-subtle)] text-emerald-800 dark:text-emerald-300 font-bold text-xs uppercase tracking-wider mb-3 shadow-xs">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-50 dark:bg-[#0C0B0A]/50 border border-emerald-200/70 dark:border-[var(--border-subtle)] text-emerald-800 dark:text-emerald-300 font-bold text-xs uppercase tracking-wider mb-3 shadow-xs">
               <Compass className="w-4 h-4 text-emerald-600 dark:text-emerald-400" />
               <span>Our Guiding Principles</span>
             </div>
-            <h2 className="font-sans text-3xl sm:text-4xl font-bold text-[#10231D] dark:text-white">
+            <h2 className="font-sans text-3xl sm:text-4xl font-bold text-[#1A1814] dark:text-white">
               Four Pillars of Premier Hospitality
             </h2>
             <p className="text-[var(--muted)] dark:text-[var(--muted)] mt-3 text-sm sm:text-base">
@@ -211,11 +211,11 @@ export const AboutUsPage: React.FC = () => {
                   transition={{ duration: 0.4, delay: idx * 0.1 }}
                   className="bg-white dark:bg-[var(--surface)] rounded-[24px] p-6 sm:p-8 border border-emerald-500/18 dark:border-emerald-500/25 shadow-sm hover:shadow-xl hover:shadow-emerald-500/12 hover:border-emerald-500/40 hover:-translate-y-1.5 transition-all duration-300 space-y-4 group"
                 >
-                  <div className="w-13 h-13 rounded-2xl bg-emerald-50 dark:bg-[#031812]/60 text-[#0F9D72] dark:text-[#39D39B] flex items-center justify-center border border-emerald-200/70 dark:border-[var(--border-subtle)] group-hover:bg-[#0F9D72] group-hover:text-white group-hover:border-[#0F9D72] transition-all">
+                  <div className="w-13 h-13 rounded-2xl bg-emerald-50 dark:bg-[#0C0B0A]/60 text-[#A97F3E] dark:text-[#D9BC7E] flex items-center justify-center border border-emerald-200/70 dark:border-[var(--border-subtle)] group-hover:bg-[#A97F3E] group-hover:text-white group-hover:border-[#A97F3E] transition-all">
                     <Icon className="w-6 h-6" />
                   </div>
                   <div>
-                    <h3 className="font-sans text-xl font-bold text-[#10231D] dark:text-white group-hover:text-[#0F9D72] dark:group-hover:text-[#39D39B] transition-colors">{pillar.title}</h3>
+                    <h3 className="font-sans text-xl font-bold text-[#1A1814] dark:text-white group-hover:text-[#A97F3E] dark:group-hover:text-[#D9BC7E] transition-colors">{pillar.title}</h3>
                     <p className="text-xs font-bold text-emerald-700 dark:text-emerald-400 mt-1">{pillar.subtitle}</p>
                   </div>
                   <p className="text-[var(--muted)] dark:text-[var(--muted)] text-sm leading-relaxed">{pillar.description}</p>
@@ -229,11 +229,11 @@ export const AboutUsPage: React.FC = () => {
       {/* Leadership & Curator Team */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24">
         <div className="text-center max-w-3xl mx-auto mb-12">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-50 dark:bg-[#031812]/50 border border-emerald-200/70 dark:border-[var(--border-subtle)] text-emerald-800 dark:text-emerald-300 font-bold text-xs uppercase tracking-wider mb-3 shadow-xs">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-50 dark:bg-[#0C0B0A]/50 border border-emerald-200/70 dark:border-[var(--border-subtle)] text-emerald-800 dark:text-emerald-300 font-bold text-xs uppercase tracking-wider mb-3 shadow-xs">
             <Users className="w-4 h-4 text-emerald-600 dark:text-emerald-400" />
             <span>The Custodians</span>
           </div>
-          <h2 className="font-sans text-3xl sm:text-4xl font-bold text-[#10231D] dark:text-white">
+          <h2 className="font-sans text-3xl sm:text-4xl font-bold text-[#1A1814] dark:text-white">
             Dedicated Concierge Desks & Field Specialists
           </h2>
           <p className="text-[var(--muted)] dark:text-[var(--muted)] mt-3 text-sm sm:text-base">
@@ -257,7 +257,7 @@ export const AboutUsPage: React.FC = () => {
                 className="w-24 h-24 rounded-full mx-auto object-cover border-2 border-emerald-300 dark:border-emerald-700 shadow-md group-hover:scale-105 transition-transform duration-300"
               />
               <div>
-                <h3 className="font-sans text-lg font-bold text-[#10231D] dark:text-white group-hover:text-[#0F9D72] dark:group-hover:text-[#39D39B] transition-colors">{member.name}</h3>
+                <h3 className="font-sans text-lg font-bold text-[#1A1814] dark:text-white group-hover:text-[#A97F3E] dark:group-hover:text-[#D9BC7E] transition-colors">{member.name}</h3>
                 <p className="text-xs font-bold text-emerald-700 dark:text-emerald-400 mt-1">{member.role}</p>
               </div>
               <p className="text-xs sm:text-sm text-[var(--muted)] dark:text-[var(--muted)] leading-relaxed">{member.bio}</p>
@@ -268,7 +268,7 @@ export const AboutUsPage: React.FC = () => {
 
       {/* Call to Action Bar */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="bg-gradient-to-r from-[#061510] via-[#0D281F] to-[#082017] rounded-[32px] p-8 sm:p-14 text-white text-center shadow-2xl border border-emerald-500/25 relative overflow-hidden">
+        <div className="bg-gradient-to-r from-[#0E0D0B] via-[#1A1815] to-[#131210] rounded-[32px] p-8 sm:p-14 text-white text-center shadow-2xl border border-emerald-500/25 relative overflow-hidden">
           <div className="relative z-10 max-w-2xl mx-auto space-y-6">
             <h2 className="font-sans text-2xl sm:text-4xl font-bold leading-tight">
               Ready to Experience Sri Lanka in Complete Luxury?

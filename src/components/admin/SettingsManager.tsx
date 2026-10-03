@@ -73,16 +73,16 @@ export const SettingsManager = () => {
 
       <div className="flex flex-col md:flex-row gap-6">
         <div className="w-full md:w-64 shrink-0 space-y-1">
-          <button onClick={() => setActiveTab('general')} className={`w-full flex items-center gap-3 px-4 py-3 rounded-xl text-sm font-bold transition-colors ${activeTab === 'general' ? 'bg-emerald-50 dark:bg-[#073126]/30 text-[var(--primary-dark)] dark:text-emerald-400' : 'text-[var(--muted)] dark:text-[var(--muted)] hover:bg-[var(--background)] dark:hover:bg-slate-800/50'}`}>
+          <button onClick={() => setActiveTab('general')} className={`w-full flex items-center gap-3 px-4 py-3 rounded-xl text-sm font-bold transition-colors ${activeTab === 'general' ? 'bg-emerald-50 dark:bg-[#161412]/30 text-[var(--primary-dark)] dark:text-emerald-400' : 'text-[var(--muted)] dark:text-[var(--muted)] hover:bg-[var(--background)] dark:hover:bg-slate-800/50'}`}>
              <Globe className="w-4 h-4" /> General
           </button>
-          <button onClick={() => setActiveTab('security')} className={`w-full flex items-center gap-3 px-4 py-3 rounded-xl text-sm font-bold transition-colors ${activeTab === 'security' ? 'bg-emerald-50 dark:bg-[#073126]/30 text-[var(--primary-dark)] dark:text-emerald-400' : 'text-[var(--muted)] dark:text-[var(--muted)] hover:bg-[var(--background)] dark:hover:bg-slate-800/50'}`}>
+          <button onClick={() => setActiveTab('security')} className={`w-full flex items-center gap-3 px-4 py-3 rounded-xl text-sm font-bold transition-colors ${activeTab === 'security' ? 'bg-emerald-50 dark:bg-[#161412]/30 text-[var(--primary-dark)] dark:text-emerald-400' : 'text-[var(--muted)] dark:text-[var(--muted)] hover:bg-[var(--background)] dark:hover:bg-slate-800/50'}`}>
              <Shield className="w-4 h-4" /> Security & Roles
           </button>
-          <button onClick={() => setActiveTab('payments')} className={`w-full flex items-center gap-3 px-4 py-3 rounded-xl text-sm font-bold transition-colors ${activeTab === 'payments' ? 'bg-emerald-50 dark:bg-[#073126]/30 text-[var(--primary-dark)] dark:text-emerald-400' : 'text-[var(--muted)] dark:text-[var(--muted)] hover:bg-[var(--background)] dark:hover:bg-slate-800/50'}`}>
+          <button onClick={() => setActiveTab('payments')} className={`w-full flex items-center gap-3 px-4 py-3 rounded-xl text-sm font-bold transition-colors ${activeTab === 'payments' ? 'bg-emerald-50 dark:bg-[#161412]/30 text-[var(--primary-dark)] dark:text-emerald-400' : 'text-[var(--muted)] dark:text-[var(--muted)] hover:bg-[var(--background)] dark:hover:bg-slate-800/50'}`}>
              <CreditCard className="w-4 h-4" /> Payment Gateways
           </button>
-          <button onClick={() => setActiveTab('notifications')} className={`w-full flex items-center gap-3 px-4 py-3 rounded-xl text-sm font-bold transition-colors ${activeTab === 'notifications' ? 'bg-emerald-50 dark:bg-[#073126]/30 text-[var(--primary-dark)] dark:text-emerald-400' : 'text-[var(--muted)] dark:text-[var(--muted)] hover:bg-[var(--background)] dark:hover:bg-slate-800/50'}`}>
+          <button onClick={() => setActiveTab('notifications')} className={`w-full flex items-center gap-3 px-4 py-3 rounded-xl text-sm font-bold transition-colors ${activeTab === 'notifications' ? 'bg-emerald-50 dark:bg-[#161412]/30 text-[var(--primary-dark)] dark:text-emerald-400' : 'text-[var(--muted)] dark:text-[var(--muted)] hover:bg-[var(--background)] dark:hover:bg-slate-800/50'}`}>
              <Mail className="w-4 h-4" /> Email & Notifications
           </button>
         </div>

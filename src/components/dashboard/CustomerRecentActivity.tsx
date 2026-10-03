@@ -36,7 +36,7 @@ export const CustomerRecentActivity: React.FC<CustomerRecentActivityProps> = ({
       timestamp: b.created_at,
       icon: Calendar,
       color: 'text-emerald-700 dark:text-emerald-400',
-      bg: 'bg-emerald-50 dark:bg-[#031812]/60 border-emerald-100 dark:border-[var(--border-subtle)]',
+      bg: 'bg-emerald-50 dark:bg-[#0C0B0A]/60 border-emerald-100 dark:border-[var(--border-subtle)]',
     });
 
     // 2. Receipt upload / pending audit
@@ -63,7 +63,7 @@ export const CustomerRecentActivity: React.FC<CustomerRecentActivityProps> = ({
         timestamp: b.verified_at || b.created_at,
         icon: CheckCircle2,
         color: 'text-emerald-800 dark:text-emerald-300',
-        bg: 'bg-emerald-50 dark:bg-[#031812]/60 border-emerald-200 dark:border-[var(--border-subtle)]',
+        bg: 'bg-emerald-50 dark:bg-[#0C0B0A]/60 border-emerald-200 dark:border-[var(--border-subtle)]',
       });
     } else if (b.payment_status === 'Rejected') {
       items.push({
@@ -104,7 +104,7 @@ export const CustomerRecentActivity: React.FC<CustomerRecentActivityProps> = ({
         className="rounded-3xl bg-white dark:bg-[var(--surface)] border border-emerald-100/90 dark:border-[var(--border-subtle)] p-6 shadow-xs"
       >
         <div className="flex items-center gap-2.5 mb-4">
-          <div className="w-8 h-8 rounded-xl bg-emerald-100 dark:bg-[#073126]/50 text-emerald-700 dark:text-emerald-300 flex items-center justify-center">
+          <div className="w-8 h-8 rounded-xl bg-emerald-100 dark:bg-[#161412]/50 text-emerald-700 dark:text-emerald-300 flex items-center justify-center">
             <Activity className="w-4 h-4" />
           </div>
           <h3 className="text-base font-sans font-bold text-slate-900 dark:text-white">
@@ -125,7 +125,7 @@ export const CustomerRecentActivity: React.FC<CustomerRecentActivityProps> = ({
     >
       <div className="flex items-center justify-between pb-4 mb-4 border-b border-slate-100 dark:border-[var(--border-subtle)]">
         <div className="flex items-center gap-2.5">
-          <div className="w-8 h-8 rounded-xl bg-emerald-100 dark:bg-[#073126]/50 text-emerald-700 dark:text-emerald-300 flex items-center justify-center">
+          <div className="w-8 h-8 rounded-xl bg-emerald-100 dark:bg-[#161412]/50 text-emerald-700 dark:text-emerald-300 flex items-center justify-center">
             <Activity className="w-4 h-4" />
           </div>
           <div>

@@ -26,7 +26,7 @@ export const CustomerTravelProfileCard: React.FC = () => {
       >
         <div className="flex items-center justify-between pb-5 mb-5 border-b border-slate-100 dark:border-[var(--border-subtle)]">
           <div className="flex items-center gap-2.5">
-            <div className="w-8 h-8 rounded-xl bg-emerald-100 dark:bg-[#073126]/50 text-emerald-700 dark:text-emerald-300 flex items-center justify-center">
+            <div className="w-8 h-8 rounded-xl bg-emerald-100 dark:bg-[#161412]/50 text-emerald-700 dark:text-emerald-300 flex items-center justify-center">
               <User className="w-4 h-4" />
             </div>
             <div>

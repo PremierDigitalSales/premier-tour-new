@@ -60,7 +60,7 @@ export const HeroSearchEngine: React.FC = () => {
       {/* Animated glowing border effect (pseudo-element style structure) */}
       <div className="absolute inset-0 -z-20 rounded-[32px] overflow-hidden opacity-50 dark:opacity-80 transition-opacity duration-500 booking-card-wrapper pointer-events-none">
         <div className="absolute inset-[-50%] animate-[booking-border-glow_10s_linear_infinite]" 
-          style={{ background: 'conic-gradient(from 0deg, transparent 0%, rgba(16, 185, 129, 0.4) 25%, transparent 50%, rgba(16, 185, 129, 0.4) 75%, transparent 100%)' }} />
+          style={{ background: 'conic-gradient(from 0deg, transparent 0%, rgba(197,160,89, 0.4) 25%, transparent 50%, rgba(197,160,89, 0.4) 75%, transparent 100%)' }} />
       </div>
 
       {/* Main glass card surface */}
@@ -96,7 +96,7 @@ export const HeroSearchEngine: React.FC = () => {
                 {isActive && (
                   <motion.div
                     layoutId="activeTabBg"
-                    className="absolute inset-0 rounded-xl bg-gradient-to-r from-emerald-600 to-emerald-500 shadow-[0_4px_12px_rgba(16,185,129,0.35)]"
+                    className="absolute inset-0 rounded-xl bg-gradient-to-r from-emerald-600 to-emerald-500 shadow-[0_4px_12px_rgba(197,160,89,0.35)]"
                     initial={false}
                     transition={{ type: 'spring', stiffness: 400, damping: 30 }}
                   />
@@ -349,7 +349,7 @@ export const HeroSearchEngine: React.FC = () => {
 
           <button
             type="submit"
-            className="w-full mt-4 py-4 rounded-2xl text-[17px] font-bold text-white flex items-center justify-center gap-2 group transition-all duration-300 bg-gradient-to-r from-emerald-600 via-emerald-500 to-emerald-400 hover:from-emerald-500 hover:via-emerald-400 hover:to-emerald-300 shadow-[0_10px_20px_rgba(16,185,129,0.3)] hover:shadow-[0_15px_30px_rgba(16,185,129,0.4)] hover:-translate-y-0.5 active:translate-y-0 active:shadow-[0_5px_10px_rgba(16,185,129,0.3)] relative overflow-hidden cursor-pointer"
+            className="w-full mt-4 py-4 rounded-2xl text-[17px] font-bold text-white flex items-center justify-center gap-2 group transition-all duration-300 bg-gradient-to-r from-emerald-600 via-emerald-500 to-emerald-400 hover:from-emerald-500 hover:via-emerald-400 hover:to-emerald-300 shadow-[0_10px_20px_rgba(197,160,89,0.3)] hover:shadow-[0_15px_30px_rgba(197,160,89,0.4)] hover:-translate-y-0.5 active:translate-y-0 active:shadow-[0_5px_10px_rgba(197,160,89,0.3)] relative overflow-hidden cursor-pointer"
           >
             {/* Soft inner highlight for the button */}
             <div className="absolute inset-0 rounded-2xl opacity-40 bg-gradient-to-b from-white/30 to-transparent pointer-events-none" />

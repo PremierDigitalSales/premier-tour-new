@@ -126,7 +126,7 @@ export const TourPackageCard: React.FC<PackageCardProps> = ({
       style={{
         transitionDelay: isVisible ? `${delayMs}ms` : '0ms',
       }}
-      className={`group bg-[#FFFFFF] dark:bg-[#031812] border border-[#10B981]/18 dark:border-[#10B981]/20 rounded-2xl shadow-[0_10px_35px_rgba(16,185,129,0.10)] hover:shadow-[0_15px_45px_rgba(16,185,129,0.20)] dark:shadow-none hover:-translate-y-1 hover:border-[#10B981]/40 flex flex-col h-full overflow-hidden p-3 sm:p-3.5 select-none cursor-pointer duration-300 ease-out ${
+      className={`group bg-[#FFFFFF] dark:bg-[#161412] border border-[var(--card-border)] rounded-2xl shadow-[var(--card-shadow)] hover:shadow-[var(--card-shadow-hover)] hover:-translate-y-1.5 hover:border-[var(--border-hover)] flex flex-col h-full overflow-hidden p-3 sm:p-3.5 select-none cursor-pointer duration-300 ease-out ${
         isVisible 
           ? 'opacity-100 translate-y-0' 
           : 'opacity-0 translate-y-[18px]'
@@ -135,7 +135,7 @@ export const TourPackageCard: React.FC<PackageCardProps> = ({
       <Link to={linkTo} className="flex flex-col h-full justify-between focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald-500 rounded-[20px]">
         {/* Top Image Viewport Container */}
         <div>
-          <div className="relative aspect-[4/3] w-full rounded-[18px] overflow-hidden bg-[#F5FBF8] dark:bg-[#073126]">
+          <div className="relative aspect-[4/3] w-full rounded-[18px] overflow-hidden bg-[#F6F2EA] dark:bg-[#161412]">
             {/* Main Image with Smooth Natural Zoom */}
             <SafeImage
               src={imageUrl || (imageUrls && imageUrls[0]) || null}
@@ -149,8 +149,8 @@ export const TourPackageCard: React.FC<PackageCardProps> = ({
 
             {/* Top-Left: Category / Featured Pill */}
             <div className="absolute top-3 left-3 flex items-center gap-1.5 z-10">
-              <span className="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-[#10B981]/10 dark:bg-[#10B981]/20 backdrop-blur-sm border border-[#10B981]/20 dark:border-[#10B981]/30 text-[#087F5B] dark:text-[#34D399] font-extrabold text-[10px] sm:text-[11px] uppercase tracking-wider shadow-xs">
-                {featured && <Sparkles className="w-3 h-3 text-[#10B981] shrink-0" />}
+              <span className="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-[#C5A059]/10 dark:bg-[#C5A059]/20 backdrop-blur-sm border border-[#C5A059]/20 dark:border-[#C5A059]/30 text-[#6E5024] dark:text-[#D4B477] font-extrabold text-[10px] sm:text-[11px] uppercase tracking-wider shadow-xs">
+                {featured && <Sparkles className="w-3 h-3 text-[#C5A059] shrink-0" />}
                 <span className="truncate max-w-[150px] sm:max-w-[180px]">{badgeText || category}</span>
               </span>
             </div>
@@ -158,7 +158,7 @@ export const TourPackageCard: React.FC<PackageCardProps> = ({
             {/* Top-Right: Star Rating Pill & Wishlist Heart */}
             <div className="absolute top-3 right-3 flex items-center gap-1.5 z-10">
               {/* Rating Pill */}
-              <div className="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-white dark:bg-[#073126] border border-[#10B981]/20 dark:border-[#10B981]/30 text-[#12352A] dark:text-[#E8F5F0] text-xs font-bold shadow-xs">
+              <div className="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-white dark:bg-[#161412] border border-[#C5A059]/20 dark:border-[#C5A059]/30 text-[#1F1B16] dark:text-[#F1EBE0] text-xs font-bold shadow-xs">
                 <Star className="w-3.5 h-3.5 fill-amber-400 text-amber-400 shrink-0" />
                 <span>{rating.toFixed(1)}</span>
                 {reviewsCount > 0 && (
@@ -195,8 +195,8 @@ export const TourPackageCard: React.FC<PackageCardProps> = ({
               )}
 
               {availabilityText && (
-                <div className="inline-flex items-center gap-1 px-2 py-0.5 rounded-md bg-[#DDF7EA] dark:bg-[#0A3A2B] text-[#10B981] dark:text-[#34D399] text-[10px] font-semibold border border-[#10B981]/20">
-                  <span className="w-1.5 h-1.5 rounded-full bg-[#10B981] animate-pulse" />
+                <div className="inline-flex items-center gap-1 px-2 py-0.5 rounded-md bg-[#F6EEDC] dark:bg-[#221F1A] text-[#C5A059] dark:text-[#D4B477] text-[10px] font-semibold border border-[#C5A059]/20">
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#C5A059] animate-pulse" />
                   <span className="truncate">{availabilityText}</span>
                 </div>
               )}
@@ -210,14 +210,14 @@ export const TourPackageCard: React.FC<PackageCardProps> = ({
               <span>{t('common_expedition') || 'Sri Lanka Expedition'}</span>
               {duration && (
                 <span className="flex items-center gap-1 text-[var(--muted)] dark:text-[var(--muted)] font-medium normal-case">
-                  <Clock className="w-3 h-3 text-[#10B981]" />
+                  <Clock className="w-3 h-3 text-[#C5A059]" />
                   {typeof duration === 'number' ? `${duration} ${t('common_days') || 'Days'}` : duration}
                 </span>
               )}
             </div>
 
             {/* Package Title */}
-            <h3 className="font-sans font-bold text-[17px] sm:text-lg text-[#0c2e24] dark:text-white leading-snug line-clamp-2 min-h-[2.6rem] group-hover:text-emerald-700 dark:group-hover:text-emerald-400 transition-colors duration-200">
+            <h3 className="font-heading font-semibold text-[22px] sm:text-2xl text-[#1F1B16] dark:text-white leading-[1.15] line-clamp-2 min-h-[3.3rem] group-hover:text-emerald-700 dark:group-hover:text-emerald-400 transition-colors duration-200">
               {title}
             </h3>
 
@@ -227,7 +227,7 @@ export const TourPackageCard: React.FC<PackageCardProps> = ({
                 {highlights.slice(0, 2).map((item, index) => (
                   <span
                     key={index}
-                    className="inline-flex items-center gap-1 px-2 py-0.5 rounded-md bg-emerald-50 dark:bg-[#031812]/40 text-emerald-900 dark:text-[var(--text-secondary)] text-[11px] font-medium border border-emerald-100 dark:border-[var(--border-subtle)] truncate max-w-[200px]"
+                    className="inline-flex items-center gap-1 px-2 py-0.5 rounded-md bg-emerald-50 dark:bg-[#0C0B0A]/40 text-emerald-900 dark:text-[var(--text-secondary)] text-[11px] font-medium border border-emerald-100 dark:border-[var(--border-subtle)] truncate max-w-[200px]"
                   >
                     <span className="w-1 h-1 rounded-full bg-emerald-500 shrink-0" />
                     <span className="truncate">{item}</span>
@@ -245,16 +245,16 @@ export const TourPackageCard: React.FC<PackageCardProps> = ({
         </div>
 
         {/* Card Footer: Starting Price & Luxury Circle CTA */}
-        <div className="pt-3 px-1.5 mt-3 border-t border-[#10B981]/15 dark:border-[#10B981]/20 flex items-center justify-between">
+        <div className="pt-3 px-1.5 mt-3 border-t border-[#C5A059]/15 dark:border-[#C5A059]/20 flex items-center justify-between">
           <div className="flex flex-col">
-            <span className="text-[10px] uppercase font-bold tracking-widest text-[#648076] dark:text-[#8FA9A0] leading-none mb-0.5">
+            <span className="text-[10px] uppercase font-bold tracking-widest text-[#7D7468] dark:text-[#A39A8B] leading-none mb-0.5">
               {t('common_from') || 'From'}
             </span>
             <div className="flex items-baseline gap-1">
-              <span className="text-xl sm:text-2xl font-sans font-black text-[#12352A] dark:text-white tracking-tight">
+              <span className="text-2xl sm:text-[28px] font-heading font-semibold text-[#1F1B16] dark:text-white leading-none">
                 {formatPrice(price)}
               </span>
-              <span className="text-[11px] text-[#648076] dark:text-[#8FA9A0] font-medium">
+              <span className="text-[11px] text-[#7D7468] dark:text-[#A39A8B] font-medium">
                 /{priceUnit === 'guest' ? (t('common_guest') || 'guest') : priceUnit === 'night' ? (t('common_night') || 'night') : priceUnit}
               </span>
             </div>
@@ -263,7 +263,7 @@ export const TourPackageCard: React.FC<PackageCardProps> = ({
           {/* Action CTA Circle Button */}
           <div
             onClick={handleCtaClick}
-            className="w-10 h-10 rounded-full bg-[#10B981] flex items-center justify-center text-white shadow-[0_4px_14px_rgba(16,185,129,0.3)] transition-all duration-300 group-hover:scale-110 group-hover:bg-[#34D399] flex-shrink-0"
+            className="btn-circle-cta transition-all duration-300 group-hover:scale-110 group-hover:rotate-[-45deg]"
           >
             <ArrowRight className="w-4 h-4 stroke-[2.5] transition-transform duration-300 group-hover:translate-x-0.5" />
           </div>

@@ -7,6 +7,7 @@ interface LogoProps {
   showText?: boolean;
   to?: string;
   imgClassName?: string;
+  variant?: 'default' | 'light';
 }
 
 export const Logo: React.FC<LogoProps> = ({
@@ -15,7 +16,9 @@ export const Logo: React.FC<LogoProps> = ({
   showText = true,
   to = '/',
   imgClassName = '',
+  variant = 'default',
 }) => {
+  const isLight = variant === 'light';
   const logoSrc = 'https://res.cloudinary.com/o1pdinam/image/upload/v1787392236/logo.jpg';
 
   const getDimensions = () => {
@@ -66,20 +69,20 @@ export const Logo: React.FC<LogoProps> = ({
       </div>
       {showText && (
         <div className={`flex-col text-left select-none overflow-hidden shrink-0 ${size === 'responsive' ? 'hidden sm:flex' : 'flex'}`}>
-          <div className="flex items-center leading-none">
+          <div className="flex items-baseline leading-none">
             <span
-              className={`font-heading ${dims.title} font-bold tracking-tight text-[var(--text)] dark:text-white`}
+              className={`font-heading ${dims.title} font-semibold tracking-[0.04em] transition-colors ${isLight ? 'text-white' : 'text-[var(--text)] dark:text-white'}`}
             >
               Premier
             </span>
             <span
-              className={`font-heading ${dims.title} font-bold tracking-tight text-[var(--primary)] ml-1`}
+              className={`font-heading italic ${dims.title} font-medium tracking-[0.02em] ml-1.5 ${isLight ? 'text-[#E6CF9B]' : 'text-[var(--primary)]'}`}
             >
               Tours
             </span>
           </div>
           <span
-            className={`${dims.tagline} font-semibold uppercase tracking-widest text-[var(--muted)] mt-0.5 whitespace-nowrap truncate`}
+            className={`${dims.tagline} font-medium uppercase tracking-[0.28em] mt-1 whitespace-nowrap truncate transition-colors ${isLight ? 'text-white/70' : 'text-[var(--muted)]'}`}
           >
             DISCOVER THE WORLD, PERFECTED FOR YOU
           </span>

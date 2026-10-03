@@ -147,23 +147,23 @@ export const HotelPartnershipSlider: React.FC = () => {
   return (
     <div className="w-full max-w-[1320px] mx-auto px-4 sm:px-6 lg:px-8" onMouseEnter={() => setIsPaused(true)} onMouseLeave={() => setIsPaused(false)}>
       {/* Section Header */}
-      <div className="mb-10 text-center flex flex-col items-center">
-        <span className="text-[10px] uppercase tracking-widest font-bold text-[var(--primary)] dark:text-[var(--accent)] mb-2 block">
-          {t('hotels_badge') || 'FEATURED HOTEL ESCAPES'}
+      <div className="mb-14 text-center flex flex-col items-center">
+        <span className="lux-eyebrow lux-eyebrow-center mb-5">
+          {t('hotels_badge') || 'Featured Hotel Escapes'}
         </span>
-        <h2 className="font-heading text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-[var(--text)] dark:text-white leading-[1.1] mb-3">
+        <h2 className="font-heading text-[clamp(2.2rem,4vw,3.5rem)] font-medium text-[var(--text)] dark:text-white leading-[1.05] mb-4">
           {t('hotels_stay_somewhere') || 'Stay Somewhere Extraordinary'}
         </h2>
-        <p className="text-sm md:text-base text-slate-600 dark:text-[var(--muted)] font-medium max-w-xl mx-auto">
+        <p className="text-base md:text-lg text-[var(--muted)] font-light max-w-xl mx-auto">
           {t('hotels_discover_handpicked') || 'Discover handpicked hotels, resorts and luxury stays across Sri Lanka.'}
         </p>
       </div>
 
       {/* Featured Card Wrapper - Interactive Border */}
-      <div className="relative group rounded-[32px] md:rounded-[40px] p-[2px] bg-slate-200 dark:bg-[var(--surface)] shadow-[0_30px_80px_rgba(7,91,74,0.15)] mx-auto overflow-hidden">
+      <div className="relative group rounded-[32px] md:rounded-[40px] p-[2px] bg-slate-200 dark:bg-[var(--surface)] shadow-[0_30px_80px_rgba(60,45,20,0.15)] mx-auto overflow-hidden">
         
         {/* Animated Gradient Border Pseudo-element */}
-        <div className="absolute inset-0 bg-[linear-gradient(45deg,#DFF7EC,#55C99A,#169C72,#DFF7EC)] bg-[length:400%_400%] animate-gradient-border opacity-70 group-hover:opacity-100 transition-opacity duration-500 rounded-[32px] md:rounded-[40px] z-0 @media (prefers-reduced-motion: reduce) { animate-none }" />
+        <div className="absolute inset-0 bg-[linear-gradient(45deg,#F6EEDC,#CFAE6E,#A97F3E,#F6EEDC)] bg-[length:400%_400%] animate-gradient-border opacity-70 group-hover:opacity-100 transition-opacity duration-500 rounded-[32px] md:rounded-[40px] z-0 @media (prefers-reduced-motion: reduce) { animate-none }" />
         
         {/* Inner Card content container */}
         <div 
@@ -186,7 +186,7 @@ export const HotelPartnershipSlider: React.FC = () => {
                 className="w-full h-full object-cover"
               />
               {/* Subtle Cinematic Gradient for text readability */}
-              <div className="absolute inset-0 bg-gradient-to-t from-[rgba(5,35,25,0.85)] via-[rgba(5,35,25,0.2)] to-transparent pointer-events-none" />
+              <div className="absolute inset-0 bg-gradient-to-t from-[rgba(12,11,10,0.85)] via-[rgba(12,11,10,0.2)] to-transparent pointer-events-none" />
               
               {/* Wishlist Button */}
               <div className="absolute top-4 right-4 sm:top-6 sm:right-6 z-20">
@@ -243,7 +243,7 @@ export const HotelPartnershipSlider: React.FC = () => {
                 </div>
 
                 {/* Hotel Title & Location */}
-                <h3 className="font-heading text-2xl sm:text-3xl md:text-4xl text-white font-bold leading-tight drop-shadow-sm mb-1 line-clamp-2">
+                <h3 className="font-heading text-3xl sm:text-4xl md:text-5xl text-white font-medium leading-tight drop-shadow-sm mb-2 line-clamp-2">
                   {hotelName}
                 </h3>
                 
@@ -287,7 +287,7 @@ export const HotelPartnershipSlider: React.FC = () => {
                 )}
                 <button 
                   onClick={() => handleBookNow(currentHotel)}
-                  className="bg-[var(--primary)] hover:bg-[var(--primary-dark)] text-white px-5 sm:px-6 py-2.5 sm:py-3 rounded-full text-xs sm:text-sm font-bold flex items-center gap-2 group transition-all shadow-lg hover:shadow-xl hover:-translate-y-0.5"
+                  className="lux-btn-gold !px-6 !py-3 group"
                 >
                   {t('hotels_explore_stay') || 'Explore Stay'}
                   <ChevronRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
@@ -330,7 +330,7 @@ export const HotelPartnershipSlider: React.FC = () => {
               className={`transition-all duration-300 rounded-full ${
                 idx === currentIndex
                   ? 'w-6 h-1.5 bg-[var(--primary)] shadow-sm'
-                  : 'w-1.5 h-1.5 bg-emerald-200 dark:bg-[#073126]/50 hover:bg-emerald-300 dark:hover:bg-emerald-800'
+                  : 'w-1.5 h-1.5 bg-emerald-200 dark:bg-[#161412]/50 hover:bg-emerald-300 dark:hover:bg-emerald-800'
               }`}
               aria-label={`Go to slide ${idx + 1}`}
             />

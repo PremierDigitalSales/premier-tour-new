@@ -144,10 +144,10 @@ export const BookingManager: React.FC = () => {
       {/* Header */}
       <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
         <div>
-          <h1 className="text-2xl sm:text-3xl font-black text-[#10231D] dark:text-white">
+          <h1 className="text-2xl sm:text-3xl font-black text-[#1A1814] dark:text-white">
             Reservations & Bookings
           </h1>
-          <p className="text-sm text-[#71817B] dark:text-[#8FA9A0]">
+          <p className="text-sm text-[#857D70] dark:text-[#A39A8B]">
             Review bookings, verify bank payment slips, export financial audit data, and issue official e-vouchers.
           </p>
         </div>
@@ -155,7 +155,7 @@ export const BookingManager: React.FC = () => {
           <button
             onClick={handleExportCSV}
             disabled={filteredBookings.length === 0}
-            className="flex-1 sm:flex-none inline-flex items-center justify-center gap-2 px-4 py-2.5 bg-[#0F9D72] hover:bg-[#0B7D5A] disabled:opacity-50 text-white text-xs font-bold rounded-xl transition-all shadow-sm active:scale-95"
+            className="flex-1 sm:flex-none inline-flex items-center justify-center gap-2 px-4 py-2.5 bg-[#A97F3E] hover:bg-[#8A6530] disabled:opacity-50 text-white text-xs font-bold rounded-xl transition-all shadow-sm active:scale-95"
             title="Download CSV report of current view"
           >
             <Download className="w-4 h-4" />
@@ -163,7 +163,7 @@ export const BookingManager: React.FC = () => {
           </button>
           <button
             onClick={fetchBookings}
-            className="px-3 py-2.5 border border-[#DDEBE5] dark:border-[var(--border-subtle)] bg-white dark:bg-[var(--surface)] text-[#10231D] dark:text-white hover:bg-[#F2F8F5] dark:hover:bg-[#13372B]/50 text-xs font-bold rounded-xl flex items-center gap-1.5 transition-colors shadow-xs"
+            className="px-3 py-2.5 border border-[#E8E0D2] dark:border-[var(--border-subtle)] bg-white dark:bg-[var(--surface)] text-[#1A1814] dark:text-white hover:bg-[#F4EFE6] dark:hover:bg-[#211E19]/50 text-xs font-bold rounded-xl flex items-center gap-1.5 transition-colors shadow-xs"
             title="Refresh bookings data"
           >
             <RefreshCw className={`w-3.5 h-3.5 ${loading ? 'animate-spin' : ''}`} />
@@ -174,11 +174,11 @@ export const BookingManager: React.FC = () => {
 
       {/* Metrics Row */}
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-        <div className="bg-white dark:bg-[var(--surface)] p-5 rounded-2xl border border-[#DDEBE5] dark:border-[var(--border-subtle)] shadow-xs">
-          <span className="text-xs font-bold text-[#71817B] dark:text-[#8FA9A0] uppercase">Total Bookings</span>
+        <div className="bg-white dark:bg-[var(--surface)] p-5 rounded-2xl border border-[#E8E0D2] dark:border-[var(--border-subtle)] shadow-xs">
+          <span className="text-xs font-bold text-[#857D70] dark:text-[#A39A8B] uppercase">Total Bookings</span>
           <div className="flex items-center justify-between mt-2">
-            <span className="text-2xl font-black text-[#10231D] dark:text-white">{bookings.length}</span>
-            <CalendarCheck className="w-5 h-5 text-[#0F9D72] dark:text-[#39D39B]" />
+            <span className="text-2xl font-black text-[#1A1814] dark:text-white">{bookings.length}</span>
+            <CalendarCheck className="w-5 h-5 text-[#A97F3E] dark:text-[#D9BC7E]" />
           </div>
         </div>
 
@@ -190,25 +190,25 @@ export const BookingManager: React.FC = () => {
           </div>
         </div>
 
-        <div className="bg-white dark:bg-[var(--surface)] p-5 rounded-2xl border border-[#0F9D72]/30 dark:border-[#39D39B]/30 shadow-xs">
-          <span className="text-xs font-bold text-[#0F9D72] dark:text-[#39D39B] uppercase">Verified Revenue</span>
+        <div className="bg-white dark:bg-[var(--surface)] p-5 rounded-2xl border border-[#A97F3E]/30 dark:border-[#D9BC7E]/30 shadow-xs">
+          <span className="text-xs font-bold text-[#A97F3E] dark:text-[#D9BC7E] uppercase">Verified Revenue</span>
           <div className="flex items-center justify-between mt-2">
-            <span className="text-2xl font-black text-[#0F9D72] dark:text-[#39D39B]">${totalRevenue.toLocaleString()}</span>
-            <DollarSign className="w-5 h-5 text-[#0F9D72]" />
+            <span className="text-2xl font-black text-[#A97F3E] dark:text-[#D9BC7E]">${totalRevenue.toLocaleString()}</span>
+            <DollarSign className="w-5 h-5 text-[#A97F3E]" />
           </div>
         </div>
       </div>
 
       {/* Filter & Search Bar */}
-      <div className="bg-white dark:bg-[var(--surface)] p-4 rounded-2xl border border-[#DDEBE5] dark:border-[var(--border-subtle)] shadow-xs flex flex-col sm:flex-row gap-3">
+      <div className="bg-white dark:bg-[var(--surface)] p-4 rounded-2xl border border-[#E8E0D2] dark:border-[var(--border-subtle)] shadow-xs flex flex-col sm:flex-row gap-3">
         <div className="relative flex-1">
-          <Search className="w-4 h-4 text-[#71817B] absolute left-3.5 top-1/2 -translate-y-1/2" />
+          <Search className="w-4 h-4 text-[#857D70] absolute left-3.5 top-1/2 -translate-y-1/2" />
           <input
             type="text"
             placeholder="Search by customer name, email, booking ref, or tour..."
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
-            className="w-full bg-[#F2F8F5] dark:bg-[var(--surface)] border border-[#DDEBE5] dark:border-[var(--border-subtle)] rounded-xl py-2 pl-10 pr-4 text-xs font-medium text-[#10231D] dark:text-white placeholder:text-[#71817B] focus:outline-none focus:border-[#0F9D72]"
+            className="w-full bg-[#F4EFE6] dark:bg-[var(--surface)] border border-[#E8E0D2] dark:border-[var(--border-subtle)] rounded-xl py-2 pl-10 pr-4 text-xs font-medium text-[#1A1814] dark:text-white placeholder:text-[#857D70] focus:outline-none focus:border-[#A97F3E]"
           />
         </div>
 
@@ -219,8 +219,8 @@ export const BookingManager: React.FC = () => {
               onClick={() => setStatusFilter(status)}
               className={`px-3 py-2 rounded-xl text-xs font-bold transition-colors whitespace-nowrap ${
                 statusFilter === status
-                  ? 'bg-[#0F9D72] text-white'
-                  : 'bg-[#F2F8F5] dark:bg-[var(--surface)] text-[#33453F] dark:text-[#C8DDD5] hover:bg-[#DDEBE5] dark:hover:bg-[#13372B]'
+                  ? 'bg-[#A97F3E] text-white'
+                  : 'bg-[#F4EFE6] dark:bg-[var(--surface)] text-[#4A453D] dark:text-[#D9D2C5] hover:bg-[#E8E0D2] dark:hover:bg-[#211E19]'
               }`}
             >
               {status}
@@ -230,22 +230,22 @@ export const BookingManager: React.FC = () => {
       </div>
 
       {/* Bookings List / Table */}
-      <div className="bg-white dark:bg-[var(--surface)] rounded-2xl border border-[#DDEBE5] dark:border-[var(--border-subtle)] overflow-hidden shadow-xs">
+      <div className="bg-white dark:bg-[var(--surface)] rounded-2xl border border-[#E8E0D2] dark:border-[var(--border-subtle)] overflow-hidden shadow-xs">
         {loading ? (
-          <div className="p-12 text-center text-xs font-semibold text-[#71817B] dark:text-[#8FA9A0]">
+          <div className="p-12 text-center text-xs font-semibold text-[#857D70] dark:text-[#A39A8B]">
             Loading reservations...
           </div>
         ) : filteredBookings.length === 0 ? (
           <div className="p-12 text-center">
-            <CalendarCheck className="w-10 h-10 text-[#71817B] mx-auto mb-3 opacity-40" />
-            <h3 className="text-base font-bold text-[#10231D] dark:text-white mb-1">No bookings match your filter</h3>
-            <p className="text-xs text-[#71817B] dark:text-[#8FA9A0]">Try searching for a different keyword or reset the status filter.</p>
+            <CalendarCheck className="w-10 h-10 text-[#857D70] mx-auto mb-3 opacity-40" />
+            <h3 className="text-base font-bold text-[#1A1814] dark:text-white mb-1">No bookings match your filter</h3>
+            <p className="text-xs text-[#857D70] dark:text-[#A39A8B]">Try searching for a different keyword or reset the status filter.</p>
           </div>
         ) : (
           <div className="overflow-x-auto">
             <table className="w-full text-left border-collapse min-w-[700px]">
               <thead>
-                <tr className="bg-[#F8FCFA] dark:bg-[var(--surface)] text-[#71817B] dark:text-[#8FA9A0] text-[11px] uppercase tracking-wider border-b border-[#DDEBE5] dark:border-[var(--border-subtle)]">
+                <tr className="bg-[#FAF7F2] dark:bg-[var(--surface)] text-[#857D70] dark:text-[#A39A8B] text-[11px] uppercase tracking-wider border-b border-[#E8E0D2] dark:border-[var(--border-subtle)]">
                   <th className="p-4 font-bold">Booking Details</th>
                   <th className="p-4 font-bold">Customer</th>
                   <th className="p-4 font-bold">Amount</th>
@@ -254,44 +254,44 @@ export const BookingManager: React.FC = () => {
                   <th className="p-4 font-bold text-right">Actions</th>
                 </tr>
               </thead>
-              <tbody className="divide-y divide-[#DDEBE5] dark:divide-[rgba(73,201,151,0.1)]">
+              <tbody className="divide-y divide-[#E8E0D2] dark:divide-[rgba(212,180,119,0.1)]">
                 {filteredBookings.map((b) => (
-                  <tr key={b.id} className="hover:bg-[#F2F8F5]/60 dark:hover:bg-[#13372B]/30 transition-colors">
+                  <tr key={b.id} className="hover:bg-[#F4EFE6]/60 dark:hover:bg-[#211E19]/30 transition-colors">
                     <td className="p-4">
-                      <div className="font-bold text-xs text-[#10231D] dark:text-white">{b.service_name || 'Expedition Booking'}</div>
-                      <div className="text-[11px] text-[#71817B] dark:text-[#8FA9A0] mt-0.5">
-                        Ref: <span className="font-mono text-[#0F9D72] dark:text-[#39D39B]">{b.id}</span>
+                      <div className="font-bold text-xs text-[#1A1814] dark:text-white">{b.service_name || 'Expedition Booking'}</div>
+                      <div className="text-[11px] text-[#857D70] dark:text-[#A39A8B] mt-0.5">
+                        Ref: <span className="font-mono text-[#A97F3E] dark:text-[#D9BC7E]">{b.id}</span>
                       </div>
-                      <div className="text-[11px] text-[#71817B] dark:text-[#8FA9A0]">
+                      <div className="text-[11px] text-[#857D70] dark:text-[#A39A8B]">
                         {new Date(b.created_at).toLocaleDateString()} • {b.service_type || 'Tour'}
                       </div>
                     </td>
 
                     <td className="p-4">
-                      <div className="text-xs font-bold text-[#10231D] dark:text-white flex items-center gap-1.5">
-                        <User className="w-3.5 h-3.5 text-[#0F9D72]" />
+                      <div className="text-xs font-bold text-[#1A1814] dark:text-white flex items-center gap-1.5">
+                        <User className="w-3.5 h-3.5 text-[#A97F3E]" />
                         {b.customer_name || 'Traveler'}
                       </div>
-                      <div className="text-[11px] text-[#71817B] dark:text-[#8FA9A0] flex items-center gap-1.5 mt-0.5">
+                      <div className="text-[11px] text-[#857D70] dark:text-[#A39A8B] flex items-center gap-1.5 mt-0.5">
                         <Mail className="w-3.5 h-3.5" />
                         {b.customer_email || 'No email provided'}
                       </div>
                       {b.customer_phone && (
-                        <div className="text-[11px] text-[#71817B] dark:text-[#8FA9A0] flex items-center gap-1.5 mt-0.5">
+                        <div className="text-[11px] text-[#857D70] dark:text-[#A39A8B] flex items-center gap-1.5 mt-0.5">
                           <Phone className="w-3.5 h-3.5" />
                           {b.customer_phone}
                         </div>
                       )}
                     </td>
 
-                    <td className="p-4 font-bold text-xs text-[#10231D] dark:text-white">
+                    <td className="p-4 font-bold text-xs text-[#1A1814] dark:text-white">
                       ${Number(b.total_amount || b.total_price || 0).toLocaleString()}
                     </td>
 
                     <td className="p-4">
                       <span className={`inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-[11px] font-bold ${
                         b.payment_status === 'Verified'
-                          ? 'bg-emerald-100 dark:bg-[var(--background)] text-[#0F9D72] dark:text-[#39D39B] border border-emerald-300 dark:border-[var(--border-subtle)]'
+                          ? 'bg-emerald-100 dark:bg-[var(--background)] text-[#A97F3E] dark:text-[#D9BC7E] border border-emerald-300 dark:border-[var(--border-subtle)]'
                           : b.payment_status === 'Rejected'
                           ? 'bg-rose-100 dark:bg-rose-950 text-rose-600 dark:text-rose-400 border border-rose-300'
                           : 'bg-amber-100 dark:bg-amber-950 text-amber-700 dark:text-amber-400 border border-amber-300'
@@ -309,12 +309,12 @@ export const BookingManager: React.FC = () => {
                           href={b.receipt_url}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="inline-flex items-center gap-1 text-xs font-bold text-[#0F9D72] dark:text-[#39D39B] hover:underline"
+                          className="inline-flex items-center gap-1 text-xs font-bold text-[#A97F3E] dark:text-[#D9BC7E] hover:underline"
                         >
                           <FileText className="w-3.5 h-3.5" /> View Slip
                         </a>
                       ) : (
-                        <span className="text-[11px] text-[#71817B] dark:text-[#8FA9A0] italic">No slip attached</span>
+                        <span className="text-[11px] text-[#857D70] dark:text-[#A39A8B] italic">No slip attached</span>
                       )}
                     </td>
 
@@ -323,7 +323,7 @@ export const BookingManager: React.FC = () => {
                         <button
                           onClick={() => setSelectedVoucher(b)}
                           title="Preview e-Voucher"
-                          className="p-1.5 rounded-lg bg-[#F2F8F5] dark:bg-[var(--surface)] hover:bg-[#DDEBE5] text-[#33453F] dark:text-white"
+                          className="p-1.5 rounded-lg bg-[#F4EFE6] dark:bg-[var(--surface)] hover:bg-[#E8E0D2] text-[#4A453D] dark:text-white"
                         >
                           <Eye className="w-4 h-4" />
                         </button>
@@ -333,7 +333,7 @@ export const BookingManager: React.FC = () => {
                             onClick={() => handleUpdateStatus(b.id, 'Verified', 'CONFIRMED')}
                             disabled={actionLoading === b.id}
                             title="Verify Bank Payment"
-                            className="px-2.5 py-1 rounded-lg bg-[#0F9D72] hover:bg-[#087A5A] text-white text-[11px] font-bold transition-colors disabled:opacity-50"
+                            className="px-2.5 py-1 rounded-lg bg-[#A97F3E] hover:bg-[#8A6530] text-white text-[11px] font-bold transition-colors disabled:opacity-50"
                           >
                             Verify
                           </button>

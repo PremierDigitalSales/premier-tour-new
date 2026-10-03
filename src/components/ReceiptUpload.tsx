@@ -166,7 +166,7 @@ export const ReceiptUpload: React.FC<ReceiptUploadProps> = ({
             Submit your deposit slip for quick booking confirmation
           </p>
         </div>
-        <span className="text-[11px] font-mono px-2.5 py-1 bg-emerald-50 dark:bg-[#031812]/60 text-emerald-700 dark:text-emerald-300 border border-emerald-200/80 dark:border-[var(--border-subtle)] rounded-lg">
+        <span className="text-[11px] font-mono px-2.5 py-1 bg-emerald-50 dark:bg-[#0C0B0A]/60 text-emerald-700 dark:text-emerald-300 border border-emerald-200/80 dark:border-[var(--border-subtle)] rounded-lg">
           Booking: #{bookingId}
         </span>
       </div>
@@ -188,10 +188,10 @@ export const ReceiptUpload: React.FC<ReceiptUploadProps> = ({
         onClick={() => fileInputRef.current?.click()}
         className={`border-2 border-dashed rounded-xl p-6 text-center cursor-pointer transition-all duration-200 ${
           isDragging
-            ? 'border-[var(--primary)] bg-emerald-50/50 dark:bg-[#031812]/30 scale-[0.99]'
+            ? 'border-[var(--primary)] bg-emerald-50/50 dark:bg-[#0C0B0A]/30 scale-[0.99]'
             : previewUrl
-            ? 'border-emerald-300 dark:border-emerald-700 bg-emerald-50/30 dark:bg-[#031812]/20'
-            : 'border-slate-300 dark:border-[var(--border-subtle)] hover:border-emerald-400 dark:hover:border-[var(--primary)] bg-[var(--background)]/60 dark:bg-[#073126]/40 hover:bg-[var(--background)] dark:hover:bg-slate-800/70'
+            ? 'border-emerald-300 dark:border-emerald-700 bg-emerald-50/30 dark:bg-[#0C0B0A]/20'
+            : 'border-slate-300 dark:border-[var(--border-subtle)] hover:border-emerald-400 dark:hover:border-[var(--primary)] bg-[var(--background)]/60 dark:bg-[#161412]/40 hover:bg-[var(--background)] dark:hover:bg-slate-800/70'
         }`}
       >
         {previewUrl ? (
@@ -215,7 +215,7 @@ export const ReceiptUpload: React.FC<ReceiptUploadProps> = ({
           </div>
         ) : (
           <div className="flex flex-col items-center">
-            <div className="w-12 h-12 bg-emerald-50 dark:bg-[#031812]/60 text-[var(--primary-dark)] dark:text-emerald-400 rounded-full flex items-center justify-center mb-3 border border-emerald-100 dark:border-[var(--border-subtle)]">
+            <div className="w-12 h-12 bg-emerald-50 dark:bg-[#0C0B0A]/60 text-[var(--primary-dark)] dark:text-emerald-400 rounded-full flex items-center justify-center mb-3 border border-emerald-100 dark:border-[var(--border-subtle)]">
               <UploadCloud className="w-6 h-6" />
             </div>
             <p className="text-sm font-medium text-[var(--text)] dark:text-[var(--text)] mb-1">
@@ -236,7 +236,7 @@ export const ReceiptUpload: React.FC<ReceiptUploadProps> = ({
       )}
 
       {uploadSuccess && (
-        <div className="mt-3 p-3 bg-emerald-50 dark:bg-[#031812]/50 border border-emerald-200 dark:border-[var(--border-subtle)] rounded-xl flex items-center gap-2 text-xs text-emerald-800 dark:text-[var(--text-secondary)] font-medium">
+        <div className="mt-3 p-3 bg-emerald-50 dark:bg-[#0C0B0A]/50 border border-emerald-200 dark:border-[var(--border-subtle)] rounded-xl flex items-center gap-2 text-xs text-emerald-800 dark:text-[var(--text-secondary)] font-medium">
           <CheckCircle2 className="w-4 h-4 text-[var(--primary-dark)] shrink-0" />
           <span>Transfer receipt uploaded successfully! Our booking team will review and confirm your reservation within 1-2 hours.</span>
         </div>

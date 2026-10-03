@@ -75,7 +75,7 @@ export const CustomerQuickActions: React.FC = () => {
                 to={action.to}
                 className="group flex flex-col p-4 rounded-2xl bg-white dark:bg-[var(--surface)] border border-emerald-100/80 dark:border-[var(--border-subtle)] hover:border-emerald-300 dark:hover:border-emerald-600 shadow-2xs hover:shadow-md transition-all duration-300 hover:-translate-y-1 text-left h-full"
               >
-                <div className="w-10 h-10 rounded-xl bg-emerald-50 dark:bg-[#031812]/60 text-emerald-700 dark:text-emerald-300 border border-emerald-100 dark:border-[var(--border-subtle)] flex items-center justify-center mb-3 group-hover:scale-108 transition-transform">
+                <div className="w-10 h-10 rounded-xl bg-emerald-50 dark:bg-[#0C0B0A]/60 text-emerald-700 dark:text-emerald-300 border border-emerald-100 dark:border-[var(--border-subtle)] flex items-center justify-center mb-3 group-hover:scale-108 transition-transform">
                   <IconComponent className="w-5 h-5" />
                 </div>
                 <h4 className="text-xs sm:text-sm font-bold text-slate-900 dark:text-white group-hover:text-emerald-700 dark:group-hover:text-emerald-300 transition-colors">

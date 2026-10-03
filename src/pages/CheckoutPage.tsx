@@ -167,11 +167,11 @@ export const CheckoutPage: React.FC = () => {
       case 'car':
         return { label: 'Chauffeur Fleet', icon: CarIcon, color: 'text-amber-700 dark:text-amber-300 bg-amber-50 dark:bg-amber-950/40 border-amber-200 dark:border-amber-800' };
       case 'flight':
-        return { label: 'Aviation Charter', icon: Plane, color: 'text-emerald-700 dark:text-emerald-300 bg-emerald-50 dark:bg-[#031812]/40 border-emerald-200 dark:border-[var(--border-subtle)]' };
+        return { label: 'Aviation Charter', icon: Plane, color: 'text-emerald-700 dark:text-emerald-300 bg-emerald-50 dark:bg-[#0C0B0A]/40 border-emerald-200 dark:border-[var(--border-subtle)]' };
       case 'hotel':
-        return { label: '5-Star Sanctuary', icon: HotelIcon, color: 'text-emerald-700 dark:text-emerald-300 bg-emerald-50 dark:bg-[#031812]/40 border-emerald-200 dark:border-[var(--border-subtle)]' };
+        return { label: '5-Star Sanctuary', icon: HotelIcon, color: 'text-emerald-700 dark:text-emerald-300 bg-emerald-50 dark:bg-[#0C0B0A]/40 border-emerald-200 dark:border-[var(--border-subtle)]' };
       default:
-        return { label: 'Luxury Expedition', icon: Compass, color: 'text-emerald-700 dark:text-emerald-300 bg-emerald-50 dark:bg-[#031812]/40 border-emerald-200 dark:border-[var(--border-subtle)]' };
+        return { label: 'Luxury Expedition', icon: Compass, color: 'text-emerald-700 dark:text-emerald-300 bg-emerald-50 dark:bg-[#0C0B0A]/40 border-emerald-200 dark:border-[var(--border-subtle)]' };
     }
   };
 
@@ -238,14 +238,14 @@ export const CheckoutPage: React.FC = () => {
             </span>
             <span>{t('checkout_step_1') || 'Review Details & Confirm'}</span>
           </div>
-          <span className="text-slate-300 dark:text-[#104D39]">&rarr;</span>
+          <span className="text-slate-300 dark:text-[#2C2720]">&rarr;</span>
           <div className={`flex items-center gap-2 ${createdBooking ? 'text-emerald-700 dark:text-emerald-400 font-bold' : 'text-slate-400'}`}>
             <span className={`w-6 h-6 rounded-full flex items-center justify-center text-xs ${createdBooking ? 'bg-emerald-50 dark:bg-[var(--background)] text-emerald-700 dark:text-emerald-300 border border-emerald-200 dark:border-[var(--border-subtle)]' : 'bg-slate-100 dark:bg-[var(--surface)] text-[var(--muted)]'}`}>
               2
             </span>
             <span>{t('checkout_step_2') || 'Upload Payment Receipt'}</span>
           </div>
-          <span className="text-slate-300 dark:text-[#104D39]">&rarr;</span>
+          <span className="text-slate-300 dark:text-[#2C2720]">&rarr;</span>
           <div className="flex items-center gap-2 text-slate-400">
             <span className="w-6 h-6 rounded-full bg-slate-100 dark:bg-[var(--surface)] text-[var(--muted)] flex items-center justify-center text-xs">
               3
@@ -258,7 +258,7 @@ export const CheckoutPage: React.FC = () => {
         {createdBooking ? (
           <div className="max-w-3xl mx-auto space-y-8">
             {/* Success Notification */}
-            <div className="bg-emerald-50 dark:bg-[#031812]/50 border border-emerald-200 dark:border-emerald-800/40 rounded-2xl package-glow-card p-6 shadow-sm">
+            <div className="bg-emerald-50 dark:bg-[#0C0B0A]/50 border border-emerald-200 dark:border-emerald-800/40 rounded-2xl package-glow-card p-6 shadow-sm">
               <div className="flex items-start gap-4">
                 <div className="w-10 h-10 rounded-full bg-emerald-100 dark:bg-[var(--surface)] text-emerald-700 dark:text-emerald-300 flex items-center justify-center shrink-0">
                   <CheckCircle2 className="w-6 h-6" />
@@ -364,7 +364,7 @@ export const CheckoutPage: React.FC = () => {
                       type="text"
                       disabled
                       value={bookingDate}
-                      className="w-full p-2.5 bg-slate-100 dark:bg-[#073126]/50 text-[var(--muted)] dark:text-[var(--muted)] border border-slate-300 dark:border-[var(--border-subtle)] rounded-xl cursor-not-allowed"
+                      className="w-full p-2.5 bg-slate-100 dark:bg-[#161412]/50 text-[var(--muted)] dark:text-[var(--muted)] border border-slate-300 dark:border-[var(--border-subtle)] rounded-xl cursor-not-allowed"
                     />
                   </div>
                 </div>

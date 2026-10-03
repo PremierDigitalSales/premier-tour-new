@@ -136,11 +136,11 @@ export const BlogPage: React.FC = () => {
         {/* 2. CURATED EXPERIENCES */}
         <section>
           <div className="text-center mb-12">
-            <span className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-emerald-50 dark:bg-[#031812]/50 border border-emerald-200/70 dark:border-[var(--border-subtle)] text-emerald-800 dark:text-emerald-300 text-xs font-bold tracking-widest uppercase mb-3 shadow-xs">
+            <span className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-emerald-50 dark:bg-[#0C0B0A]/50 border border-emerald-200/70 dark:border-[var(--border-subtle)] text-emerald-800 dark:text-emerald-300 text-xs font-bold tracking-widest uppercase mb-3 shadow-xs">
               <Sparkles className="w-3.5 h-3.5 text-emerald-600 dark:text-emerald-400" />
               Curated Experiences
             </span>
-            <h2 className="text-3xl sm:text-4xl font-sans font-bold text-[#10231D] dark:text-white mb-3">Find Your Sri Lankan Story</h2>
+            <h2 className="text-3xl sm:text-4xl font-sans font-bold text-[#1A1814] dark:text-white mb-3">Find Your Sri Lankan Story</h2>
             <p className="text-[var(--muted)] dark:text-[var(--muted)] max-w-xl mx-auto text-sm sm:text-base">Explore Sri Lanka through experiences designed for every kind of traveler.</p>
           </div>
 
@@ -155,11 +155,11 @@ export const BlogPage: React.FC = () => {
                 className="group relative h-72 rounded-[24px] overflow-hidden cursor-pointer bg-white dark:bg-[var(--surface)] border border-emerald-500/18 dark:border-emerald-500/25 shadow-md shadow-emerald-900/5 hover:shadow-xl hover:shadow-emerald-500/15 hover:border-emerald-500/40 hover:-translate-y-1.5 transition-all duration-300"
               >
                 <SafeImage src={exp.image} alt={exp.title} className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-106" />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#061510]/90 via-[#061510]/30 to-transparent"></div>
+                <div className="absolute inset-0 bg-gradient-to-t from-[#0E0D0B]/90 via-[#0E0D0B]/30 to-transparent"></div>
                 <div className="absolute inset-0 p-6 flex flex-col justify-end">
                   <h3 className="text-white text-xl font-sans font-bold mb-1 group-hover:text-emerald-300 transition-colors">{exp.title}</h3>
                   <p className="text-slate-200 text-xs mb-4 opacity-90 leading-relaxed">{exp.desc}</p>
-                  <div className="w-9 h-9 rounded-full bg-white/20 dark:bg-[#031812]/50 backdrop-blur-md border border-white/30 dark:border-emerald-400/30 flex items-center justify-center transform group-hover:translate-x-1.5 group-hover:bg-emerald-500 transition-all">
+                  <div className="w-9 h-9 rounded-full bg-white/20 dark:bg-[#0C0B0A]/50 backdrop-blur-md border border-white/30 dark:border-emerald-400/30 flex items-center justify-center transform group-hover:translate-x-1.5 group-hover:bg-emerald-500 transition-all">
                     <ArrowRight className="w-4 h-4 text-white" />
                   </div>
                 </div>
@@ -177,13 +177,13 @@ export const BlogPage: React.FC = () => {
               <div className="lg:w-2/3">
                 <div className="flex items-center gap-2 mb-6">
                   <span className="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse" />
-                  <h2 className="text-2xl font-sans font-bold text-[#10231D] dark:text-white">Editor's Choice</h2>
+                  <h2 className="text-2xl font-sans font-bold text-[#1A1814] dark:text-white">Editor's Choice</h2>
                 </div>
                 
                 <Link to={`/blog/${featuredPost.slug}`} className="block group relative rounded-[28px] overflow-hidden bg-white dark:bg-[var(--surface)] border border-emerald-500/20 dark:border-emerald-500/25 shadow-lg shadow-emerald-900/5 hover:shadow-2xl hover:shadow-emerald-500/15 hover:border-emerald-500/45 hover:-translate-y-1.5 transition-all duration-400">
                   <div className="h-64 sm:h-80 md:h-[380px] overflow-hidden relative">
                     <SafeImage src={featuredPost.cover_image} alt={featuredPost.title} className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-104" />
-                    <div className="absolute top-4 left-4 bg-white/95 dark:bg-[#031812]/90 backdrop-blur-md px-3.5 py-1.5 rounded-full text-xs font-extrabold text-emerald-800 dark:text-emerald-300 border border-emerald-200/80 dark:border-emerald-500/30 shadow-xs uppercase tracking-wider">
+                    <div className="absolute top-4 left-4 bg-white/95 dark:bg-[#0C0B0A]/90 backdrop-blur-md px-3.5 py-1.5 rounded-full text-xs font-extrabold text-emerald-800 dark:text-emerald-300 border border-emerald-200/80 dark:border-emerald-500/30 shadow-xs uppercase tracking-wider">
                       {featuredPost.category}
                     </div>
                   </div>
@@ -195,7 +195,7 @@ export const BlogPage: React.FC = () => {
                       <span>•</span>
                       <span>{new Date(featuredPost.published_at || '').toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })}</span>
                     </div>
-                    <h3 className="text-2xl md:text-3xl font-sans font-bold text-[#10231D] dark:text-white leading-tight mb-4 group-hover:text-[#0F9D72] dark:group-hover:text-[#39D39B] transition-colors">
+                    <h3 className="text-2xl md:text-3xl font-sans font-bold text-[#1A1814] dark:text-white leading-tight mb-4 group-hover:text-[#A97F3E] dark:group-hover:text-[#D9BC7E] transition-colors">
                       {featuredPost.title}
                     </h3>
                     <p className="text-[var(--muted)] dark:text-[var(--muted)] mb-8 line-clamp-2 md:line-clamp-3 leading-relaxed text-sm sm:text-base">
@@ -205,7 +205,7 @@ export const BlogPage: React.FC = () => {
                       <div className="flex items-center gap-3">
                         <SafeImage src={featuredPost.author.avatar} alt={featuredPost.author.name} className="w-10 h-10 rounded-full object-cover border-2 border-emerald-200 dark:border-[var(--border-subtle)]" />
                         <div>
-                          <p className="text-xs font-bold text-[#10231D] dark:text-white">{featuredPost.author.name}</p>
+                          <p className="text-xs font-bold text-[#1A1814] dark:text-white">{featuredPost.author.name}</p>
                           <p className="text-[10px] text-[var(--muted)] dark:text-[var(--muted)]">{featuredPost.author.role}</p>
                         </div>
                       </div>
@@ -221,7 +221,7 @@ export const BlogPage: React.FC = () => {
               <div className="lg:w-1/3 flex flex-col">
                 <div className="mb-6 flex items-center gap-2">
                   <Sparkles className="w-4 h-4 text-emerald-600 dark:text-emerald-400" />
-                  <h2 className="text-2xl font-sans font-bold text-[#10231D] dark:text-white">Trending Now</h2>
+                  <h2 className="text-2xl font-sans font-bold text-[#1A1814] dark:text-white">Trending Now</h2>
                 </div>
                 
                 <div className="flex flex-col gap-4">
@@ -232,7 +232,7 @@ export const BlogPage: React.FC = () => {
                       </div>
                       <div className="flex-1 min-w-0">
                         <span className="text-[10px] font-bold tracking-wider text-emerald-700 dark:text-emerald-400 uppercase mb-1 block">{post.category}</span>
-                        <h4 className="text-sm font-bold text-[#10231D] dark:text-white mb-2 leading-snug group-hover:text-[#0F9D72] dark:group-hover:text-[#39D39B] transition-colors line-clamp-2">
+                        <h4 className="text-sm font-bold text-[#1A1814] dark:text-white mb-2 leading-snug group-hover:text-[#A97F3E] dark:group-hover:text-[#D9BC7E] transition-colors line-clamp-2">
                           {post.title}
                         </h4>
                         <div className="flex items-center gap-1.5 text-[11px] text-[var(--muted)] dark:text-[var(--muted)] font-medium">
@@ -255,7 +255,7 @@ export const BlogPage: React.FC = () => {
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-8">
             <div>
               <div className="flex items-center gap-2 mb-2 flex-wrap">
-                <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-50 dark:bg-[#031812]/50 border border-emerald-200/70 dark:border-[var(--border-subtle)] text-emerald-800 dark:text-emerald-300 text-xs font-bold tracking-widest uppercase shadow-xs">
+                <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-50 dark:bg-[#0C0B0A]/50 border border-emerald-200/70 dark:border-[var(--border-subtle)] text-emerald-800 dark:text-emerald-300 text-xs font-bold tracking-widest uppercase shadow-xs">
                   The Journal
                 </span>
                 {selectedDestination && (
@@ -272,7 +272,7 @@ export const BlogPage: React.FC = () => {
                   </span>
                 )}
               </div>
-              <h2 className="text-3xl sm:text-4xl font-sans font-bold text-[#10231D] dark:text-white mb-2">Latest Travel Stories</h2>
+              <h2 className="text-3xl sm:text-4xl font-sans font-bold text-[#1A1814] dark:text-white mb-2">Latest Travel Stories</h2>
               <p className="text-[var(--muted)] dark:text-[var(--muted)] text-sm sm:text-base">
                 {selectedDestination 
                   ? `Showing curated guides and stories for ${selectedDestination}.`
@@ -289,7 +289,7 @@ export const BlogPage: React.FC = () => {
                   placeholder="Search stories, places..."
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
-                  className="pl-11 pr-4 py-2.5 rounded-full bg-white dark:bg-[var(--surface)] border border-emerald-500/20 dark:border-emerald-500/25 text-sm text-[#10231D] dark:text-white placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-emerald-500/30 focus:border-emerald-500 w-full sm:w-72 shadow-xs transition-all"
+                  className="pl-11 pr-4 py-2.5 rounded-full bg-white dark:bg-[var(--surface)] border border-emerald-500/20 dark:border-emerald-500/25 text-sm text-[#1A1814] dark:text-white placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-emerald-500/30 focus:border-emerald-500 w-full sm:w-72 shadow-xs transition-all"
                 />
               </div>
             </div>
@@ -303,8 +303,8 @@ export const BlogPage: React.FC = () => {
                 onClick={() => setSelectedCategory(cat)}
                 className={`px-5 py-2 rounded-full text-xs font-bold transition-all duration-200 whitespace-nowrap cursor-pointer shadow-xs border ${
                   selectedCategory === cat
-                    ? 'bg-[#0F9D72] text-white border-[#0F9D72] shadow-sm shadow-emerald-500/20'
-                    : 'bg-white dark:bg-[var(--surface)] text-[#33453F] dark:text-[var(--text-secondary)] border-emerald-500/18 dark:border-emerald-500/25 hover:border-emerald-500/50 hover:text-[#0F9D72] dark:hover:text-[#39D39B] hover:bg-emerald-50/40'
+                    ? 'bg-[#A97F3E] text-white border-[#A97F3E] shadow-sm shadow-emerald-500/20'
+                    : 'bg-white dark:bg-[var(--surface)] text-[#4A453D] dark:text-[var(--text-secondary)] border-emerald-500/18 dark:border-emerald-500/25 hover:border-emerald-500/50 hover:text-[#A97F3E] dark:hover:text-[#D9BC7E] hover:bg-emerald-50/40'
                 }`}
               >
                 {cat}
@@ -322,7 +322,7 @@ export const BlogPage: React.FC = () => {
           ) : filteredPosts.length === 0 ? (
             <div className="bg-white dark:bg-[var(--surface)] rounded-[24px] p-12 sm:p-16 text-center border border-emerald-500/20 shadow-sm flex flex-col items-center justify-center">
               <BookOpen className="w-12 h-12 text-emerald-400/60 mx-auto mb-4" />
-              <h3 className="text-lg font-sans font-bold text-[#10231D] dark:text-white mb-2">
+              <h3 className="text-lg font-sans font-bold text-[#1A1814] dark:text-white mb-2">
                 {selectedDestination 
                   ? (t('map_no_stories') || 'No stories available for this destination yet.')
                   : 'No stories found'}
@@ -362,7 +362,7 @@ export const BlogPage: React.FC = () => {
                     
                     {/* Top-Left Category Badge */}
                     <div className="absolute top-3 left-3 z-10">
-                      <span className="inline-flex items-center px-3 py-1 rounded-full bg-white/95 dark:bg-[#031812]/90 backdrop-blur-md border border-[var(--border-subtle)] dark:border-emerald-500/20 text-emerald-950 dark:text-emerald-300 font-extrabold text-[10px] sm:text-[11px] uppercase tracking-wider shadow-xs">
+                      <span className="inline-flex items-center px-3 py-1 rounded-full bg-white/95 dark:bg-[#0C0B0A]/90 backdrop-blur-md border border-[var(--border-subtle)] dark:border-emerald-500/20 text-emerald-950 dark:text-emerald-300 font-extrabold text-[10px] sm:text-[11px] uppercase tracking-wider shadow-xs">
                         {post.category}
                       </span>
                     </div>
@@ -382,7 +382,7 @@ export const BlogPage: React.FC = () => {
                       <span>{new Date(post.published_at || '').toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })}</span>
                     </div>
 
-                    <h3 className="font-sans font-bold text-lg sm:text-xl text-[#10231D] dark:text-white line-clamp-2 group-hover:text-[#0F9D72] dark:group-hover:text-[#39D39B] transition-colors mb-2.5 leading-snug">
+                    <h3 className="font-sans font-bold text-lg sm:text-xl text-[#1A1814] dark:text-white line-clamp-2 group-hover:text-[#A97F3E] dark:group-hover:text-[#D9BC7E] transition-colors mb-2.5 leading-snug">
                       <Link to={`/blog/${post.slug}`}>{post.title}</Link>
                     </h3>
 
@@ -393,7 +393,7 @@ export const BlogPage: React.FC = () => {
                     <div className="flex items-center justify-between pt-3.5 border-t border-emerald-100/80 dark:border-[var(--border-subtle)] mt-auto">
                       <div className="flex items-center gap-2.5 min-w-0">
                         <SafeImage src={post.author.avatar} alt={post.author.name} className="w-7 h-7 rounded-full object-cover border border-emerald-200 dark:border-[var(--border-subtle)] shrink-0" />
-                        <span className="text-xs font-bold text-[#10231D] dark:text-[var(--text)] truncate">{post.author.name}</span>
+                        <span className="text-xs font-bold text-[#1A1814] dark:text-[var(--text)] truncate">{post.author.name}</span>
                       </div>
                       <Link to={`/blog/${post.slug}`} className="btn-circle-cta !w-9 !h-9 text-xs" aria-label={`Read story: ${post.title}`}>
                         <ArrowRight className="w-4 h-4" />
@@ -416,11 +416,11 @@ export const BlogPage: React.FC = () => {
         {photoPosts.length > 0 && (
           <section>
             <div className="flex items-center gap-3 mb-8">
-              <div className="w-10 h-10 rounded-xl bg-emerald-50 dark:bg-[#031812]/50 border border-emerald-200/60 dark:border-[var(--border-subtle)] flex items-center justify-center text-emerald-700 dark:text-emerald-400">
+              <div className="w-10 h-10 rounded-xl bg-emerald-50 dark:bg-[#0C0B0A]/50 border border-emerald-200/60 dark:border-[var(--border-subtle)] flex items-center justify-center text-emerald-700 dark:text-emerald-400">
                 <Camera className="w-5 h-5" />
               </div>
               <div>
-                <h2 className="text-2xl sm:text-3xl font-sans font-bold text-[#10231D] dark:text-white">Through the Lens</h2>
+                <h2 className="text-2xl sm:text-3xl font-sans font-bold text-[#1A1814] dark:text-white">Through the Lens</h2>
                 <p className="text-sm text-[var(--muted)] dark:text-[var(--muted)] mt-0.5">See Sri Lanka through the eyes of our discerning travelers.</p>
               </div>
             </div>
@@ -443,20 +443,20 @@ export const BlogPage: React.FC = () => {
         {/* 7. TRAVEL EXTRAS */}
         <section>
           <div className="text-center mb-12">
-            <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-50 dark:bg-[#031812]/50 border border-emerald-200/70 dark:border-[var(--border-subtle)] text-emerald-800 dark:text-emerald-300 text-xs font-bold tracking-widest uppercase mb-2 shadow-xs">
+            <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-50 dark:bg-[#0C0B0A]/50 border border-emerald-200/70 dark:border-[var(--border-subtle)] text-emerald-800 dark:text-emerald-300 text-xs font-bold tracking-widest uppercase mb-2 shadow-xs">
               Essential Tools
             </span>
-            <h2 className="text-3xl font-sans font-bold text-[#10231D] dark:text-white mb-2">Travel Extras</h2>
+            <h2 className="text-3xl font-sans font-bold text-[#1A1814] dark:text-white mb-2">Travel Extras</h2>
             <p className="text-[var(--muted)] dark:text-[var(--muted)] text-sm sm:text-base">Everything you need to travel seamlessly through Sri Lanka.</p>
           </div>
           
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-5">
             {TRAVEL_EXTRAS.map((extra, idx) => (
               <div key={idx} className="bg-white dark:bg-[var(--surface)] p-6 rounded-[24px] border border-emerald-500/18 dark:border-emerald-500/25 shadow-sm hover:shadow-lg hover:shadow-emerald-500/10 hover:border-emerald-500/40 hover:-translate-y-1.5 transition-all duration-300 group flex flex-col items-center text-center">
-                <div className="w-14 h-14 rounded-2xl bg-emerald-50 dark:bg-[#031812]/50 border border-emerald-200/60 dark:border-[var(--border-subtle)] flex items-center justify-center mb-4 group-hover:bg-[#0F9D72] group-hover:border-[#0F9D72] transition-all">
+                <div className="w-14 h-14 rounded-2xl bg-emerald-50 dark:bg-[#0C0B0A]/50 border border-emerald-200/60 dark:border-[var(--border-subtle)] flex items-center justify-center mb-4 group-hover:bg-[#A97F3E] group-hover:border-[#A97F3E] transition-all">
                   <extra.icon className="w-6 h-6 text-emerald-700 dark:text-emerald-400 group-hover:text-white transition-colors" />
                 </div>
-                <h3 className="font-sans font-bold text-[#10231D] dark:text-white mb-1.5">{extra.title}</h3>
+                <h3 className="font-sans font-bold text-[#1A1814] dark:text-white mb-1.5">{extra.title}</h3>
                 <p className="text-xs text-[var(--muted)] dark:text-[var(--muted)] mb-6 flex-1 leading-relaxed">{extra.desc}</p>
                 <button className="text-[11px] font-extrabold tracking-wider text-emerald-700 dark:text-emerald-400 uppercase hover:text-emerald-800 dark:hover:text-emerald-300 transition-colors">
                   {extra.action}
@@ -467,17 +467,17 @@ export const BlogPage: React.FC = () => {
         </section>
 
         {/* 8. WHERE TO NEXT (Newsletter) */}
-        <section className="bg-gradient-to-br from-emerald-50/70 via-white to-emerald-50/40 dark:from-[#0D281F] dark:to-[#061510] rounded-[32px] border border-emerald-500/20 dark:border-emerald-500/25 p-8 sm:p-12 md:p-16 shadow-xl relative overflow-hidden">
+        <section className="bg-gradient-to-br from-emerald-50/70 via-white to-emerald-50/40 dark:from-[#1A1815] dark:to-[#0E0D0B] rounded-[32px] border border-emerald-500/20 dark:border-emerald-500/25 p-8 sm:p-12 md:p-16 shadow-xl relative overflow-hidden">
           <div className="absolute right-0 bottom-0 opacity-10 dark:opacity-5 pointer-events-none translate-x-1/4 translate-y-1/4">
-             <div className="w-96 h-96 rounded-full border-[40px] border-[#0F9D72]"></div>
+             <div className="w-96 h-96 rounded-full border-[40px] border-[#A97F3E]"></div>
           </div>
           
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-14 items-center relative z-10">
             <div>
-              <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-100/70 dark:bg-[#031812]/60 border border-emerald-300/60 dark:border-[var(--border-subtle)] text-emerald-900 dark:text-emerald-300 text-xs font-bold tracking-widest uppercase mb-4 shadow-xs">
+              <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-100/70 dark:bg-[#0C0B0A]/60 border border-emerald-300/60 dark:border-[var(--border-subtle)] text-emerald-900 dark:text-emerald-300 text-xs font-bold tracking-widest uppercase mb-4 shadow-xs">
                 Private Journal Dispatch
               </span>
-              <h2 className="text-3xl sm:text-4xl md:text-5xl font-sans font-bold text-[#10231D] dark:text-white mb-4 leading-tight">Where To Next?</h2>
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-sans font-bold text-[#1A1814] dark:text-white mb-4 leading-tight">Where To Next?</h2>
               <p className="text-[var(--muted)] dark:text-[var(--text-secondary)] text-sm sm:text-base leading-relaxed">
                 Receive newly published Ceylon dispatches, seasonal wildlife calendars, and exclusive VIP itinerary invitations straight to your inbox.
               </p>
@@ -486,7 +486,7 @@ export const BlogPage: React.FC = () => {
             <div className="bg-white dark:bg-[var(--background)] p-6 sm:p-8 rounded-[24px] shadow-lg shadow-emerald-900/5 border border-emerald-500/20 dark:border-emerald-500/25">
               <form className="flex flex-col gap-4" onSubmit={(e) => { e.preventDefault(); alert('Subscribed to newsletter successfully!'); }}>
                 <div>
-                  <label className="block text-xs font-bold text-[#10231D] dark:text-[var(--text)] mb-2 uppercase tracking-wider">Email Address</label>
+                  <label className="block text-xs font-bold text-[#1A1814] dark:text-[var(--text)] mb-2 uppercase tracking-wider">Email Address</label>
                   <input 
                     type="email" 
                     required 

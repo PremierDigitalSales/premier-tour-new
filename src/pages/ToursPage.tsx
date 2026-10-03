@@ -159,7 +159,7 @@ export const ToursPage: React.FC = () => {
   };
 
   return (
-    <div id="tours-catalog-page" className="min-h-screen bg-[#F5FBF8] dark:bg-[#031812] text-[#12352A] dark:text-[#E8F5F0] pb-20 transition-colors">
+    <div id="tours-catalog-page" className="min-h-screen bg-[#F6F2EA] dark:bg-[#0C0B0A] text-[#1F1B16] dark:text-[#F1EBE0] pb-20 transition-colors">
       <SEOHelmet
         title={category !== 'All' ? `${category} Sri Lanka Tours | Premier Tours` : "Luxury Sri Lanka Tours | Premier Tours"}
         description={dynamicPageDescription}
@@ -183,17 +183,17 @@ export const ToursPage: React.FC = () => {
 
       {/* Filter and Search Toolbar */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-8">
-        <div className="bg-white dark:bg-[#073126] border border-[#10B981]/18 dark:border-[#10B981]/20 shadow-[0_8px_30px_rgba(16,185,129,0.06)] rounded-2xl p-4 sm:p-5 mb-8">
+        <div className="bg-white dark:bg-[#161412] border border-[#C5A059]/18 dark:border-[#C5A059]/20 shadow-[0_8px_30px_rgba(197,160,89,0.06)] rounded-2xl p-4 sm:p-5 mb-8">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
             {/* Search Input */}
             <div className="relative md:col-span-2">
-              <Search className="absolute left-3.5 top-1/2 -translate-y-1/2 w-4 h-4 text-[#10B981]" />
+              <Search className="absolute left-3.5 top-1/2 -translate-y-1/2 w-4 h-4 text-[#C5A059]" />
               <input
                 type="text"
                 placeholder={t('tours_search_placeholder', 'Search expeditions, regions, highlights...')}
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
-                className="w-full pl-10 pr-4 py-2.5 bg-[#F5FBF8] dark:bg-[#031812] border border-[#10B981]/30 dark:border-[#10B981]/20 text-[#12352A] dark:text-white rounded-xl text-xs sm:text-sm focus:outline-none focus:border-[#10B981] focus:ring-1 focus:ring-[#10B981] transition-colors placeholder:text-[#648076]"
+                className="w-full pl-10 pr-4 py-2.5 bg-[#F6F2EA] dark:bg-[#0C0B0A] border border-[#C5A059]/30 dark:border-[#C5A059]/20 text-[#1F1B16] dark:text-white rounded-xl text-xs sm:text-sm focus:outline-none focus:border-[#C5A059] focus:ring-1 focus:ring-[#C5A059] transition-colors placeholder:text-[#7D7468]"
               />
             </div>
 
@@ -202,7 +202,7 @@ export const ToursPage: React.FC = () => {
               <select
                 value={category}
                 onChange={(e) => setCategory(e.target.value)}
-                className="w-full px-3.5 py-2.5 bg-[#F5FBF8] dark:bg-[#031812] border border-[#10B981]/30 dark:border-[#10B981]/20 text-[#12352A] dark:text-white rounded-xl text-xs sm:text-sm focus:outline-none focus:border-[#10B981] focus:ring-1 focus:ring-[#10B981] transition-colors cursor-pointer"
+                className="w-full px-3.5 py-2.5 bg-[#F6F2EA] dark:bg-[#0C0B0A] border border-[#C5A059]/30 dark:border-[#C5A059]/20 text-[#1F1B16] dark:text-white rounded-xl text-xs sm:text-sm focus:outline-none focus:border-[#C5A059] focus:ring-1 focus:ring-[#C5A059] transition-colors cursor-pointer"
               >
                 {CATEGORIES.map((cat) => (
                   <option key={cat} value={cat}>
@@ -217,7 +217,7 @@ export const ToursPage: React.FC = () => {
               <select
                 value={sortBy}
                 onChange={(e) => setSortBy(e.target.value as any)}
-                className="w-full px-3.5 py-2.5 bg-[#F5FBF8] dark:bg-[#031812] border border-[#10B981]/30 dark:border-[#10B981]/20 text-[#12352A] dark:text-white rounded-xl text-xs sm:text-sm focus:outline-none focus:border-[#10B981] focus:ring-1 focus:ring-[#10B981] transition-colors cursor-pointer"
+                className="w-full px-3.5 py-2.5 bg-[#F6F2EA] dark:bg-[#0C0B0A] border border-[#C5A059]/30 dark:border-[#C5A059]/20 text-[#1F1B16] dark:text-white rounded-xl text-xs sm:text-sm focus:outline-none focus:border-[#C5A059] focus:ring-1 focus:ring-[#C5A059] transition-colors cursor-pointer"
               >
                 <option value="featured">{t('sort_featured') || 'Featured First'}</option>
                 <option value="price-asc">{t('sort_price_low') || 'Price: Low to High'}</option>
@@ -230,7 +230,7 @@ export const ToursPage: React.FC = () => {
           {/* Quick Filter Pills */}
           <div className="flex items-center gap-2 overflow-x-auto pt-4 mt-4 border-t border-slate-100 dark:border-[var(--border-subtle)] scrollbar-none">
             <span className="text-xs text-[var(--muted)] dark:text-[var(--muted)] whitespace-nowrap flex items-center gap-1 font-medium">
-              <SlidersHorizontal className="w-3.5 h-3.5 text-[#10B981]" /> {t('tours_categories_label', 'Categories:')}
+              <SlidersHorizontal className="w-3.5 h-3.5 text-[#C5A059]" /> {t('tours_categories_label', 'Categories:')}
             </span>
             {CATEGORIES.map((cat) => (
               <button
@@ -253,7 +253,7 @@ export const ToursPage: React.FC = () => {
           <div className="flex flex-wrap items-center gap-2 mb-6 text-xs">
             <span className="text-[var(--muted)] dark:text-[var(--muted)] font-medium">{t('tours_active_filters') || 'Active filters:'}</span>
             {searchTerm && (
-              <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-lg bg-emerald-50 dark:bg-[#031812]/50 text-emerald-800 dark:text-[var(--text-secondary)] border border-emerald-200 dark:border-[var(--border-subtle)] font-medium">
+              <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-lg bg-emerald-50 dark:bg-[#0C0B0A]/50 text-emerald-800 dark:text-[var(--text-secondary)] border border-emerald-200 dark:border-[var(--border-subtle)] font-medium">
                 {t('tours_keyword') || 'Keyword'}: "{searchTerm}"
                 <button onClick={() => setSearchTerm('')} className="hover:text-rose-500 cursor-pointer ml-1">
                   <X className="w-3 h-3" />
@@ -261,7 +261,7 @@ export const ToursPage: React.FC = () => {
               </span>
             )}
             {category !== 'All' && (
-              <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-lg bg-emerald-50 dark:bg-[#031812]/50 text-emerald-800 dark:text-[var(--text-secondary)] border border-emerald-200 dark:border-[var(--border-subtle)] font-medium">
+              <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-lg bg-emerald-50 dark:bg-[#0C0B0A]/50 text-emerald-800 dark:text-[var(--text-secondary)] border border-emerald-200 dark:border-[var(--border-subtle)] font-medium">
                 {t('tours_category') || 'Category'}: {t(`cat_${category.toLowerCase()}`) || category}
                 <button onClick={() => setCategory('All')} className="hover:text-rose-500 cursor-pointer ml-1">
                   <X className="w-3 h-3" />
@@ -269,7 +269,7 @@ export const ToursPage: React.FC = () => {
               </span>
             )}
             {departureDate && (
-              <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-lg bg-emerald-50 dark:bg-[#031812]/50 text-emerald-800 dark:text-[var(--text-secondary)] border border-emerald-200 dark:border-[var(--border-subtle)] font-medium">
+              <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-lg bg-emerald-50 dark:bg-[#0C0B0A]/50 text-emerald-800 dark:text-[var(--text-secondary)] border border-emerald-200 dark:border-[var(--border-subtle)] font-medium">
                 <Calendar className="w-3 h-3 text-[var(--primary)]" />
                 {t('common_date') || 'Date'}: {departureDate}
                 <button onClick={() => setDepartureDate('')} className="hover:text-rose-500 cursor-pointer ml-1">
@@ -278,7 +278,7 @@ export const ToursPage: React.FC = () => {
               </span>
             )}
             {guestCount && guestCount !== '2' && (
-              <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-lg bg-emerald-50 dark:bg-[#031812]/50 text-emerald-800 dark:text-[var(--text-secondary)] border border-emerald-200 dark:border-[var(--border-subtle)] font-medium">
+              <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-lg bg-emerald-50 dark:bg-[#0C0B0A]/50 text-emerald-800 dark:text-[var(--text-secondary)] border border-emerald-200 dark:border-[var(--border-subtle)] font-medium">
                 <Users className="w-3 h-3 text-[var(--primary)]" />
                 {t('tours_party') || 'Party'}: {guestCount} {t('tours_guests_count') || 'Guests'}
               </span>
@@ -305,7 +305,7 @@ export const ToursPage: React.FC = () => {
         {loadingTours ? (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-7">
             {[1, 2, 3, 4, 5, 6].map((n) => (
-              <div key={n} className="rounded-3xl bg-white dark:bg-[#073126] p-4 border border-slate-200 dark:border-emerald-950/40 animate-pulse">
+              <div key={n} className="rounded-3xl bg-white dark:bg-[#161412] p-4 border border-slate-200 dark:border-emerald-950/40 animate-pulse">
                 <div className="h-56 bg-slate-200 dark:bg-emerald-900/30 rounded-2xl mb-4" />
                 <div className="h-4 bg-slate-200 dark:bg-emerald-900/30 rounded w-1/3 mb-2" />
                 <div className="h-6 bg-slate-200 dark:bg-emerald-900/30 rounded w-3/4 mb-4" />
@@ -325,13 +325,13 @@ export const ToursPage: React.FC = () => {
             </button>
           </div>
         ) : filteredTours.length === 0 ? (
-          <div className="bg-white dark:bg-[#073126] p-12 rounded-3xl border border-[#10B981]/20 text-center max-w-md mx-auto shadow-sm">
+          <div className="bg-white dark:bg-[#161412] p-12 rounded-3xl border border-[#C5A059]/20 text-center max-w-md mx-auto shadow-sm">
             <Compass className="w-12 h-12 text-slate-400 mx-auto mb-3" />
             <h3 className="text-lg font-sans font-bold text-[var(--text)] dark:text-white mb-1">{t('tours_no_results') || 'No Expeditions Found'}</h3>
             <p className="text-xs text-[var(--muted)] dark:text-[var(--muted)] mb-4">{t('tours_try_clearing') || 'Try clearing your search terms or increasing the price filter.'}</p>
             <button
               onClick={handleClearFilters}
-              className="py-2.5 px-5 rounded-xl text-xs font-semibold bg-[#10B981] text-white hover:bg-[#34D399] transition-colors cursor-pointer"
+              className="py-2.5 px-5 rounded-xl text-xs font-semibold bg-[#C5A059] text-white hover:bg-[#D4B477] transition-colors cursor-pointer"
             >
               {t('tours_reset_filters') || 'Reset Filters'}
             </button>

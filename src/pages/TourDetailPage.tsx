@@ -169,7 +169,7 @@ export const TourDetailPage: React.FC = () => {
         {/* Title and Rating Bar */}
         <div className="mb-8">
           <div className="flex items-center gap-2 mb-2">
-            <span className="text-xs uppercase tracking-widest font-semibold text-emerald-800 dark:text-emerald-300 bg-emerald-50 dark:bg-[#031812]/50 px-3 py-1 rounded-full border border-emerald-200/80 dark:border-[var(--border-subtle)]">
+            <span className="text-xs uppercase tracking-widest font-semibold text-emerald-800 dark:text-emerald-300 bg-emerald-50 dark:bg-[#0C0B0A]/50 px-3 py-1 rounded-full border border-emerald-200/80 dark:border-[var(--border-subtle)]">
               {tour.category} Odyssey
             </span>
             <div className="flex items-center gap-1 text-xs text-[var(--muted)] dark:text-[var(--text-secondary)] glass-card border border-slate-200 dark:border-[var(--border-subtle)] px-3 py-1 rounded-full">
@@ -225,7 +225,7 @@ export const TourDetailPage: React.FC = () => {
                   <h3 className="text-sm font-semibold text-[var(--text)] dark:text-white mb-3">{t('tour_detail_highlights') || 'Signature Highlights'}</h3>
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                     {tourHighlights.map((item, idx) => (
-                      <div key={idx} className="flex items-start gap-2.5 p-3 rounded-xl bg-emerald-50/60 dark:bg-[#031812]/40 border border-emerald-100/80 dark:border-[var(--border-subtle)] text-xs text-[var(--text)] dark:text-[var(--text)]">
+                      <div key={idx} className="flex items-start gap-2.5 p-3 rounded-xl bg-emerald-50/60 dark:bg-[#0C0B0A]/40 border border-emerald-100/80 dark:border-[var(--border-subtle)] text-xs text-[var(--text)] dark:text-[var(--text)]">
                         <CheckCircle2 className="w-4 h-4 text-[var(--primary-dark)] dark:text-emerald-400 shrink-0 mt-0.5" />
                         <span>{item}</span>
                       </div>
@@ -251,10 +251,10 @@ export const TourDetailPage: React.FC = () => {
                 <div className="space-y-6 relative before:absolute before:left-4 before:top-4 before:bottom-4 before:w-0.5 before:bg-slate-200 dark:before:bg-slate-800">
                   {tourItinerary.map((day, dIdx) => (
                     <div key={day.day || dIdx + 1} className="relative pl-10">
-                      <div className="absolute left-1.5 top-0 w-6 h-6 rounded-full bg-emerald-600 dark:bg-emerald-500 text-white text-xs font-bold flex items-center justify-center shadow-[0_0_10px_rgba(16,185,129,0.4)] border-2 border-white dark:border-[#031812]">
+                      <div className="absolute left-1.5 top-0 w-6 h-6 rounded-full bg-emerald-600 dark:bg-emerald-500 text-white text-xs font-bold flex items-center justify-center shadow-[0_0_10px_rgba(197,160,89,0.4)] border-2 border-white dark:border-[#0C0B0A]">
                         {day.day || dIdx + 1}
                       </div>
-                      <div className="bg-white/80 dark:bg-[#081C16] p-5 rounded-xl border border-emerald-100 dark:border-emerald-800/40 shadow-sm transition-all hover:shadow-md hover:border-emerald-300 dark:hover:border-emerald-700/50">
+                      <div className="bg-white/80 dark:bg-[#12110F] p-5 rounded-xl border border-emerald-100 dark:border-emerald-800/40 shadow-sm transition-all hover:shadow-md hover:border-emerald-300 dark:hover:border-emerald-700/50">
                         <h4 className="text-base font-sans font-bold text-[var(--text)] dark:text-white mb-1.5">
                           {t('common_day') || 'Day'} {day.day || dIdx + 1}: {day.title}
                         </h4>
@@ -314,7 +314,7 @@ export const TourDetailPage: React.FC = () => {
                   </span>
                   <span className="text-xs text-[var(--muted)] dark:text-[var(--muted)]"> / {t('common_guest') || 'guest'}</span>
                 </div>
-                <span className="text-[11px] font-medium text-emerald-700 dark:text-emerald-300 bg-emerald-50 dark:bg-[#031812]/50 px-2.5 py-1 rounded-lg border border-emerald-200 dark:border-[var(--border-subtle)]">
+                <span className="text-[11px] font-medium text-emerald-700 dark:text-emerald-300 bg-emerald-50 dark:bg-[#0C0B0A]/50 px-2.5 py-1 rounded-lg border border-emerald-200 dark:border-[var(--border-subtle)]">
                   {t('tour_detail_instant_confirmation') || 'Instant Confirmation'}
                 </span>
               </div>
@@ -408,7 +408,7 @@ export const TourDetailPage: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-24 mb-10">
         <div className="text-center mb-8">
           <span className="text-xs font-bold text-emerald-600 dark:text-emerald-400 uppercase tracking-widest block mb-2">{t('tours_traveler_experiences') || 'TRAVELER REVIEWS'}</span>
-          <h2 className="text-2xl md:text-3xl font-sans font-bold text-[#10231D] dark:text-white">{t('tour_detail_what_guests_say') || 'What Our Guests Say'}</h2>
+          <h2 className="text-2xl md:text-3xl font-sans font-bold text-[#1A1814] dark:text-white">{t('tour_detail_what_guests_say') || 'What Our Guests Say'}</h2>
         </div>
         <div className="-mx-4 sm:mx-0">
            <ReviewsSection filterTourId={tour.id} />

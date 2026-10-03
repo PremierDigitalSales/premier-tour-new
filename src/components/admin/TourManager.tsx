@@ -78,7 +78,7 @@ export const TourManager = () => {
           <div className="overflow-x-auto">
             <table className="w-full text-left border-collapse">
               <thead>
-                <tr className="bg-[var(--background)] dark:bg-[#073126]/50 text-[var(--muted)] dark:text-[var(--muted)] text-xs uppercase tracking-wider border-b border-slate-200 dark:border-[var(--border-subtle)]">
+                <tr className="bg-[var(--background)] dark:bg-[#161412]/50 text-[var(--muted)] dark:text-[var(--muted)] text-xs uppercase tracking-wider border-b border-slate-200 dark:border-[var(--border-subtle)]">
                   <th className="p-4 font-semibold">Tour</th>
                   <th className="p-4 font-semibold">Category</th>
                   <th className="p-4 font-semibold">Duration</th>
@@ -116,7 +116,7 @@ export const TourManager = () => {
                         </div>
                       </td>
                       <td className="p-4 text-sm text-[var(--muted)] dark:text-[var(--text-secondary)]">
-                        <span className="bg-emerald-50 dark:bg-[#073126]/30 text-[var(--primary-dark)] dark:text-emerald-400 px-2 py-1 rounded text-xs font-semibold">{tour.category || 'Expedition'}</span>
+                        <span className="bg-emerald-50 dark:bg-[#161412]/30 text-[var(--primary-dark)] dark:text-emerald-400 px-2 py-1 rounded text-xs font-semibold">{tour.category || 'Expedition'}</span>
                       </td>
                       <td className="p-4 text-sm text-[var(--muted)] dark:text-[var(--text-secondary)]">
                         <span className="bg-slate-100 dark:bg-[var(--surface)] text-[var(--text)] dark:text-white px-2 py-1 rounded text-xs font-semibold">{dur}</span>

@@ -48,7 +48,7 @@ export const ReviewSummary: React.FC<ReviewSummaryProps> = ({ reviews = [] }) =>
                 className={`w-5 h-5 ${
                   star <= Math.round(averageRating)
                     ? 'fill-amber-400 text-amber-400'
-                    : 'fill-slate-200 text-slate-200 dark:fill-[#104D39] dark:text-[#104D39]'
+                    : 'fill-slate-200 text-slate-200 dark:fill-[#2C2720] dark:text-[#2C2720]'
                 }`}
               />
             ))}

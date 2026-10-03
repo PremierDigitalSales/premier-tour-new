@@ -80,10 +80,10 @@ export const ReviewManager: React.FC = () => {
       {/* Header */}
       <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
         <div>
-          <h1 className="text-2xl sm:text-3xl font-black text-[#10231D] dark:text-white">
+          <h1 className="text-2xl sm:text-3xl font-black text-[#1A1814] dark:text-white">
             Customer Reviews & Moderation
           </h1>
-          <p className="text-sm text-[#71817B] dark:text-[#8FA9A0]">
+          <p className="text-sm text-[#857D70] dark:text-[#A39A8B]">
             Audit, approve, or reject verified client trip testimonials.
           </p>
         </div>
@@ -97,8 +97,8 @@ export const ReviewManager: React.FC = () => {
             onClick={() => setStatusFilter(tab)}
             className={`px-4 py-2 rounded-xl text-xs font-bold transition-colors whitespace-nowrap ${
               statusFilter === tab
-                ? 'bg-[#0F9D72] text-white'
-                : 'bg-white dark:bg-[var(--surface)] text-[#33453F] dark:text-[#C8DDD5] border border-[#DDEBE5] dark:border-[var(--border-subtle)] hover:bg-[#F2F8F5]'
+                ? 'bg-[#A97F3E] text-white'
+                : 'bg-white dark:bg-[var(--surface)] text-[#4A453D] dark:text-[#D9D2C5] border border-[#E8E0D2] dark:border-[var(--border-subtle)] hover:bg-[#F4EFE6]'
             }`}
           >
             {tab} {tab === 'PENDING' && reviews.filter(r => r.status === 'PENDING').length > 0 && (
@@ -113,20 +113,20 @@ export const ReviewManager: React.FC = () => {
       {/* Reviews List */}
       <div className="space-y-4">
         {loading ? (
-          <div className="p-12 text-center text-xs font-semibold text-[#71817B] dark:text-[#8FA9A0]">
+          <div className="p-12 text-center text-xs font-semibold text-[#857D70] dark:text-[#A39A8B]">
             Loading reviews...
           </div>
         ) : filteredReviews.length === 0 ? (
-          <div className="bg-white dark:bg-[var(--surface)] rounded-2xl border border-[#DDEBE5] dark:border-[var(--border-subtle)] p-12 text-center">
-            <MessageSquare className="w-10 h-10 text-[#71817B] mx-auto mb-3 opacity-40" />
-            <h3 className="text-base font-bold text-[#10231D] dark:text-white mb-1">No reviews found</h3>
-            <p className="text-xs text-[#71817B] dark:text-[#8FA9A0]">No reviews match the selected filter.</p>
+          <div className="bg-white dark:bg-[var(--surface)] rounded-2xl border border-[#E8E0D2] dark:border-[var(--border-subtle)] p-12 text-center">
+            <MessageSquare className="w-10 h-10 text-[#857D70] mx-auto mb-3 opacity-40" />
+            <h3 className="text-base font-bold text-[#1A1814] dark:text-white mb-1">No reviews found</h3>
+            <p className="text-xs text-[#857D70] dark:text-[#A39A8B]">No reviews match the selected filter.</p>
           </div>
         ) : (
           filteredReviews.map((r) => (
             <div
               key={r.id}
-              className="bg-white dark:bg-[var(--surface)] rounded-2xl border border-[#DDEBE5] dark:border-[var(--border-subtle)] p-5 shadow-xs flex flex-col sm:flex-row justify-between gap-4"
+              className="bg-white dark:bg-[var(--surface)] rounded-2xl border border-[#E8E0D2] dark:border-[var(--border-subtle)] p-5 shadow-xs flex flex-col sm:flex-row justify-between gap-4"
             >
               <div className="space-y-2 flex-1">
                 <div className="flex items-center gap-2">
@@ -135,14 +135,14 @@ export const ReviewManager: React.FC = () => {
                       <Star
                         key={star}
                         className={`w-3.5 h-3.5 ${
-                          star <= r.rating ? 'fill-amber-400' : 'fill-slate-200 dark:fill-[#104D39] text-slate-200 dark:text-[#104D39]'
+                          star <= r.rating ? 'fill-amber-400' : 'fill-slate-200 dark:fill-[#2C2720] text-slate-200 dark:text-[#2C2720]'
                         }`}
                       />
                     ))}
                   </div>
-                  <span className="text-xs font-bold text-[#10231D] dark:text-white">{r.title}</span>
+                  <span className="text-xs font-bold text-[#1A1814] dark:text-white">{r.title}</span>
                   <span className={`text-[10px] font-bold px-2 py-0.5 rounded-full ${
-                    r.status === 'APPROVED' ? 'bg-emerald-100 text-[#0F9D72] dark:bg-[var(--background)] dark:text-[#39D39B]' :
+                    r.status === 'APPROVED' ? 'bg-emerald-100 text-[#A97F3E] dark:bg-[var(--background)] dark:text-[#D9BC7E]' :
                     r.status === 'REJECTED' ? 'bg-rose-100 text-rose-600 dark:bg-rose-950 dark:text-rose-400' :
                     'bg-amber-100 text-amber-700 dark:bg-amber-950 dark:text-amber-400'
                   }`}>
@@ -159,21 +159,21 @@ export const ReviewManager: React.FC = () => {
                   )}
                 </div>
 
-                <p className="text-xs text-[#33453F] dark:text-[#C8DDD5] leading-relaxed">
+                <p className="text-xs text-[#4A453D] dark:text-[#D9D2C5] leading-relaxed">
                   "{r.content}"
                 </p>
 
                 {r.images && r.images.length > 0 && (
                   <div className="flex items-center gap-2 mt-2">
                     {r.images.map((img, idx) => (
-                      <a key={idx} href={img} target="_blank" rel="noreferrer" className="w-10 h-10 rounded-lg overflow-hidden border border-[#DDEBE5] dark:border-[var(--border-subtle)]">
+                      <a key={idx} href={img} target="_blank" rel="noreferrer" className="w-10 h-10 rounded-lg overflow-hidden border border-[#E8E0D2] dark:border-[var(--border-subtle)]">
                         <img src={img} alt={`Review photo ${idx}`} className="w-full h-full object-cover" />
                       </a>
                     ))}
                   </div>
                 )}
 
-                <div className="text-[11px] text-[#71817B] dark:text-[#8FA9A0] flex flex-wrap items-center gap-2 mt-2">
+                <div className="text-[11px] text-[#857D70] dark:text-[#A39A8B] flex flex-wrap items-center gap-2 mt-2">
                                     <span className="font-semibold">{r.user_name || 'Traveler'}</span>
                   {r.user_location && (
                     <>
@@ -199,7 +199,7 @@ export const ReviewManager: React.FC = () => {
                 {r.status !== 'APPROVED' && (
                   <button
                     onClick={() => handleUpdateStatus(r.id, 'APPROVED')}
-                    className="px-3 py-1.5 rounded-xl bg-[#0F9D72] hover:bg-[#087A5A] text-white text-xs font-bold transition-colors flex items-center gap-1"
+                    className="px-3 py-1.5 rounded-xl bg-[#A97F3E] hover:bg-[#8A6530] text-white text-xs font-bold transition-colors flex items-center gap-1"
                   >
                     <CheckCircle2 className="w-3.5 h-3.5" /> Approve
                   </button>
@@ -246,11 +246,11 @@ export const ReviewManager: React.FC = () => {
       {/* Rejection Reason Modal */}
       {rejectionModalId && (
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-xs">
-          <div className="bg-white dark:bg-[var(--surface)] rounded-2xl p-6 max-w-md w-full border border-[#DDEBE5] dark:border-[var(--border-subtle)] shadow-xl">
-            <h3 className="text-base font-bold text-[#10231D] dark:text-white mb-2">
+          <div className="bg-white dark:bg-[var(--surface)] rounded-2xl p-6 max-w-md w-full border border-[#E8E0D2] dark:border-[var(--border-subtle)] shadow-xl">
+            <h3 className="text-base font-bold text-[#1A1814] dark:text-white mb-2">
               Reject Customer Review
             </h3>
-            <p className="text-xs text-[#71817B] dark:text-[#8FA9A0] mb-4">
+            <p className="text-xs text-[#857D70] dark:text-[#A39A8B] mb-4">
               Please provide feedback explaining why this review was not approved for publication.
             </p>
 
@@ -259,13 +259,13 @@ export const ReviewManager: React.FC = () => {
               onChange={(e) => setRejectionReason(e.target.value)}
               placeholder="e.g. Inappropriate language, off-topic, or unverified order..."
               rows={3}
-              className="w-full bg-[#F2F8F5] dark:bg-[var(--surface)] border border-[#DDEBE5] dark:border-[var(--border-subtle)] rounded-xl p-3 text-xs text-[#10231D] dark:text-white focus:outline-none focus:border-[#0F9D72] mb-4"
+              className="w-full bg-[#F4EFE6] dark:bg-[var(--surface)] border border-[#E8E0D2] dark:border-[var(--border-subtle)] rounded-xl p-3 text-xs text-[#1A1814] dark:text-white focus:outline-none focus:border-[#A97F3E] mb-4"
             />
 
             <div className="flex items-center justify-end gap-2">
               <button
                 onClick={() => { setRejectionModalId(null); setRejectionReason(''); }}
-                className="px-4 py-2 rounded-xl text-xs font-bold text-[#71817B] hover:bg-slate-100 dark:hover:bg-slate-800"
+                className="px-4 py-2 rounded-xl text-xs font-bold text-[#857D70] hover:bg-slate-100 dark:hover:bg-slate-800"
               >
                 Cancel
               </button>
@@ -283,24 +283,24 @@ export const ReviewManager: React.FC = () => {
       {/* Edit Review Modal */}
       {editModalReview && (
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-xs">
-          <div className="bg-white dark:bg-[var(--surface)] rounded-2xl p-6 max-w-md w-full border border-[#DDEBE5] dark:border-[var(--border-subtle)] shadow-xl">
-            <h3 className="text-base font-bold text-[#10231D] dark:text-white mb-4">
+          <div className="bg-white dark:bg-[var(--surface)] rounded-2xl p-6 max-w-md w-full border border-[#E8E0D2] dark:border-[var(--border-subtle)] shadow-xl">
+            <h3 className="text-base font-bold text-[#1A1814] dark:text-white mb-4">
               Edit Review
             </h3>
             
             <form onSubmit={handleEditSubmit} className="space-y-4">
               <div>
-                <label className="block text-xs font-bold text-[#33453F] dark:text-[#C8DDD5] mb-1">Traveler Name</label>
+                <label className="block text-xs font-bold text-[#4A453D] dark:text-[#D9D2C5] mb-1">Traveler Name</label>
                 <input
                   type="text"
                   value={editForm.user_name}
                   onChange={(e) => setEditForm({...editForm, user_name: e.target.value})}
-                  className="w-full bg-[#F2F8F5] dark:bg-[#031812] border border-[#DDEBE5] dark:border-[var(--border-subtle)] rounded-xl p-2.5 text-xs text-[#10231D] dark:text-white focus:outline-none focus:border-[#0F9D72]"
+                  className="w-full bg-[#F4EFE6] dark:bg-[#0C0B0A] border border-[#E8E0D2] dark:border-[var(--border-subtle)] rounded-xl p-2.5 text-xs text-[#1A1814] dark:text-white focus:outline-none focus:border-[#A97F3E]"
                 />
               </div>
 
               <div>
-                <label className="block text-xs font-bold text-[#33453F] dark:text-[#C8DDD5] mb-1">Rating</label>
+                <label className="block text-xs font-bold text-[#4A453D] dark:text-[#D9D2C5] mb-1">Rating</label>
                 <div className="flex items-center gap-1">
                   {[1,2,3,4,5].map(star => (
                     <button
@@ -309,29 +309,29 @@ export const ReviewManager: React.FC = () => {
                       onClick={() => setEditForm({...editForm, rating: star})}
                       className="p-1 focus:outline-none"
                     >
-                      <Star className={`w-5 h-5 ${star <= editForm.rating ? 'fill-amber-400 text-amber-400' : 'fill-slate-200 dark:fill-[#104D39] text-slate-200 dark:text-[#104D39]'}`} />
+                      <Star className={`w-5 h-5 ${star <= editForm.rating ? 'fill-amber-400 text-amber-400' : 'fill-slate-200 dark:fill-[#2C2720] text-slate-200 dark:text-[#2C2720]'}`} />
                     </button>
                   ))}
                 </div>
               </div>
 
               <div>
-                <label className="block text-xs font-bold text-[#33453F] dark:text-[#C8DDD5] mb-1">Title</label>
+                <label className="block text-xs font-bold text-[#4A453D] dark:text-[#D9D2C5] mb-1">Title</label>
                 <input
                   type="text"
                   value={editForm.title}
                   onChange={(e) => setEditForm({...editForm, title: e.target.value})}
-                  className="w-full bg-[#F2F8F5] dark:bg-[#031812] border border-[#DDEBE5] dark:border-[var(--border-subtle)] rounded-xl p-2.5 text-xs text-[#10231D] dark:text-white focus:outline-none focus:border-[#0F9D72]"
+                  className="w-full bg-[#F4EFE6] dark:bg-[#0C0B0A] border border-[#E8E0D2] dark:border-[var(--border-subtle)] rounded-xl p-2.5 text-xs text-[#1A1814] dark:text-white focus:outline-none focus:border-[#A97F3E]"
                 />
               </div>
 
               <div>
-                <label className="block text-xs font-bold text-[#33453F] dark:text-[#C8DDD5] mb-1">Review Content</label>
+                <label className="block text-xs font-bold text-[#4A453D] dark:text-[#D9D2C5] mb-1">Review Content</label>
                 <textarea
                   value={editForm.content}
                   onChange={(e) => setEditForm({...editForm, content: e.target.value})}
                   rows={4}
-                  className="w-full bg-[#F2F8F5] dark:bg-[#031812] border border-[#DDEBE5] dark:border-[var(--border-subtle)] rounded-xl p-3 text-xs text-[#10231D] dark:text-white focus:outline-none focus:border-[#0F9D72] resize-none"
+                  className="w-full bg-[#F4EFE6] dark:bg-[#0C0B0A] border border-[#E8E0D2] dark:border-[var(--border-subtle)] rounded-xl p-3 text-xs text-[#1A1814] dark:text-white focus:outline-none focus:border-[#A97F3E] resize-none"
                 />
               </div>
 
@@ -339,13 +339,13 @@ export const ReviewManager: React.FC = () => {
                 <button
                   type="button"
                   onClick={() => setEditModalReview(null)}
-                  className="px-4 py-2 rounded-xl text-xs font-bold text-[#71817B] hover:bg-slate-100 dark:hover:bg-[var(--surface-subtle)]"
+                  className="px-4 py-2 rounded-xl text-xs font-bold text-[#857D70] hover:bg-slate-100 dark:hover:bg-[var(--surface-subtle)]"
                 >
                   Cancel
                 </button>
                 <button
                   type="submit"
-                  className="px-4 py-2 rounded-xl text-xs font-bold bg-[#0F9D72] hover:bg-[#087A5A] text-white"
+                  className="px-4 py-2 rounded-xl text-xs font-bold bg-[#A97F3E] hover:bg-[#8A6530] text-white"
                 >
                   Save Changes
                 </button>

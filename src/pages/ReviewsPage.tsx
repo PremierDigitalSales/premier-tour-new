@@ -23,8 +23,8 @@ export const ReviewsPage = () => {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="text-center mb-12">
-          <h2 className="text-3xl font-sans font-bold text-[#10231D] dark:text-white mb-4">{t('reviews_title', 'What Travelers Say About Premier Tours')}</h2>
-          <p className="text-[#33453F] dark:text-[var(--text-secondary)]">{t('reviews_subtitle', 'Explore experiences shared by travelers and discover what makes our journeys special.')}</p>
+          <h2 className="text-3xl font-sans font-bold text-[#1A1814] dark:text-white mb-4">{t('reviews_title', 'What Travelers Say About Premier Tours')}</h2>
+          <p className="text-[#4A453D] dark:text-[var(--text-secondary)]">{t('reviews_subtitle', 'Explore experiences shared by travelers and discover what makes our journeys special.')}</p>
         </div>
         <ReviewsSection />
       </div>

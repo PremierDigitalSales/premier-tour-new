@@ -169,9 +169,9 @@ export const ProfilePhotoModal: React.FC<ProfilePhotoModalProps> = ({
           className="w-full max-w-md bg-white dark:bg-[var(--surface)] border border-emerald-100 dark:border-[var(--border-subtle)] rounded-3xl shadow-2xl overflow-hidden text-slate-800 dark:text-[var(--text)]"
         >
           {/* Header */}
-          <div className="px-6 py-5 border-b border-emerald-100/80 dark:border-[var(--border-subtle)] flex items-center justify-between bg-gradient-to-r from-emerald-50/50 via-white to-emerald-50/20 dark:from-[#0c241c] dark:via-[#071b14] dark:to-[#092018]">
+          <div className="px-6 py-5 border-b border-emerald-100/80 dark:border-[var(--border-subtle)] flex items-center justify-between bg-gradient-to-r from-emerald-50/50 via-white to-emerald-50/20 dark:from-[#181613] dark:via-[#100F0D] dark:to-[#131210]">
             <div className="flex items-center gap-2.5">
-              <div className="w-8 h-8 rounded-xl bg-emerald-100 dark:bg-[#073126]/50 text-emerald-700 dark:text-emerald-300 flex items-center justify-center">
+              <div className="w-8 h-8 rounded-xl bg-emerald-100 dark:bg-[#161412]/50 text-emerald-700 dark:text-emerald-300 flex items-center justify-center">
                 <Camera className="w-4 h-4" />
               </div>
               <h3 id="photo-modal-title" className="font-sans font-bold text-lg text-slate-900 dark:text-white">
@@ -235,7 +235,7 @@ export const ProfilePhotoModal: React.FC<ProfilePhotoModalProps> = ({
               <motion.div
                 initial={{ opacity: 0, y: -4 }}
                 animate={{ opacity: 1, y: 0 }}
-                className="p-3.5 rounded-2xl bg-emerald-50 dark:bg-[#031812]/40 border border-emerald-200 dark:border-[var(--border-subtle)] flex items-center gap-2.5 text-xs text-emerald-700 dark:text-emerald-300"
+                className="p-3.5 rounded-2xl bg-emerald-50 dark:bg-[#0C0B0A]/40 border border-emerald-200 dark:border-[var(--border-subtle)] flex items-center gap-2.5 text-xs text-emerald-700 dark:text-emerald-300"
               >
                 <CheckCircle2 className="w-4 h-4 shrink-0 text-emerald-600 dark:text-emerald-400" />
                 <div className="font-medium">{successMessage}</div>
@@ -250,8 +250,8 @@ export const ProfilePhotoModal: React.FC<ProfilePhotoModalProps> = ({
               onClick={() => fileInputRef.current?.click()}
               className={`border-2 border-dashed rounded-2xl p-6 text-center cursor-pointer transition-all ${
                 isDragging
-                  ? 'border-emerald-500 bg-emerald-50/70 dark:bg-[#031812]/40 scale-101'
-                  : 'border-slate-200 dark:border-[var(--border-subtle)] hover:border-emerald-400 dark:hover:border-emerald-500 bg-slate-50/60 dark:bg-[#073126]/60'
+                  ? 'border-emerald-500 bg-emerald-50/70 dark:bg-[#0C0B0A]/40 scale-101'
+                  : 'border-slate-200 dark:border-[var(--border-subtle)] hover:border-emerald-400 dark:hover:border-emerald-500 bg-slate-50/60 dark:bg-[#161412]/60'
               }`}
             >
               <input
@@ -261,7 +261,7 @@ export const ProfilePhotoModal: React.FC<ProfilePhotoModalProps> = ({
                 className="hidden"
                 onChange={handleFileChange}
               />
-              <div className="w-10 h-10 rounded-full bg-emerald-100 dark:bg-[#073126]/40 text-emerald-700 dark:text-emerald-300 flex items-center justify-center mx-auto mb-2.5">
+              <div className="w-10 h-10 rounded-full bg-emerald-100 dark:bg-[#161412]/40 text-emerald-700 dark:text-emerald-300 flex items-center justify-center mx-auto mb-2.5">
                 <Upload className="w-5 h-5" />
               </div>
               <p className="text-sm font-semibold text-slate-800 dark:text-[var(--text)]">

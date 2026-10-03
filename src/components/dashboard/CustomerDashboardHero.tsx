@@ -28,7 +28,7 @@ export const CustomerDashboardHero: React.FC = () => {
     <>
       <section 
         id="customer-dashboard-hero"
-        className="relative overflow-hidden border-b border-emerald-100/80 dark:border-[var(--border-subtle)] bg-gradient-to-b from-[#F2FAF6] via-[#F8FCFA] to-white dark:from-[#061812] dark:via-[#082018] dark:to-[#05140e] transition-colors"
+        className="relative overflow-hidden border-b border-emerald-100/80 dark:border-[var(--border-subtle)] bg-gradient-to-b from-[#F6F2EA] via-[#FAF7F2] to-white dark:from-[#100F0D] dark:via-[#131210] dark:to-[#100F0D] transition-colors"
       >
         {/* Subtle Ambient Green Floating Glow Elements */}
         <div className="absolute inset-0 pointer-events-none overflow-hidden">
@@ -76,7 +76,7 @@ export const CustomerDashboardHero: React.FC = () => {
                   </div>
 
                   {/* Camera Badge on corner */}
-                  <span className="absolute bottom-0 right-0 w-6 h-6 rounded-full bg-emerald-600 dark:bg-emerald-500 text-white flex items-center justify-center shadow-md border-2 border-white dark:border-[#071b14] group-hover:bg-emerald-500 transition-colors">
+                  <span className="absolute bottom-0 right-0 w-6 h-6 rounded-full bg-emerald-600 dark:bg-emerald-500 text-white flex items-center justify-center shadow-md border-2 border-white dark:border-[#100F0D] group-hover:bg-emerald-500 transition-colors">
                     <Camera className="w-3 h-3" />
                   </span>
                 </button>
@@ -85,7 +85,7 @@ export const CustomerDashboardHero: React.FC = () => {
               {/* Text Info */}
               <div className="space-y-1.5 min-w-0">
                 <div className="flex flex-wrap items-center gap-2">
-                  <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-[11px] font-semibold bg-emerald-100/80 text-emerald-800 dark:bg-[#031812]/80 dark:text-emerald-300 border border-emerald-200/60 dark:border-[var(--border-subtle)]">
+                  <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-[11px] font-semibold bg-emerald-100/80 text-emerald-800 dark:bg-[#0C0B0A]/80 dark:text-emerald-300 border border-emerald-200/60 dark:border-[var(--border-subtle)]">
                     <Sparkles className="w-3 h-3 text-emerald-600 dark:text-emerald-400" />
                     Premier Club Traveler
                   </span>
@@ -101,7 +101,7 @@ export const CustomerDashboardHero: React.FC = () => {
 
                 <div className="flex flex-wrap items-center gap-3 text-xs text-slate-500 dark:text-[var(--muted)]">
                   <span className="font-medium text-slate-600 dark:text-[var(--text-secondary)]">{user.email}</span>
-                  <span className="hidden sm:inline text-slate-300 dark:text-[#104D39]">•</span>
+                  <span className="hidden sm:inline text-slate-300 dark:text-[#2C2720]">•</span>
                   <button
                     id="open-profile-edit-btn"
                     onClick={() => setIsEditModalOpen(true)}
@@ -109,7 +109,7 @@ export const CustomerDashboardHero: React.FC = () => {
                   >
                     <Edit3 className="w-3 h-3" /> Edit Profile
                   </button>
-                  <span className="hidden sm:inline text-slate-300 dark:text-[#104D39]">•</span>
+                  <span className="hidden sm:inline text-slate-300 dark:text-[#2C2720]">•</span>
                   <button
                     id="open-profile-photo-text-btn"
                     onClick={() => setIsPhotoModalOpen(true)}

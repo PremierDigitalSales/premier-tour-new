@@ -70,7 +70,7 @@ export const FlightManager = () => {
           <div className="overflow-x-auto">
             <table className="w-full text-left border-collapse">
               <thead>
-                <tr className="bg-[var(--background)] dark:bg-[#073126]/50 text-[var(--muted)] dark:text-[var(--muted)] text-xs uppercase tracking-wider border-b border-slate-200 dark:border-[var(--border-subtle)]">
+                <tr className="bg-[var(--background)] dark:bg-[#161412]/50 text-[var(--muted)] dark:text-[var(--muted)] text-xs uppercase tracking-wider border-b border-slate-200 dark:border-[var(--border-subtle)]">
                   <th className="p-4 font-semibold">Airline</th>
                   <th className="p-4 font-semibold">Flight Number</th>
                   <th className="p-4 font-semibold">From</th>
@@ -110,7 +110,7 @@ export const FlightManager = () => {
                   return (
                     <tr key={flightId} className="hover:bg-[var(--background)] dark:hover:bg-slate-800/20 transition-colors">
                       <td className="p-4 font-bold text-sm text-[var(--text)] dark:text-white flex items-center gap-2">
-                        <div className="w-8 h-8 rounded-lg bg-emerald-50 dark:bg-[#031812]/40 flex items-center justify-center shrink-0">
+                        <div className="w-8 h-8 rounded-lg bg-emerald-50 dark:bg-[#0C0B0A]/40 flex items-center justify-center shrink-0">
                           <Plane className="w-4 h-4 text-[var(--primary)]" />
                         </div>
                         <span>{airlineName}</span>
@@ -123,7 +123,7 @@ export const FlightManager = () => {
                       <td className="p-4 text-sm font-semibold text-slate-800 dark:text-[var(--text)]">{departure}</td>
                       <td className="p-4 text-sm font-semibold text-slate-800 dark:text-[var(--text)]">{arrival}</td>
                       <td className="p-4 text-sm">
-                        <span className="bg-emerald-50 dark:bg-[#073126]/30 text-[var(--primary-dark)] dark:text-emerald-400 px-2.5 py-1 rounded-full text-xs font-bold">
+                        <span className="bg-emerald-50 dark:bg-[#161412]/30 text-[var(--primary-dark)] dark:text-emerald-400 px-2.5 py-1 rounded-full text-xs font-bold">
                           {stops}
                         </span>
                       </td>

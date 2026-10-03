@@ -57,7 +57,7 @@ export const CustomerDashboardStats: React.FC<CustomerDashboardStatsProps> = ({
       value: totalBookings,
       icon: Calendar,
       accentColor: 'text-emerald-800 dark:text-emerald-300',
-      iconBg: 'bg-emerald-50 dark:bg-[#031812]/60 text-emerald-700 dark:text-emerald-300 border-emerald-100 dark:border-[var(--border-subtle)]',
+      iconBg: 'bg-emerald-50 dark:bg-[#0C0B0A]/60 text-emerald-700 dark:text-emerald-300 border-emerald-100 dark:border-[var(--border-subtle)]',
       borderGlow: 'hover:border-emerald-300 dark:hover:border-emerald-600',
     },
     {
@@ -77,7 +77,7 @@ export const CustomerDashboardStats: React.FC<CustomerDashboardStatsProps> = ({
       value: verifiedCount,
       icon: CheckCircle2,
       accentColor: 'text-emerald-700 dark:text-emerald-400',
-      iconBg: 'bg-emerald-50 dark:bg-[#031812]/60 text-emerald-700 dark:text-emerald-400 border-emerald-100 dark:border-[var(--border-subtle)]',
+      iconBg: 'bg-emerald-50 dark:bg-[#0C0B0A]/60 text-emerald-700 dark:text-emerald-400 border-emerald-100 dark:border-[var(--border-subtle)]',
       borderGlow: 'hover:border-emerald-300 dark:hover:border-emerald-500',
     },
   ];
@@ -88,7 +88,7 @@ export const CustomerDashboardStats: React.FC<CustomerDashboardStatsProps> = ({
         {[1, 2, 3].map((n) => (
           <div
             key={n}
-            className="h-28 rounded-2xl bg-white/60 dark:bg-[#073126]/60 border border-emerald-100/60 dark:border-[var(--border-subtle)] animate-pulse p-5"
+            className="h-28 rounded-2xl bg-white/60 dark:bg-[#161412]/60 border border-emerald-100/60 dark:border-[var(--border-subtle)] animate-pulse p-5"
           />
         ))}
       </div>
@@ -106,7 +106,7 @@ export const CustomerDashboardStats: React.FC<CustomerDashboardStatsProps> = ({
             initial={{ opacity: 0, y: 15 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.35, delay: idx * 0.08, ease: 'easeOut' }}
-            className={`group relative overflow-hidden bg-white/90 dark:bg-[#073126]/90 backdrop-blur-md rounded-2xl p-5 border border-emerald-100/90 dark:border-[var(--border-subtle)] shadow-xs hover:shadow-md transition-all duration-300 hover:-translate-y-0.5 ${stat.borderGlow}`}
+            className={`group relative overflow-hidden bg-white/90 dark:bg-[#161412]/90 backdrop-blur-md rounded-2xl p-5 border border-emerald-100/90 dark:border-[var(--border-subtle)] shadow-xs hover:shadow-md transition-all duration-300 hover:-translate-y-0.5 ${stat.borderGlow}`}
           >
             {/* Subtle card ambient radial glow */}
             <div className="absolute top-0 right-0 w-32 h-32 bg-emerald-500/5 dark:bg-emerald-400/5 rounded-full blur-2xl pointer-events-none group-hover:bg-emerald-500/10 transition-colors" />

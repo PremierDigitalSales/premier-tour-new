@@ -63,7 +63,7 @@ export const ContactUsPage: React.FC = () => {
         className: 'custom-leaflet-marker',
         html: `
           <div style="
-            background: linear-gradient(135deg, #0F9D72, #087A5A);
+            background: linear-gradient(135deg, #A97F3E, #8A6530);
             color: white;
             padding: 8px;
             border-radius: 50%;
@@ -72,7 +72,7 @@ export const ContactUsPage: React.FC = () => {
             display: flex;
             align-items: center;
             justify-content: center;
-            box-shadow: 0 4px 16px rgba(15, 157, 114, 0.45);
+            box-shadow: 0 4px 16px rgba(169,127,62, 0.45);
             border: 2px solid white;
           ">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -91,9 +91,9 @@ export const ContactUsPage: React.FC = () => {
         .bindPopup(
           `
           <div style="font-family: inherit; padding: 4px; max-width: 220px;">
-            <p style="font-weight: 700; color: #10231D; margin: 0 0 4px 0; font-size: 14px;">Premier Digital — Nugegoda</p>
+            <p style="font-weight: 700; color: #1A1814; margin: 0 0 4px 0; font-size: 14px;">Premier Digital — Nugegoda</p>
             <p style="color: #475569; margin: 0; font-size: 12px; line-height: 1.4;">603 Premier Digital, Susiri Shopping Complex, Nugegoda, Sri Lanka</p>
-            <p style="color: #0F9D72; margin: 6px 0 0 0; font-size: 11px; font-weight: 700;">Open 24/7 VIP Concierge</p>
+            <p style="color: #A97F3E; margin: 6px 0 0 0; font-size: 11px; font-weight: 700;">Open 24/7 VIP Concierge</p>
           </div>
         `
         )
@@ -176,7 +176,7 @@ export const ContactUsPage: React.FC = () => {
             className="lg:col-span-5 space-y-6"
           >
             {/* WhatsApp VIP Concierge Card */}
-            <div className="bg-gradient-to-br from-[#061510] via-[#0D281F] to-[#082017] rounded-[24px] p-6 sm:p-8 text-white border border-emerald-500/30 shadow-xl shadow-emerald-950/20 relative overflow-hidden">
+            <div className="bg-gradient-to-br from-[#0E0D0B] via-[#1A1815] to-[#131210] rounded-[24px] p-6 sm:p-8 text-white border border-emerald-500/30 shadow-xl shadow-emerald-950/20 relative overflow-hidden">
               <div className="flex items-center justify-between gap-4 mb-4">
                 <div className="flex items-center gap-3">
                   <div className="w-12 h-12 rounded-2xl bg-emerald-500/20 border border-emerald-400/40 flex items-center justify-center text-emerald-400 shadow-xs">
@@ -189,7 +189,7 @@ export const ContactUsPage: React.FC = () => {
                 </div>
                 <span className="flex h-3 w-3 relative">
                   <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-                  <span className="relative inline-flex rounded-full h-3 w-3 bg-[#0F9D72]"></span>
+                  <span className="relative inline-flex rounded-full h-3 w-3 bg-[#A97F3E]"></span>
                 </span>
               </div>
 
@@ -211,17 +211,17 @@ export const ContactUsPage: React.FC = () => {
 
             {/* Direct Communication Channels */}
             <div className="bg-white dark:bg-[var(--surface)] rounded-[24px] p-6 sm:p-8 border border-emerald-500/18 dark:border-emerald-500/25 shadow-sm space-y-6">
-              <h3 className="font-sans text-xl font-bold text-[#10231D] dark:text-white border-b border-emerald-100/80 dark:border-[var(--border-subtle)] pb-3">
+              <h3 className="font-sans text-xl font-bold text-[#1A1814] dark:text-white border-b border-emerald-100/80 dark:border-[var(--border-subtle)] pb-3">
                 Premier Digital Headquarters
               </h3>
 
               <div className="space-y-4 text-sm">
                 <div className="flex items-start gap-3.5">
-                  <div className="w-10 h-10 rounded-xl bg-emerald-50 dark:bg-[#031812]/60 text-[#0F9D72] dark:text-[#39D39B] flex items-center justify-center shrink-0 mt-0.5 border border-emerald-200/70 dark:border-[var(--border-subtle)]">
+                  <div className="w-10 h-10 rounded-xl bg-emerald-50 dark:bg-[#0C0B0A]/60 text-[#A97F3E] dark:text-[#D9BC7E] flex items-center justify-center shrink-0 mt-0.5 border border-emerald-200/70 dark:border-[var(--border-subtle)]">
                     <MapPin className="w-4 h-4" />
                   </div>
                   <div>
-                    <p className="font-bold text-[#10231D] dark:text-[var(--text)]">Physical Address</p>
+                    <p className="font-bold text-[#1A1814] dark:text-[var(--text)]">Physical Address</p>
                     <p className="text-[var(--muted)] dark:text-[var(--muted)] mt-0.5 leading-relaxed">
                       {BANK_DETAILS.branchAddress}
                     </p>
@@ -229,38 +229,38 @@ export const ContactUsPage: React.FC = () => {
                 </div>
 
                 <div className="flex items-start gap-3.5">
-                  <div className="w-10 h-10 rounded-xl bg-emerald-50 dark:bg-[#031812]/60 text-[#0F9D72] dark:text-[#39D39B] flex items-center justify-center shrink-0 mt-0.5 border border-emerald-200/70 dark:border-[var(--border-subtle)]">
+                  <div className="w-10 h-10 rounded-xl bg-emerald-50 dark:bg-[#0C0B0A]/60 text-[#A97F3E] dark:text-[#D9BC7E] flex items-center justify-center shrink-0 mt-0.5 border border-emerald-200/70 dark:border-[var(--border-subtle)]">
                     <Phone className="w-4 h-4" />
                   </div>
                   <div>
-                    <p className="font-bold text-[#10231D] dark:text-[var(--text)]">Direct Telephone</p>
+                    <p className="font-bold text-[#1A1814] dark:text-[var(--text)]">Direct Telephone</p>
                     <p className="text-[var(--muted)] dark:text-[var(--muted)] mt-0.5">
-                      Hotline: <a href={`tel:${BANK_DETAILS.supportPhone}`} className="text-[#0F9D72] dark:text-[#39D39B] hover:underline font-mono font-bold">{BANK_DETAILS.supportPhone}</a>
+                      Hotline: <a href={`tel:${BANK_DETAILS.supportPhone}`} className="text-[#A97F3E] dark:text-[#D9BC7E] hover:underline font-mono font-bold">{BANK_DETAILS.supportPhone}</a>
                     </p>
                     <p className="text-[var(--muted)] dark:text-[var(--muted)] mt-0.5">
-                      VIP Emergency: <a href={`tel:${BANK_DETAILS.hotlineMobile}`} className="text-[#0F9D72] dark:text-[#39D39B] hover:underline font-mono font-bold">{BANK_DETAILS.hotlineMobile}</a>
+                      VIP Emergency: <a href={`tel:${BANK_DETAILS.hotlineMobile}`} className="text-[#A97F3E] dark:text-[#D9BC7E] hover:underline font-mono font-bold">{BANK_DETAILS.hotlineMobile}</a>
                     </p>
                   </div>
                 </div>
 
                 <div className="flex items-start gap-3.5">
-                  <div className="w-10 h-10 rounded-xl bg-emerald-50 dark:bg-[#031812]/60 text-[#0F9D72] dark:text-[#39D39B] flex items-center justify-center shrink-0 mt-0.5 border border-emerald-200/70 dark:border-[var(--border-subtle)]">
+                  <div className="w-10 h-10 rounded-xl bg-emerald-50 dark:bg-[#0C0B0A]/60 text-[#A97F3E] dark:text-[#D9BC7E] flex items-center justify-center shrink-0 mt-0.5 border border-emerald-200/70 dark:border-[var(--border-subtle)]">
                     <Mail className="w-4 h-4" />
                   </div>
                   <div>
-                    <p className="font-bold text-[#10231D] dark:text-[var(--text)]">Electronic Mail</p>
+                    <p className="font-bold text-[#1A1814] dark:text-[var(--text)]">Electronic Mail</p>
                     <p className="text-[var(--muted)] dark:text-[var(--muted)] mt-0.5">
-                      Inquiries: <a href={`mailto:${BANK_DETAILS.supportEmail}`} className="text-[#0F9D72] dark:text-[#39D39B] hover:underline font-semibold">{BANK_DETAILS.supportEmail}</a>
+                      Inquiries: <a href={`mailto:${BANK_DETAILS.supportEmail}`} className="text-[#A97F3E] dark:text-[#D9BC7E] hover:underline font-semibold">{BANK_DETAILS.supportEmail}</a>
                     </p>
                   </div>
                 </div>
 
                 <div className="flex items-start gap-3.5">
-                  <div className="w-10 h-10 rounded-xl bg-emerald-50 dark:bg-[#031812]/60 text-[#0F9D72] dark:text-[#39D39B] flex items-center justify-center shrink-0 mt-0.5 border border-emerald-200/70 dark:border-[var(--border-subtle)]">
+                  <div className="w-10 h-10 rounded-xl bg-emerald-50 dark:bg-[#0C0B0A]/60 text-[#A97F3E] dark:text-[#D9BC7E] flex items-center justify-center shrink-0 mt-0.5 border border-emerald-200/70 dark:border-[var(--border-subtle)]">
                     <Clock className="w-4 h-4" />
                   </div>
                   <div>
-                    <p className="font-bold text-[#10231D] dark:text-[var(--text)]">Operating Hours</p>
+                    <p className="font-bold text-[#1A1814] dark:text-[var(--text)]">Operating Hours</p>
                     <p className="text-[var(--muted)] dark:text-[var(--muted)] mt-0.5">
                       Concierge Desk: 24 Hours / 7 Days a Week
                     </p>
@@ -272,10 +272,10 @@ export const ContactUsPage: React.FC = () => {
               </div>
 
               {/* SLTDA & Regulatory Compliance Badge */}
-              <div className="pt-4 border-t border-emerald-100/80 dark:border-[var(--border-subtle)] flex items-center gap-3 bg-emerald-50/50 dark:bg-[#031812]/30 p-3.5 rounded-2xl border border-emerald-200/60 dark:border-[var(--border-subtle)]">
-                <ShieldCheck className="w-5 h-5 text-[#0F9D72] dark:text-[#39D39B] shrink-0" />
+              <div className="pt-4 border-t border-emerald-100/80 dark:border-[var(--border-subtle)] flex items-center gap-3 bg-emerald-50/50 dark:bg-[#0C0B0A]/30 p-3.5 rounded-2xl border border-emerald-200/60 dark:border-[var(--border-subtle)]">
+                <ShieldCheck className="w-5 h-5 text-[#A97F3E] dark:text-[#D9BC7E] shrink-0" />
                 <div className="text-xs">
-                  <p className="font-bold text-[#10231D] dark:text-[var(--text)]">Official Government Licensed</p>
+                  <p className="font-bold text-[#1A1814] dark:text-[var(--text)]">Official Government Licensed</p>
                   <p className="text-[var(--muted)] dark:text-[var(--muted)] font-mono font-semibold">SLTDA License: {BANK_DETAILS.sltdaLicense}</p>
                 </div>
               </div>
@@ -291,11 +291,11 @@ export const ContactUsPage: React.FC = () => {
           >
             {/* Inquiry Submission Form Card */}
             <div className="bg-white dark:bg-[var(--surface)] rounded-[24px] p-6 sm:p-8 border border-emerald-500/18 dark:border-emerald-500/25 shadow-sm">
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-50 dark:bg-[#031812]/50 border border-emerald-200/70 dark:border-[var(--border-subtle)] text-emerald-800 dark:text-emerald-300 font-bold text-xs uppercase tracking-wider mb-3 shadow-xs">
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-50 dark:bg-[#0C0B0A]/50 border border-emerald-200/70 dark:border-[var(--border-subtle)] text-emerald-800 dark:text-emerald-300 font-bold text-xs uppercase tracking-wider mb-3 shadow-xs">
                 <Compass className="w-4 h-4 text-emerald-600 dark:text-emerald-400" />
                 <span>Bespoke Travel Consultation</span>
               </div>
-              <h2 className="font-sans text-2xl sm:text-3xl font-bold text-[#10231D] dark:text-white mb-2">
+              <h2 className="font-sans text-2xl sm:text-3xl font-bold text-[#1A1814] dark:text-white mb-2">
                 Send an Inquiry to Our Specialists
               </h2>
               <p className="text-sm text-[var(--muted)] dark:text-[var(--muted)] mb-6 leading-relaxed">
@@ -306,9 +306,9 @@ export const ContactUsPage: React.FC = () => {
                 <motion.div
                   initial={{ opacity: 0, scale: 0.95 }}
                   animate={{ opacity: 1, scale: 1 }}
-                  className="bg-emerald-50 dark:bg-[#031812]/50 border border-emerald-200 dark:border-[var(--border-subtle)] rounded-2xl p-6 text-center text-emerald-900 dark:text-[var(--text-secondary)] space-y-3"
+                  className="bg-emerald-50 dark:bg-[#0C0B0A]/50 border border-emerald-200 dark:border-[var(--border-subtle)] rounded-2xl p-6 text-center text-emerald-900 dark:text-[var(--text-secondary)] space-y-3"
                 >
-                  <CheckCircle2 className="w-12 h-12 text-[#0F9D72] dark:text-[#39D39B] mx-auto" />
+                  <CheckCircle2 className="w-12 h-12 text-[#A97F3E] dark:text-[#D9BC7E] mx-auto" />
                   <h3 className="font-sans text-xl font-bold">Inquiry Received Successfully!</h3>
                   <p className="text-sm text-emerald-800 dark:text-emerald-300 max-w-md mx-auto">
                     Thank you for reaching out. A dedicated luxury travel curator has been assigned to your request and will contact you shortly.
@@ -331,7 +331,7 @@ export const ContactUsPage: React.FC = () => {
 
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div>
-                      <label className="block text-xs font-bold text-[#10231D] dark:text-[var(--text)] mb-1.5 uppercase tracking-wider">
+                      <label className="block text-xs font-bold text-[#1A1814] dark:text-[var(--text)] mb-1.5 uppercase tracking-wider">
                         Full Name <span className="text-rose-500">*</span>
                       </label>
                       <input
@@ -345,7 +345,7 @@ export const ContactUsPage: React.FC = () => {
                     </div>
 
                     <div>
-                      <label className="block text-xs font-bold text-[#10231D] dark:text-[var(--text)] mb-1.5 uppercase tracking-wider">
+                      <label className="block text-xs font-bold text-[#1A1814] dark:text-[var(--text)] mb-1.5 uppercase tracking-wider">
                         Email Address <span className="text-rose-500">*</span>
                       </label>
                       <input
@@ -361,7 +361,7 @@ export const ContactUsPage: React.FC = () => {
 
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div>
-                      <label className="block text-xs font-bold text-[#10231D] dark:text-[var(--text)] mb-1.5 uppercase tracking-wider">
+                      <label className="block text-xs font-bold text-[#1A1814] dark:text-[var(--text)] mb-1.5 uppercase tracking-wider">
                         Phone / WhatsApp (Optional)
                       </label>
                       <input
@@ -374,7 +374,7 @@ export const ContactUsPage: React.FC = () => {
                     </div>
 
                     <div>
-                      <label className="block text-xs font-bold text-[#10231D] dark:text-[var(--text)] mb-1.5 uppercase tracking-wider">
+                      <label className="block text-xs font-bold text-[#1A1814] dark:text-[var(--text)] mb-1.5 uppercase tracking-wider">
                         Primary Area of Interest
                       </label>
                       <select
@@ -393,7 +393,7 @@ export const ContactUsPage: React.FC = () => {
                   </div>
 
                   <div>
-                    <label className="block text-xs font-bold text-[#10231D] dark:text-[var(--text)] mb-1.5 uppercase tracking-wider">
+                    <label className="block text-xs font-bold text-[#1A1814] dark:text-[var(--text)] mb-1.5 uppercase tracking-wider">
                       Subject
                     </label>
                     <input
@@ -406,7 +406,7 @@ export const ContactUsPage: React.FC = () => {
                   </div>
 
                   <div>
-                    <label className="block text-xs font-bold text-[#10231D] dark:text-[var(--text)] mb-1.5 uppercase tracking-wider">
+                    <label className="block text-xs font-bold text-[#1A1814] dark:text-[var(--text)] mb-1.5 uppercase tracking-wider">
                       Your Travel Vision or Message <span className="text-rose-500">*</span>
                     </label>
                     <textarea
@@ -438,12 +438,12 @@ export const ContactUsPage: React.FC = () => {
             </div>
 
             {/* Interactive Leaflet OpenStreetMap Box */}
-            <div className="bg-white/80 dark:bg-[#073126]/80 backdrop-blur-md rounded-[24px] p-6 border border-emerald-500/30 dark:border-emerald-500/40 shadow-[0_0_25px_rgba(16,185,129,0.15)] dark:shadow-[0_0_30px_rgba(16,185,129,0.1)] overflow-hidden">
+            <div className="bg-white/80 dark:bg-[#161412]/80 backdrop-blur-md rounded-[24px] p-6 border border-emerald-500/30 dark:border-emerald-500/40 shadow-[0_0_25px_rgba(197,160,89,0.15)] dark:shadow-[0_0_30px_rgba(197,160,89,0.1)] overflow-hidden">
               <div className="flex items-center justify-between mb-3.5">
                 <div className="flex items-center gap-2">
-                  <MapPin className="w-5 h-5 text-[#0F9D72] dark:text-[#39D39B]" />
+                  <MapPin className="w-5 h-5 text-[#A97F3E] dark:text-[#D9BC7E]" />
                   <div>
-                    <h3 className="font-sans text-lg font-bold text-[#10231D] dark:text-white">
+                    <h3 className="font-sans text-lg font-bold text-[#1A1814] dark:text-white">
                       Premier Digital — Nugegoda
                     </h3>
                     <p className="text-xs text-[var(--muted)] dark:text-[var(--text-secondary)] mt-0.5">

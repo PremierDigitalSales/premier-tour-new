@@ -23,14 +23,14 @@ export const AuthCallbackPage: React.FC = () => {
     <div className="min-h-[80vh] flex flex-col items-center justify-center p-6 text-center">
       <SEOHelmet title="Account Verification | Premier Tours" description="Processing email verification." noIndex={true} />
       <div className="max-w-md w-full glass-card p-8 rounded-3xl border border-slate-200 dark:border-[var(--border-subtle)] shadow-xl text-center space-y-4">
-        <div className="w-16 h-16 rounded-full bg-emerald-50 dark:bg-emerald-950/40 border border-emerald-300 dark:border-emerald-800 text-[#0F9D72] dark:text-[#39D39B] flex items-center justify-center mx-auto animate-pulse">
+        <div className="w-16 h-16 rounded-full bg-emerald-50 dark:bg-emerald-950/40 border border-emerald-300 dark:border-emerald-800 text-[#A97F3E] dark:text-[#D9BC7E] flex items-center justify-center mx-auto animate-pulse">
           <Compass className="w-8 h-8 animate-spin" />
         </div>
-        <h2 className="text-xl font-heading font-bold text-[#10231D] dark:text-white">
+        <h2 className="text-xl font-heading font-bold text-[#1A1814] dark:text-white">
           Authenticating...
         </h2>
-        <p className="text-xs text-[#71817B] dark:text-[#8FA9A0] flex items-center justify-center gap-2">
-          <Loader2 className="w-4 h-4 animate-spin text-[#0F9D72]" />
+        <p className="text-xs text-[#857D70] dark:text-[#A39A8B] flex items-center justify-center gap-2">
+          <Loader2 className="w-4 h-4 animate-spin text-[#A97F3E]" />
           Please wait...
         </p>
       </div>

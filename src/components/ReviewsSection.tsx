@@ -130,30 +130,30 @@ export const ReviewsSection: React.FC<{
   };
 
   return (
-    <section className="py-20 bg-[#F2F8F5] dark:bg-[var(--background)] relative overflow-hidden transition-colors">
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(15,157,114,0.05)_0%,transparent_70%)] pointer-events-none" />
+    <section className="py-20 bg-[#F4EFE6] dark:bg-[var(--background)] relative overflow-hidden transition-colors">
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(169,127,62,0.05)_0%,transparent_70%)] pointer-events-none" />
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
         
         {/* Social Proof Header */}
         <div className="flex flex-col md:flex-row items-center justify-between gap-6 mb-12 bg-white dark:bg-[var(--surface)] p-6 sm:p-8 rounded-[24px] border border-emerald-500/20 shadow-sm relative overflow-hidden">
-          <div className="absolute top-0 right-0 w-64 h-64 bg-[#0F9D72]/5 rounded-full blur-3xl" />
+          <div className="absolute top-0 right-0 w-64 h-64 bg-[#A97F3E]/5 rounded-full blur-3xl" />
           
           <div className="flex items-center gap-6 sm:gap-12 w-full md:w-auto relative z-10">
             <div>
-              <div className="flex items-center gap-1 text-[#0F9D72] mb-1">
+              <div className="flex items-center gap-1 text-[#A97F3E] mb-1">
                 {[...Array(5)].map((_, i) => (
                   <Star key={i} className="w-4 h-4 fill-current" />
                 ))}
               </div>
-              <p className="text-sm font-bold text-[#10231D] dark:text-white flex items-center gap-2">
+              <p className="text-sm font-bold text-[#1A1814] dark:text-white flex items-center gap-2">
                 {stats.count > 0 ? (
                   <>
-                    {stats.avg} / 5.0 <span className="text-[#71817B] font-normal hidden sm:inline">Based on {stats.count} {stats.count === 1 ? 'review' : 'reviews'}</span>
+                    {stats.avg} / 5.0 <span className="text-[#857D70] font-normal hidden sm:inline">Based on {stats.count} {stats.count === 1 ? 'review' : 'reviews'}</span>
                   </>
                 ) : (
                   <>
-                    5.0 / 5.0 <span className="text-[#71817B] font-normal hidden sm:inline">· Verified Premier Concierge Service</span>
+                    5.0 / 5.0 <span className="text-[#857D70] font-normal hidden sm:inline">· Verified Premier Concierge Service</span>
                   </>
                 )}
               </p>
@@ -171,13 +171,13 @@ export const ReviewsSection: React.FC<{
                 </div>
               ) : (
                 <>
-                  <div className="flex items-center gap-1 text-[#0F9D72] mb-1">
+                  <div className="flex items-center gap-1 text-[#A97F3E] mb-1">
                     {[...Array(5)].map((_, i) => (
                       <Star key={i} className="w-4 h-4 fill-current" />
                     ))}
                   </div>
-                  <p className="text-sm font-bold text-[#10231D] dark:text-white">
-                    {stats.avg} / 5 <span className="text-[#71817B] font-normal">{t('reviews_authentic_ratings') || 'Authentic Guest Reviews'}</span>
+                  <p className="text-sm font-bold text-[#1A1814] dark:text-white">
+                    {stats.avg} / 5 <span className="text-[#857D70] font-normal">{t('reviews_authentic_ratings') || 'Authentic Guest Reviews'}</span>
                   </p>
                 </>
               )}
@@ -185,7 +185,7 @@ export const ReviewsSection: React.FC<{
           </div>
           
           <div className="w-full md:w-auto relative z-10 text-center md:text-right">
-             <h2 className="font-sans text-xl md:text-2xl font-bold text-[#10231D] dark:text-white mb-4 md:mb-0 hidden md:block">
+             <h2 className="font-sans text-xl md:text-2xl font-bold text-[#1A1814] dark:text-white mb-4 md:mb-0 hidden md:block">
                {t('reviews_photos_title') || 'Traveler Photos & Reviews'}
              </h2>
              <button
@@ -217,8 +217,8 @@ export const ReviewsSection: React.FC<{
                   onClick={() => { setActiveFilter(filter); setCurrentPage(1); }}
                   className={`whitespace-nowrap px-4 py-2 rounded-full text-sm font-semibold transition-all border ${
                     activeFilter === filter
-                      ? 'bg-[#0F9D72] text-white border-[#0F9D72] shadow-[0_4px_16px_rgba(15,157,114,0.3)]'
-                      : 'bg-white dark:bg-[var(--surface)] text-[#71817B] dark:text-[var(--text-secondary)] border-emerald-500/20 hover:border-[#0F9D72]/50 hover:text-[#0F9D72]'
+                      ? 'bg-[#A97F3E] text-white border-[#A97F3E] shadow-[0_4px_16px_rgba(169,127,62,0.3)]'
+                      : 'bg-white dark:bg-[var(--surface)] text-[#857D70] dark:text-[var(--text-secondary)] border-emerald-500/20 hover:border-[#A97F3E]/50 hover:text-[#A97F3E]'
                   }`}
                 >
                   {label} {filter === 'With Photos' && stats.withPhotos > 0 && `(${stats.withPhotos})`}
@@ -237,18 +237,18 @@ export const ReviewsSection: React.FC<{
           </div>
         ) : filteredReviews.length === 0 ? (
           <div className="bg-white dark:bg-[var(--surface)] rounded-[24px] border border-emerald-500/20 p-12 text-center">
-            <div className="w-16 h-16 bg-emerald-50 dark:bg-[#073126]/30 rounded-full flex items-center justify-center mx-auto mb-4">
-              <Camera className="w-8 h-8 text-[#0F9D72]" />
+            <div className="w-16 h-16 bg-emerald-50 dark:bg-[#161412]/30 rounded-full flex items-center justify-center mx-auto mb-4">
+              <Camera className="w-8 h-8 text-[#A97F3E]" />
             </div>
-            <h3 className="font-sans font-bold text-2xl text-[#10231D] dark:text-white mb-2">
+            <h3 className="font-sans font-bold text-2xl text-[#1A1814] dark:text-white mb-2">
               Be the first to share your Premier Tours experience.
             </h3>
-            <p className="text-[#71817B] dark:text-[var(--muted)] mb-6">
+            <p className="text-[#857D70] dark:text-[var(--muted)] mb-6">
               Your stories inspire others to explore the wonders of Sri Lanka.
             </p>
             <button
                onClick={() => setIsModalOpen(true)}
-               className="px-6 py-3 bg-[#0F9D72] text-white font-bold rounded-xl text-sm shadow-md hover:bg-[#0c8560] transition-colors"
+               className="px-6 py-3 bg-[#A97F3E] text-white font-bold rounded-xl text-sm shadow-md hover:bg-[#8F6A33] transition-colors"
              >
                Share Your Experience
              </button>
@@ -268,11 +268,11 @@ export const ReviewsSection: React.FC<{
                     initial={{ opacity: 0, x: 50 }}
                     animate={{ opacity: 1, x: 0 }}
                     exit={{ opacity: 0, scale: 0.95 }}
-                    className="bg-white dark:bg-[var(--surface)] rounded-[24px] border border-emerald-500/20 p-6 sm:p-8 hover:shadow-[0_8px_30px_rgba(15,157,114,0.12)] hover:border-emerald-500/40 transition-all duration-300 flex flex-col flex-1 w-full md:w-1/2"
+                    className="bg-white dark:bg-[var(--surface)] rounded-[24px] border border-emerald-500/20 p-6 sm:p-8 hover:shadow-[0_8px_30px_rgba(169,127,62,0.12)] hover:border-emerald-500/40 transition-all duration-300 flex flex-col flex-1 w-full md:w-1/2"
                   >
                     <div className="flex items-start justify-between mb-4">
                       <div className="flex items-center gap-4">
-                        <div className="w-12 h-12 rounded-full overflow-hidden bg-gradient-to-br from-emerald-100 to-emerald-200 dark:from-[#073126] dark:to-emerald-950 flex-shrink-0 border border-emerald-300 dark:border-emerald-700 flex items-center justify-center text-[#0F9D72] dark:text-emerald-300 font-bold text-base shadow-inner">
+                        <div className="w-12 h-12 rounded-full overflow-hidden bg-gradient-to-br from-emerald-100 to-emerald-200 dark:from-[#161412] dark:to-emerald-950 flex-shrink-0 border border-emerald-300 dark:border-emerald-700 flex items-center justify-center text-[#A97F3E] dark:text-emerald-300 font-bold text-base shadow-inner">
                           {review.user_avatar ? (
                             <SafeImage src={review.user_avatar} alt={review.user_name || 'Guest'} className="w-full h-full object-cover" />
                           ) : (
@@ -280,21 +280,21 @@ export const ReviewsSection: React.FC<{
                           )}
                         </div>
                         <div>
-                          <h4 className="font-bold text-[#10231D] dark:text-white flex flex-wrap items-center gap-2">
+                          <h4 className="font-bold text-[#1A1814] dark:text-white flex flex-wrap items-center gap-2">
                             {review.user_name || 'Traveler'}
                             {isDemo ? (
                               <span className="inline-flex items-center gap-1 text-[10px] uppercase font-extrabold text-amber-800 dark:text-amber-200 bg-amber-100/90 dark:bg-amber-950/60 px-2.5 py-0.5 rounded-full border border-amber-300 dark:border-amber-800/60">
                                 DEMO REVIEW
                               </span>
                             ) : isVerified ? (
-                              <span className="inline-flex items-center gap-1 text-[10px] uppercase font-bold text-[#0F9D72] dark:text-emerald-400 bg-emerald-50 dark:bg-[#073126]/40 px-2.5 py-0.5 rounded-full border border-emerald-200 dark:border-emerald-800/40">
+                              <span className="inline-flex items-center gap-1 text-[10px] uppercase font-bold text-[#A97F3E] dark:text-emerald-400 bg-emerald-50 dark:bg-[#161412]/40 px-2.5 py-0.5 rounded-full border border-emerald-200 dark:border-emerald-800/40">
                                 <CheckCircle className="w-3 h-3" /> Verified Traveler
                               </span>
                             ) : null}
                           </h4>
                           <div className="flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-2 mt-0.5">
                             {review.user_location && (
-                              <p className="text-xs text-[#71817B] dark:text-[var(--muted)] flex items-center gap-1">
+                              <p className="text-xs text-[#857D70] dark:text-[var(--muted)] flex items-center gap-1">
                                 <span className="inline-block w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
                                 {review.user_location}
                               </p>
@@ -302,23 +302,23 @@ export const ReviewsSection: React.FC<{
                           </div>
                         </div>
                       </div>
-                      <div className="flex items-center gap-0.5 text-[#0F9D72]">
+                      <div className="flex items-center gap-0.5 text-[#A97F3E]">
                         {[...Array(5)].map((_, i) => (
                           <Star key={i} className={`w-4 h-4 ${i < review.rating ? 'fill-current' : 'text-slate-300 dark:text-[var(--muted)]'}`} />
                         ))}
                       </div>
                     </div>
                     
-                    <h5 className="font-sans font-bold text-lg text-[#10231D] dark:text-white mb-2">
+                    <h5 className="font-sans font-bold text-lg text-[#1A1814] dark:text-white mb-2">
                       "{review.title}"
                     </h5>
-                    <p className="text-[#33453F] dark:text-[var(--text-secondary)] text-sm leading-relaxed mb-6 flex-grow">
+                    <p className="text-[#4A453D] dark:text-[var(--text-secondary)] text-sm leading-relaxed mb-6 flex-grow">
                       {review.content}
                     </p>
                     
                     {/* Tour Tag */}
                     {(review.service_name || review.item_id) && (
-                      <div className="mb-4 inline-flex items-center gap-2 text-xs font-semibold text-[#0F9D72] bg-[#0F9D72]/10 px-3 py-1.5 rounded-lg border border-[#0F9D72]/20">
+                      <div className="mb-4 inline-flex items-center gap-2 text-xs font-semibold text-[#A97F3E] bg-[#A97F3E]/10 px-3 py-1.5 rounded-lg border border-[#A97F3E]/20">
                         <span>{t('reviews_trip') || 'Tour:'}</span> {getTourName(review)}
                       </div>
                     )}
@@ -330,7 +330,7 @@ export const ReviewsSection: React.FC<{
                           <button
                             key={idx}
                             onClick={() => setSelectedPhoto(img)}
-                            className="w-16 h-16 rounded-xl overflow-hidden border border-emerald-500/20 hover:border-[#0F9D72] transition-colors focus:outline-none"
+                            className="w-16 h-16 rounded-xl overflow-hidden border border-emerald-500/20 hover:border-[#A97F3E] transition-colors focus:outline-none"
                           >
                             <SafeImage src={img} alt={`Traveler photo ${idx + 1}`} className="w-full h-full object-cover" />
                           </button>
@@ -343,13 +343,13 @@ export const ReviewsSection: React.FC<{
                         onClick={() => handleVoteHelpful(review.id)}
                         className={`flex items-center gap-1.5 text-xs font-semibold transition-colors ${
                           votedIds.includes(review.id)
-                            ? 'text-[#0F9D72] font-bold cursor-default'
-                            : 'text-[#71817B] dark:text-[var(--text-secondary)] hover:text-[#0F9D72] cursor-pointer'
+                            ? 'text-[#A97F3E] font-bold cursor-default'
+                            : 'text-[#857D70] dark:text-[var(--text-secondary)] hover:text-[#A97F3E] cursor-pointer'
                         }`}
                       >
                         <ThumbsUp className="w-4 h-4" /> {votedIds.includes(review.id) ? (t('reviews_thank_you') || 'Helpful') : (t('reviews_helpful') || 'Helpful')} {review.helpful_count > 0 && `(${review.helpful_count})`}
                       </button>
-                      <p className="text-xs text-[#71817B] dark:text-[var(--muted)]">
+                      <p className="text-xs text-[#857D70] dark:text-[var(--muted)]">
                         {new Date(review.created_at).toLocaleDateString('en-US', { month: 'long', year: 'numeric' })}
                       </p>
                     </div>
@@ -362,7 +362,7 @@ export const ReviewsSection: React.FC<{
           {/* Pagination Controls */}
           {filteredReviews.length > reviewsPerPage && (
             <div className="mt-12 flex flex-col sm:flex-row items-center justify-between gap-4 border-t border-emerald-500/20 pt-6">
-              <div className="text-sm font-semibold text-[#71817B] dark:text-[var(--muted)]">
+              <div className="text-sm font-semibold text-[#857D70] dark:text-[var(--muted)]">
                 Showing {((validCurrentPage - 1) * reviewsPerPage) + 1}–{Math.min(validCurrentPage * reviewsPerPage, filteredReviews.length)} of {filteredReviews.length} reviews
               </div>
               <div className="flex items-center gap-2">
@@ -370,7 +370,7 @@ export const ReviewsSection: React.FC<{
                   onClick={() => setCurrentPage(p => Math.max(1, p - 1))}
                   disabled={validCurrentPage === 1}
                   aria-label="Previous reviews"
-                  className="p-2 rounded-full border border-emerald-500/20 hover:bg-emerald-50 dark:hover:bg-[#073126] disabled:opacity-50 disabled:cursor-not-allowed transition-colors text-[#10231D] dark:text-white"
+                  className="p-2 rounded-full border border-emerald-500/20 hover:bg-emerald-50 dark:hover:bg-[#161412] disabled:opacity-50 disabled:cursor-not-allowed transition-colors text-[#1A1814] dark:text-white"
                 >
                   <ChevronLeft className="w-5 h-5" />
                 </button>
@@ -378,7 +378,7 @@ export const ReviewsSection: React.FC<{
                   onClick={() => setCurrentPage(p => Math.min(totalPages, p + 1))}
                   disabled={validCurrentPage === totalPages}
                   aria-label="Next reviews"
-                  className="p-2 rounded-full border border-emerald-500/20 hover:bg-emerald-50 dark:hover:bg-[#073126] disabled:opacity-50 disabled:cursor-not-allowed transition-colors text-[#10231D] dark:text-white"
+                  className="p-2 rounded-full border border-emerald-500/20 hover:bg-emerald-50 dark:hover:bg-[#161412] disabled:opacity-50 disabled:cursor-not-allowed transition-colors text-[#1A1814] dark:text-white"
                 >
                   <ChevronRight className="w-5 h-5" />
                 </button>

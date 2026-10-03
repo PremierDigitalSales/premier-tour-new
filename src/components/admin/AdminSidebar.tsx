@@ -33,16 +33,16 @@ export const AdminSidebar = ({
 }) => {
   return (
     <aside 
-      className={`fixed top-0 left-0 z-50 h-screen w-64 bg-white dark:bg-[var(--background)] border-r border-[#DDEBE5] dark:border-[var(--border-subtle)] transition-transform duration-300 transform ${
+      className={`fixed top-0 left-0 z-50 h-screen w-64 bg-white dark:bg-[var(--background)] border-r border-[#E8E0D2] dark:border-[var(--border-subtle)] transition-transform duration-300 transform ${
         isOpen ? 'translate-x-0' : '-translate-x-full lg:translate-x-0'
       } shadow-lg lg:shadow-none`}
     >
       <div className="h-full flex flex-col">
         {/* Header brand */}
-        <div className="flex items-center justify-between px-6 py-4 border-b border-[#DDEBE5] dark:border-[var(--border-subtle)]">
+        <div className="flex items-center justify-between px-6 py-4 border-b border-[#E8E0D2] dark:border-[var(--border-subtle)]">
           <Logo to="/" size="sm" />
           <button 
-            className="lg:hidden p-1.5 rounded-lg text-[#71817B] hover:text-[#10231D] dark:hover:text-white hover:bg-[#F2F8F5] dark:hover:bg-[#0D281F]" 
+            className="lg:hidden p-1.5 rounded-lg text-[#857D70] hover:text-[#1A1814] dark:hover:text-white hover:bg-[#F4EFE6] dark:hover:bg-[#1A1815]" 
             onClick={onClose || (() => setActiveTab(activeTab))}
             aria-label="Close sidebar"
           >
@@ -65,11 +65,11 @@ export const AdminSidebar = ({
                     }}
                     className={`w-full flex items-center gap-3 px-3.5 py-2.5 rounded-xl transition-all text-xs font-bold ${
                       active
-                        ? 'bg-[#0F9D72] text-white shadow-xs'
-                        : 'text-[#33453F] dark:text-[#C8DDD5] hover:bg-[#F2F8F5] dark:hover:bg-[#0D281F] hover:text-[#0F9D72] dark:hover:text-[#39D39B]'
+                        ? 'bg-[#A97F3E] text-white shadow-xs'
+                        : 'text-[#4A453D] dark:text-[#D9D2C5] hover:bg-[#F4EFE6] dark:hover:bg-[#1A1815] hover:text-[#A97F3E] dark:hover:text-[#D9BC7E]'
                     }`}
                   >
-                    <Icon className={`w-4 h-4 ${active ? 'text-white' : 'text-[#0F9D72] dark:text-[#39D39B]'}`} />
+                    <Icon className={`w-4 h-4 ${active ? 'text-white' : 'text-[#A97F3E] dark:text-[#D9BC7E]'}`} />
                     <span>{tab.label}</span>
                   </button>
                 </li>

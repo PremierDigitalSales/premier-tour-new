@@ -155,7 +155,7 @@ export const AuthModal: React.FC<AuthModalProps> = ({
           </div>
 
           {/* Quick Demo Bar */}
-          <div className="p-3 bg-emerald-50/50 dark:bg-[#073126]/40 border-b border-slate-200 dark:border-[var(--border-subtle)] text-xs">
+          <div className="p-3 bg-emerald-50/50 dark:bg-[#161412]/40 border-b border-slate-200 dark:border-[var(--border-subtle)] text-xs">
             <div className="grid grid-cols-2 gap-2">
               <button
                 type="button"
@@ -212,7 +212,7 @@ export const AuthModal: React.FC<AuthModalProps> = ({
               className={`mx-4 mb-2 p-2.5 rounded-lg text-xs flex items-center gap-2 border ${
                 toast.type === 'error'
                   ? 'bg-rose-50 text-rose-800 border-rose-300 dark:bg-rose-950/40 dark:text-rose-200 dark:border-rose-800'
-                  : 'bg-emerald-50 text-emerald-800 border-emerald-300 dark:bg-[#031812]/40 dark:text-[var(--text-secondary)] dark:border-[var(--border-subtle)]'
+                  : 'bg-emerald-50 text-emerald-800 border-emerald-300 dark:bg-[#0C0B0A]/40 dark:text-[var(--text-secondary)] dark:border-[var(--border-subtle)]'
               }`}
             >
               {toast.type === 'error' ? <AlertCircle className="w-3.5 h-3.5" /> : <CheckCircle2 className="w-3.5 h-3.5" />}
@@ -392,7 +392,7 @@ export const AuthModal: React.FC<AuthModalProps> = ({
           )}
 
           {/* Footer note */}
-          <div className="p-3 bg-[var(--background)] dark:bg-[#031812]/80 border-t border-slate-200 dark:border-[var(--border-subtle)] text-center text-[10px] text-slate-400">
+          <div className="p-3 bg-[var(--background)] dark:bg-[#0C0B0A]/80 border-t border-slate-200 dark:border-[var(--border-subtle)] text-center text-[10px] text-slate-400">
             Verified Booking Protection & SSL 256-Bit Encrypted
           </div>
         </motion.div>

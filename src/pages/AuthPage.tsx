@@ -267,7 +267,7 @@ export const AuthPage: React.FC = () => {
               className={`mx-4 mb-3 p-3.5 rounded-xl text-xs flex flex-col gap-2 border ${
                 toast.type === 'error'
                   ? 'bg-rose-50 dark:bg-rose-950/40 text-rose-800 dark:text-rose-200 border-rose-300 dark:border-rose-800'
-                  : 'bg-emerald-50 dark:bg-[#031812]/40 text-emerald-800 dark:text-[var(--text-secondary)] border-emerald-300 dark:border-[var(--border-subtle)]'
+                  : 'bg-emerald-50 dark:bg-[#0C0B0A]/40 text-emerald-800 dark:text-[var(--text-secondary)] border-emerald-300 dark:border-[var(--border-subtle)]'
               }`}
             >
               <div className="flex items-start gap-2.5">
@@ -316,7 +316,7 @@ export const AuthPage: React.FC = () => {
                   placeholder="traveler@domain.com"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
-                  className="w-full pl-9 pr-3 py-2.5 bg-[var(--background)] dark:bg-[#073126]/80 border border-slate-300 dark:border-[var(--border-subtle)] text-[var(--text)] dark:text-white rounded-xl focus:outline-none focus:ring-2 focus:ring-[var(--primary)] text-xs"
+                  className="w-full pl-9 pr-3 py-2.5 bg-[var(--background)] dark:bg-[#161412]/80 border border-slate-300 dark:border-[var(--border-subtle)] text-[var(--text)] dark:text-white rounded-xl focus:outline-none focus:ring-2 focus:ring-[var(--primary)] text-xs"
                 />
               </div>
             </div>
@@ -340,7 +340,7 @@ export const AuthPage: React.FC = () => {
                   placeholder="••••••••"
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
-                  className="w-full pl-9 pr-10 py-2.5 bg-[var(--background)] dark:bg-[#073126]/80 border border-slate-300 dark:border-[var(--border-subtle)] text-[var(--text)] dark:text-white rounded-xl focus:outline-none focus:ring-2 focus:ring-[var(--primary)] text-xs"
+                  className="w-full pl-9 pr-10 py-2.5 bg-[var(--background)] dark:bg-[#161412]/80 border border-slate-300 dark:border-[var(--border-subtle)] text-[var(--text)] dark:text-white rounded-xl focus:outline-none focus:ring-2 focus:ring-[var(--primary)] text-xs"
                 />
                 <button
                   type="button"
@@ -398,7 +398,7 @@ export const AuthPage: React.FC = () => {
                   placeholder="e.g. Lady Evelyn Sinclair"
                   value={fullName}
                   onChange={(e) => setFullName(e.target.value)}
-                  className="w-full pl-9 pr-3 py-2 bg-[var(--background)] dark:bg-[#073126]/80 border border-slate-300 dark:border-[var(--border-subtle)] text-[var(--text)] dark:text-white rounded-xl focus:outline-none focus:ring-2 focus:ring-[var(--primary)] text-xs"
+                  className="w-full pl-9 pr-3 py-2 bg-[var(--background)] dark:bg-[#161412]/80 border border-slate-300 dark:border-[var(--border-subtle)] text-[var(--text)] dark:text-white rounded-xl focus:outline-none focus:ring-2 focus:ring-[var(--primary)] text-xs"
                 />
               </div>
             </div>
@@ -413,7 +413,7 @@ export const AuthPage: React.FC = () => {
                   placeholder="traveler@domain.com"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
-                  className="w-full pl-9 pr-3 py-2 bg-[var(--background)] dark:bg-[#073126]/80 border border-slate-300 dark:border-[var(--border-subtle)] text-[var(--text)] dark:text-white rounded-xl focus:outline-none focus:ring-2 focus:ring-[var(--primary)] text-xs"
+                  className="w-full pl-9 pr-3 py-2 bg-[var(--background)] dark:bg-[#161412]/80 border border-slate-300 dark:border-[var(--border-subtle)] text-[var(--text)] dark:text-white rounded-xl focus:outline-none focus:ring-2 focus:ring-[var(--primary)] text-xs"
                 />
               </div>
             </div>
@@ -428,7 +428,7 @@ export const AuthPage: React.FC = () => {
                   placeholder="At least 6 characters"
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
-                  className="w-full pl-9 pr-10 py-2 bg-[var(--background)] dark:bg-[#073126]/80 border border-slate-300 dark:border-[var(--border-subtle)] text-[var(--text)] dark:text-white rounded-xl focus:outline-none focus:ring-2 focus:ring-[var(--primary)] text-xs"
+                  className="w-full pl-9 pr-10 py-2 bg-[var(--background)] dark:bg-[#161412]/80 border border-slate-300 dark:border-[var(--border-subtle)] text-[var(--text)] dark:text-white rounded-xl focus:outline-none focus:ring-2 focus:ring-[var(--primary)] text-xs"
                 />
                 <button
                   type="button"
@@ -466,7 +466,7 @@ export const AuthPage: React.FC = () => {
                   placeholder="Re-enter password"
                   value={confirmPassword}
                   onChange={(e) => setConfirmPassword(e.target.value)}
-                  className="w-full pl-9 pr-10 py-2 bg-[var(--background)] dark:bg-[#073126]/80 border border-slate-300 dark:border-[var(--border-subtle)] text-[var(--text)] dark:text-white rounded-xl focus:outline-none focus:ring-2 focus:ring-[var(--primary)] text-xs"
+                  className="w-full pl-9 pr-10 py-2 bg-[var(--background)] dark:bg-[#161412]/80 border border-slate-300 dark:border-[var(--border-subtle)] text-[var(--text)] dark:text-white rounded-xl focus:outline-none focus:ring-2 focus:ring-[var(--primary)] text-xs"
                 />
                 <button
                   type="button"
@@ -518,7 +518,7 @@ export const AuthPage: React.FC = () => {
         {activeTab === 'forgot' && (
           <form onSubmit={handleForgotPassword} className="p-6 pt-2 space-y-4 text-xs">
             <div className="text-center py-2">
-              <div className="w-10 h-10 rounded-full bg-emerald-50 dark:bg-[#031812]/60 border border-emerald-300 dark:border-[var(--border-subtle)] text-[var(--primary-dark)] dark:text-emerald-400 flex items-center justify-center mx-auto mb-2">
+              <div className="w-10 h-10 rounded-full bg-emerald-50 dark:bg-[#0C0B0A]/60 border border-emerald-300 dark:border-[var(--border-subtle)] text-[var(--primary-dark)] dark:text-emerald-400 flex items-center justify-center mx-auto mb-2">
                 <KeyRound className="w-5 h-5" />
               </div>
               <h3 className="font-sans font-bold text-sm text-[var(--text)] dark:text-white">{t('auth_reset') || 'Reset Account Password'}</h3>
@@ -537,7 +537,7 @@ export const AuthPage: React.FC = () => {
                   placeholder="traveler@domain.com"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
-                  className="w-full pl-9 pr-3 py-2.5 bg-[var(--background)] dark:bg-[#073126]/80 border border-slate-300 dark:border-[var(--border-subtle)] text-[var(--text)] dark:text-white rounded-xl focus:outline-none focus:ring-2 focus:ring-[var(--primary)] text-xs"
+                  className="w-full pl-9 pr-3 py-2.5 bg-[var(--background)] dark:bg-[#161412]/80 border border-slate-300 dark:border-[var(--border-subtle)] text-[var(--text)] dark:text-white rounded-xl focus:outline-none focus:ring-2 focus:ring-[var(--primary)] text-xs"
                 />
               </div>
             </div>
@@ -576,7 +576,7 @@ export const AuthPage: React.FC = () => {
         )}
 
         {/* Security badge footer */}
-        <div className="p-4 bg-[var(--background)] dark:bg-[#031812]/80 border-t border-slate-200 dark:border-[var(--border-subtle)] text-center flex items-center justify-center gap-2 text-[11px] text-[var(--muted)] dark:text-[var(--muted)]">
+        <div className="p-4 bg-[var(--background)] dark:bg-[#0C0B0A]/80 border-t border-slate-200 dark:border-[var(--border-subtle)] text-center flex items-center justify-center gap-2 text-[11px] text-[var(--muted)] dark:text-[var(--muted)]">
           <Shield className="w-3.5 h-3.5 text-[var(--primary-dark)] dark:text-emerald-400" />
           <span>SSL 256-Bit Encrypted & SLTDA Certified Travel Agency</span>
         </div>

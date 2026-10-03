@@ -68,7 +68,7 @@ export const CarManager = () => {
           <div className="overflow-x-auto">
             <table className="w-full text-left border-collapse">
               <thead>
-                <tr className="bg-[var(--background)] dark:bg-[#073126]/50 text-[var(--muted)] dark:text-[var(--muted)] text-xs uppercase tracking-wider border-b border-slate-200 dark:border-[var(--border-subtle)]">
+                <tr className="bg-[var(--background)] dark:bg-[#161412]/50 text-[var(--muted)] dark:text-[var(--muted)] text-xs uppercase tracking-wider border-b border-slate-200 dark:border-[var(--border-subtle)]">
                   <th className="p-4 font-semibold">Vehicle</th>
                   <th className="p-4 font-semibold">Transmission / Type</th>
                   <th className="p-4 font-semibold">Price/Day</th>
@@ -104,7 +104,7 @@ export const CarManager = () => {
                         </div>
                       </td>
                       <td className="p-4 text-sm text-[var(--muted)] dark:text-[var(--text-secondary)]">
-                        <span className="bg-emerald-50 dark:bg-[#073126]/30 text-[var(--primary-dark)] dark:text-emerald-400 px-2 py-1 rounded text-xs font-semibold">{type}</span>
+                        <span className="bg-emerald-50 dark:bg-[#161412]/30 text-[var(--primary-dark)] dark:text-emerald-400 px-2 py-1 rounded text-xs font-semibold">{type}</span>
                       </td>
                       <td className="p-4 text-sm font-bold text-[var(--text)] dark:text-white">${price}/day</td>
                       <td className="p-4">

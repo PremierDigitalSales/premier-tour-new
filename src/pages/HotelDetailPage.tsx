@@ -174,7 +174,7 @@ export const HotelDetailPage: React.FC = () => {
         {/* Title and Rating */}
         <div className="mb-8">
           <div className="flex items-center gap-2 mb-2">
-            <span className="text-xs uppercase tracking-widest font-semibold text-emerald-800 dark:text-emerald-300 bg-emerald-50 dark:bg-[#031812]/50 px-3 py-1 rounded-full border border-emerald-200/80 dark:border-[var(--border-subtle)]">
+            <span className="text-xs uppercase tracking-widest font-semibold text-emerald-800 dark:text-emerald-300 bg-emerald-50 dark:bg-[#0C0B0A]/50 px-3 py-1 rounded-full border border-emerald-200/80 dark:border-[var(--border-subtle)]">
               {t('hotel_detail_sanctuary') || 'Palatial Sanctuary'}
             </span>
             <div className="flex items-center gap-1 text-xs text-[var(--muted)] dark:text-[var(--text-secondary)] glass-card border border-slate-200 dark:border-[var(--border-subtle)] px-3 py-1 rounded-full">
@@ -229,7 +229,7 @@ export const HotelDetailPage: React.FC = () => {
                   <h3 className="text-base font-sans font-bold text-[var(--text)] dark:text-white mb-4">{t('hotel_detail_amenities') || 'Five-Star Amenities & Privileges'}</h3>
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                     {hotelAmenities.map((amenity, idx) => (
-                      <div key={idx} className="flex items-center gap-2.5 p-3 rounded-xl bg-[var(--background)] dark:bg-[#073126]/60 border border-slate-200/80 dark:border-[var(--border-subtle)] text-xs text-[var(--text)] dark:text-[var(--text)] font-medium">
+                      <div key={idx} className="flex items-center gap-2.5 p-3 rounded-xl bg-[var(--background)] dark:bg-[#161412]/60 border border-slate-200/80 dark:border-[var(--border-subtle)] text-xs text-[var(--text)] dark:text-[var(--text)] font-medium">
                         <CheckCircle2 className="w-4 h-4 text-[var(--primary-dark)] shrink-0" />
                         <span>{amenity}</span>
                       </div>
@@ -239,7 +239,7 @@ export const HotelDetailPage: React.FC = () => {
               )}
             </div>
 
-            <div className="bg-emerald-50/60 dark:bg-[#031812]/40 p-6 rounded-2xl border border-emerald-200 dark:border-[var(--border-subtle)] space-y-3">
+            <div className="bg-emerald-50/60 dark:bg-[#0C0B0A]/40 p-6 rounded-2xl border border-emerald-200 dark:border-[var(--border-subtle)] space-y-3">
               <h3 className="text-sm font-semibold text-emerald-900 dark:text-emerald-300 flex items-center gap-2">
                 <Landmark className="w-4 h-4 text-emerald-700 dark:text-emerald-400" />
                 {t('hotel_detail_protection_title') || 'Premier Booking Protection for Hotel Reservations'}
@@ -261,7 +261,7 @@ export const HotelDetailPage: React.FC = () => {
                   </span>
                   <span className="text-xs text-[var(--muted)] dark:text-[var(--muted)]"> / {t('common_night') || 'night'}</span>
                 </div>
-                <span className="text-[11px] font-medium text-emerald-700 dark:text-emerald-300 bg-emerald-50 dark:bg-[#031812]/50 px-2.5 py-1 rounded-lg border border-emerald-200 dark:border-[var(--border-subtle)]">
+                <span className="text-[11px] font-medium text-emerald-700 dark:text-emerald-300 bg-emerald-50 dark:bg-[#0C0B0A]/50 px-2.5 py-1 rounded-lg border border-emerald-200 dark:border-[var(--border-subtle)]">
                   {t('hotel_detail_butler_included') || 'Butler Included'}
                 </span>
               </div>
@@ -330,7 +330,7 @@ export const HotelDetailPage: React.FC = () => {
               </div>
 
               {/* Total Calculation */}
-              <div className="p-4 bg-[var(--background)] dark:bg-[#073126]/60 rounded-xl border border-slate-200 dark:border-[var(--border-subtle)] space-y-2 text-xs text-[var(--muted)] dark:text-[var(--muted)]">
+              <div className="p-4 bg-[var(--background)] dark:bg-[#161412]/60 rounded-xl border border-slate-200 dark:border-[var(--border-subtle)] space-y-2 text-xs text-[var(--muted)] dark:text-[var(--muted)]">
                 <div className="flex justify-between">
                   <span>{formatPrice(hotel.price_per_night)} × {nights} {t('hotel_detail_nights_count') || 'night(s)'}</span>
                   <span className="font-semibold text-[var(--text)] dark:text-white">{formatPrice(totalPrice)}</span>

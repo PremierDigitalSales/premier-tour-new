@@ -54,7 +54,7 @@ export const DatabaseManager = () => {
 
       <div className="glass-card border border-slate-200 dark:border-[var(--border-subtle)] rounded-2xl p-6 shadow-sm">
         <div className="flex items-start gap-4 mb-6 pb-6 border-b border-slate-100 dark:border-[var(--border-subtle)]">
-           <div className="w-12 h-12 rounded-xl bg-emerald-50 dark:bg-[#073126]/30 flex items-center justify-center shrink-0">
+           <div className="w-12 h-12 rounded-xl bg-emerald-50 dark:bg-[#161412]/30 flex items-center justify-center shrink-0">
              <Database className="w-6 h-6 text-[var(--primary)]" />
            </div>
            <div>

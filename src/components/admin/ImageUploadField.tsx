@@ -129,7 +129,7 @@ export const ImageUploadField: React.FC<ImageUploadFieldProps> = ({
       )}
 
       {internalPreview ? (
-        <div className="relative border border-emerald-200 dark:border-[var(--border-subtle)] bg-emerald-50/40 dark:bg-[#031812]/20 rounded-2xl p-4 flex items-center gap-4">
+        <div className="relative border border-emerald-200 dark:border-[var(--border-subtle)] bg-emerald-50/40 dark:bg-[#0C0B0A]/20 rounded-2xl p-4 flex items-center gap-4">
           <img 
             src={internalPreview} 
             alt="Upload preview" 
@@ -156,9 +156,9 @@ export const ImageUploadField: React.FC<ImageUploadFieldProps> = ({
         </div>
       ) : (
         <label className="relative block cursor-pointer group">
-          <div className="w-full py-4 px-4 border-2 border-dashed rounded-2xl flex flex-col items-center justify-center transition-all border-slate-300 dark:border-[var(--border-subtle)] hover:border-[var(--primary)] dark:hover:border-emerald-500 bg-slate-50/50 dark:bg-[#073126]/50">
+          <div className="w-full py-4 px-4 border-2 border-dashed rounded-2xl flex flex-col items-center justify-center transition-all border-slate-300 dark:border-[var(--border-subtle)] hover:border-[var(--primary)] dark:hover:border-emerald-500 bg-slate-50/50 dark:bg-[#161412]/50">
             <div className="flex flex-col items-center gap-1.5 text-center">
-              <div className="w-10 h-10 rounded-full bg-emerald-100 dark:bg-[#073126]/40 flex items-center justify-center text-[var(--primary)] dark:text-emerald-400 mb-1 group-hover:scale-105 transition-transform">
+              <div className="w-10 h-10 rounded-full bg-emerald-100 dark:bg-[#161412]/40 flex items-center justify-center text-[var(--primary)] dark:text-emerald-400 mb-1 group-hover:scale-105 transition-transform">
                 <UploadCloud className="w-5 h-5" />
               </div>
               <span className="text-sm font-bold text-[var(--text)] dark:text-white">Click or drag image to upload</span>

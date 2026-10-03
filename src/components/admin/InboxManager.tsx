@@ -100,10 +100,10 @@ export const InboxManager: React.FC = () => {
       {/* Header */}
       <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
         <div>
-          <h1 className="text-2xl sm:text-3xl font-black text-[#10231D] dark:text-white">
+          <h1 className="text-2xl sm:text-3xl font-black text-[#1A1814] dark:text-white">
             Inbox & Concierge Inquiries
           </h1>
-          <p className="text-sm text-[#71817B] dark:text-[#8FA9A0]">
+          <p className="text-sm text-[#857D70] dark:text-[#A39A8B]">
             Review custom itinerary inquiries, private charter dispatches, and traveler requests.
           </p>
         </div>
@@ -111,11 +111,11 @@ export const InboxManager: React.FC = () => {
 
       {/* KPI Cards */}
       <div className="grid grid-cols-1 sm:grid-cols-4 gap-4">
-        <div className="bg-white dark:bg-[var(--surface)] p-4 rounded-2xl border border-[#DDEBE5] dark:border-[var(--border-subtle)] shadow-xs">
-          <span className="text-xs font-bold text-[#71817B] dark:text-[#8FA9A0] uppercase">Total Inquiries</span>
+        <div className="bg-white dark:bg-[var(--surface)] p-4 rounded-2xl border border-[#E8E0D2] dark:border-[var(--border-subtle)] shadow-xs">
+          <span className="text-xs font-bold text-[#857D70] dark:text-[#A39A8B] uppercase">Total Inquiries</span>
           <div className="flex items-center justify-between mt-2">
-            <span className="text-2xl font-black text-[#10231D] dark:text-white">{inquiries.length}</span>
-            <Inbox className="w-5 h-5 text-[#0F9D72]" />
+            <span className="text-2xl font-black text-[#1A1814] dark:text-white">{inquiries.length}</span>
+            <Inbox className="w-5 h-5 text-[#A97F3E]" />
           </div>
         </div>
 
@@ -140,12 +140,12 @@ export const InboxManager: React.FC = () => {
         </div>
 
         <div className="bg-white dark:bg-[var(--surface)] p-4 rounded-2xl border border-emerald-200 dark:border-[var(--border-subtle)] shadow-xs">
-          <span className="text-xs font-bold text-[#0F9D72] dark:text-[#39D39B] uppercase">Resolved / Replied</span>
+          <span className="text-xs font-bold text-[#A97F3E] dark:text-[#D9BC7E] uppercase">Resolved / Replied</span>
           <div className="flex items-center justify-between mt-2">
-            <span className="text-2xl font-black text-[#0F9D72] dark:text-[#39D39B]">
+            <span className="text-2xl font-black text-[#A97F3E] dark:text-[#D9BC7E]">
               {inquiries.filter(i => i.status === 'Resolved' || i.status === 'Replied').length}
             </span>
-            <CheckCircle2 className="w-5 h-5 text-[#0F9D72]" />
+            <CheckCircle2 className="w-5 h-5 text-[#A97F3E]" />
           </div>
         </div>
       </div>
@@ -159,8 +159,8 @@ export const InboxManager: React.FC = () => {
               onClick={() => setFilter(tab)}
               className={`px-4 py-2 rounded-xl text-xs font-bold transition-colors whitespace-nowrap ${
                 filter === tab
-                  ? 'bg-[#0F9D72] text-white'
-                  : 'bg-white dark:bg-[var(--surface)] text-[#71817B] dark:text-[#8FA9A0] hover:bg-[#F2F8F5] dark:hover:bg-[#13372B]/50 border border-[#DDEBE5] dark:border-[var(--border-subtle)]'
+                  ? 'bg-[#A97F3E] text-white'
+                  : 'bg-white dark:bg-[var(--surface)] text-[#857D70] dark:text-[#A39A8B] hover:bg-[#F4EFE6] dark:hover:bg-[#211E19]/50 border border-[#E8E0D2] dark:border-[var(--border-subtle)]'
               }`}
             >
               {tab}
@@ -169,29 +169,29 @@ export const InboxManager: React.FC = () => {
         </div>
 
         <div className="relative w-full sm:w-64">
-          <Search className="w-4 h-4 text-[#71817B] absolute left-3 top-1/2 -translate-y-1/2" />
+          <Search className="w-4 h-4 text-[#857D70] absolute left-3 top-1/2 -translate-y-1/2" />
           <input
             type="text"
             placeholder="Search inquiries..."
             value={search}
             onChange={(e) => setSearch(e.target.value)}
-            className="w-full bg-white dark:bg-[var(--surface)] border border-[#DDEBE5] dark:border-[var(--border-subtle)] rounded-xl py-2 pl-9 pr-3 text-xs text-[#10231D] dark:text-white focus:outline-none focus:border-[#0F9D72]"
+            className="w-full bg-white dark:bg-[var(--surface)] border border-[#E8E0D2] dark:border-[var(--border-subtle)] rounded-xl py-2 pl-9 pr-3 text-xs text-[#1A1814] dark:text-white focus:outline-none focus:border-[#A97F3E]"
           />
         </div>
       </div>
 
       {/* Messages List */}
-      <div className="bg-white dark:bg-[var(--surface)] rounded-2xl border border-[#DDEBE5] dark:border-[var(--border-subtle)] overflow-hidden shadow-xs">
+      <div className="bg-white dark:bg-[var(--surface)] rounded-2xl border border-[#E8E0D2] dark:border-[var(--border-subtle)] overflow-hidden shadow-xs">
         {loading ? (
-          <div className="p-12 text-center text-xs text-[#71817B]">Loading inquiries...</div>
+          <div className="p-12 text-center text-xs text-[#857D70]">Loading inquiries...</div>
         ) : filteredInquiries.length === 0 ? (
-          <div className="p-12 text-center text-[#71817B] flex flex-col items-center">
-            <Inbox className="w-10 h-10 mb-2 opacity-40 text-[#0F9D72]" />
-            <p className="font-bold text-sm text-[#10231D] dark:text-white">No inquiries found</p>
-            <p className="text-xs text-[#71817B] dark:text-[#8FA9A0] mt-1">There are no messages matching your search or filter.</p>
+          <div className="p-12 text-center text-[#857D70] flex flex-col items-center">
+            <Inbox className="w-10 h-10 mb-2 opacity-40 text-[#A97F3E]" />
+            <p className="font-bold text-sm text-[#1A1814] dark:text-white">No inquiries found</p>
+            <p className="text-xs text-[#857D70] dark:text-[#A39A8B] mt-1">There are no messages matching your search or filter.</p>
           </div>
         ) : (
-          <div className="divide-y divide-[#DDEBE5] dark:divide-[rgba(73,201,151,0.1)]">
+          <div className="divide-y divide-[#E8E0D2] dark:divide-[rgba(212,180,119,0.1)]">
             {filteredInquiries.map((inq) => {
               const currentStatus = inq.status || 'Unread';
               return (
@@ -203,35 +203,35 @@ export const InboxManager: React.FC = () => {
                       handleStatusChange(inq.id, 'In Progress');
                     }
                   }}
-                  className="p-4 sm:p-5 hover:bg-[#F2F8F5]/60 dark:hover:bg-[#13372B]/30 cursor-pointer transition-colors flex flex-col sm:flex-row justify-between items-start sm:items-center gap-3"
+                  className="p-4 sm:p-5 hover:bg-[#F4EFE6]/60 dark:hover:bg-[#211E19]/30 cursor-pointer transition-colors flex flex-col sm:flex-row justify-between items-start sm:items-center gap-3"
                 >
                   <div className="flex items-start gap-3.5 flex-1 min-w-0">
                     <div className={`w-10 h-10 rounded-full flex items-center justify-center font-bold text-sm shrink-0 ${
                       currentStatus === 'Unread'
                         ? 'bg-rose-100 dark:bg-rose-950 text-rose-600 dark:text-rose-400'
-                        : 'bg-emerald-100 dark:bg-[var(--background)] text-[#0F9D72] dark:text-[#39D39B]'
+                        : 'bg-emerald-100 dark:bg-[var(--background)] text-[#A97F3E] dark:text-[#D9BC7E]'
                     }`}>
                       {inq.name ? inq.name.charAt(0).toUpperCase() : 'M'}
                     </div>
 
                     <div className="min-w-0 flex-1">
                       <div className="flex items-center gap-2 flex-wrap">
-                        <span className="font-bold text-sm text-[#10231D] dark:text-white truncate">
+                        <span className="font-bold text-sm text-[#1A1814] dark:text-white truncate">
                           {inq.name}
                         </span>
-                        <span className="text-xs text-[#71817B] dark:text-[#8FA9A0]">
+                        <span className="text-xs text-[#857D70] dark:text-[#A39A8B]">
                           &lt;{inq.email}&gt;
                         </span>
                         {inq.phone && (
-                          <span className="text-xs text-[#71817B] dark:text-[#8FA9A0] flex items-center gap-1">
+                          <span className="text-xs text-[#857D70] dark:text-[#A39A8B] flex items-center gap-1">
                             <Phone className="w-3 h-3" /> {inq.phone}
                           </span>
                         )}
                       </div>
-                      <p className="font-semibold text-xs text-[#10231D] dark:text-white mt-0.5 truncate">
+                      <p className="font-semibold text-xs text-[#1A1814] dark:text-white mt-0.5 truncate">
                         {inq.subject}
                       </p>
-                      <p className="text-xs text-[#71817B] dark:text-[#8FA9A0] line-clamp-1 mt-0.5">
+                      <p className="text-xs text-[#857D70] dark:text-[#A39A8B] line-clamp-1 mt-0.5">
                         {inq.message}
                       </p>
                     </div>
@@ -243,12 +243,12 @@ export const InboxManager: React.FC = () => {
                         ? 'bg-rose-100 dark:bg-rose-950 text-rose-600 dark:text-rose-400'
                         : currentStatus === 'In Progress'
                         ? 'bg-amber-100 dark:bg-amber-950 text-amber-700 dark:text-amber-400'
-                        : 'bg-emerald-100 dark:bg-[var(--background)] text-[#0F9D72] dark:text-[#39D39B]'
+                        : 'bg-emerald-100 dark:bg-[var(--background)] text-[#A97F3E] dark:text-[#D9BC7E]'
                     }`}>
                       {currentStatus}
                     </span>
 
-                    <span className="text-[11px] text-[#71817B] dark:text-[#8FA9A0]">
+                    <span className="text-[11px] text-[#857D70] dark:text-[#A39A8B]">
                       {new Date(inq.created_at).toLocaleDateString()}
                     </span>
 
@@ -258,7 +258,7 @@ export const InboxManager: React.FC = () => {
                         e.stopPropagation();
                         handleDelete(inq.id);
                       }}
-                      className="p-1.5 text-[#71817B] hover:text-rose-600 transition-colors"
+                      className="p-1.5 text-[#857D70] hover:text-rose-600 transition-colors"
                       title="Delete Inquiry"
                     >
                       <Trash2 className="w-4 h-4" />
@@ -274,20 +274,20 @@ export const InboxManager: React.FC = () => {
       {/* Inquiry Detail & Reply Modal */}
       {selectedInquiry && (
         <div className="fixed inset-0 z-[200] flex items-center justify-center p-4 bg-slate-900/70 backdrop-blur-sm">
-          <div className="bg-white dark:bg-[var(--surface)] rounded-3xl w-full max-w-2xl max-h-[90vh] flex flex-col shadow-2xl border border-[#DDEBE5] dark:border-[var(--border-subtle)]">
-            <div className="p-6 border-b border-[#DDEBE5] dark:border-[var(--border-subtle)] flex justify-between items-start shrink-0">
+          <div className="bg-white dark:bg-[var(--surface)] rounded-3xl w-full max-w-2xl max-h-[90vh] flex flex-col shadow-2xl border border-[#E8E0D2] dark:border-[var(--border-subtle)]">
+            <div className="p-6 border-b border-[#E8E0D2] dark:border-[var(--border-subtle)] flex justify-between items-start shrink-0">
               <div>
-                <span className="text-xs font-bold text-[#0F9D72] dark:text-[#39D39B] uppercase">Inquiry Details</span>
-                <h2 className="text-xl font-bold text-[#10231D] dark:text-white mt-1">
+                <span className="text-xs font-bold text-[#A97F3E] dark:text-[#D9BC7E] uppercase">Inquiry Details</span>
+                <h2 className="text-xl font-bold text-[#1A1814] dark:text-white mt-1">
                   {selectedInquiry.subject}
                 </h2>
-                <p className="text-xs text-[#71817B] dark:text-[#8FA9A0] mt-0.5">
+                <p className="text-xs text-[#857D70] dark:text-[#A39A8B] mt-0.5">
                   From {selectedInquiry.name} ({selectedInquiry.email})
                 </p>
               </div>
               <button
                 onClick={() => setSelectedInquiry(null)}
-                className="p-2 hover:bg-slate-100 dark:hover:bg-[#13372B] rounded-full text-[#71817B] transition-colors"
+                className="p-2 hover:bg-slate-100 dark:hover:bg-[#211E19] rounded-full text-[#857D70] transition-colors"
               >
                 <X className="w-5 h-5" />
               </button>
@@ -295,25 +295,25 @@ export const InboxManager: React.FC = () => {
 
             <div className="p-6 overflow-y-auto flex-1 space-y-5">
               {/* Sender info bar */}
-              <div className="bg-[#F8FCFA] dark:bg-[var(--surface)] p-4 rounded-2xl border border-[#DDEBE5] dark:border-[var(--border-subtle)] flex flex-wrap gap-4 items-center justify-between text-xs">
+              <div className="bg-[#FAF7F2] dark:bg-[var(--surface)] p-4 rounded-2xl border border-[#E8E0D2] dark:border-[var(--border-subtle)] flex flex-wrap gap-4 items-center justify-between text-xs">
                 <div>
-                  <span className="text-[#71817B] dark:text-[#8FA9A0] block">Received:</span>
-                  <span className="font-bold text-[#10231D] dark:text-white">
+                  <span className="text-[#857D70] dark:text-[#A39A8B] block">Received:</span>
+                  <span className="font-bold text-[#1A1814] dark:text-white">
                     {new Date(selectedInquiry.created_at).toLocaleString()}
                   </span>
                 </div>
                 {selectedInquiry.phone && (
                   <div>
-                    <span className="text-[#71817B] dark:text-[#8FA9A0] block">Phone:</span>
-                    <span className="font-bold text-[#10231D] dark:text-white">{selectedInquiry.phone}</span>
+                    <span className="text-[#857D70] dark:text-[#A39A8B] block">Phone:</span>
+                    <span className="font-bold text-[#1A1814] dark:text-white">{selectedInquiry.phone}</span>
                   </div>
                 )}
                 <div>
-                  <span className="text-[#71817B] dark:text-[#8FA9A0] block">Current Status:</span>
+                  <span className="text-[#857D70] dark:text-[#A39A8B] block">Current Status:</span>
                   <select
                     value={selectedInquiry.status || 'Unread'}
                     onChange={(e) => handleStatusChange(selectedInquiry.id, e.target.value)}
-                    className="mt-1 font-bold text-xs bg-white dark:bg-[var(--surface)] border border-[#DDEBE5] dark:border-[var(--border-subtle)] rounded-lg px-2.5 py-1 text-[#10231D] dark:text-white focus:outline-none"
+                    className="mt-1 font-bold text-xs bg-white dark:bg-[var(--surface)] border border-[#E8E0D2] dark:border-[var(--border-subtle)] rounded-lg px-2.5 py-1 text-[#1A1814] dark:text-white focus:outline-none"
                   >
                     <option value="Unread">Unread</option>
                     <option value="In Progress">In Progress</option>
@@ -325,22 +325,22 @@ export const InboxManager: React.FC = () => {
 
               {/* Message Content */}
               <div>
-                <label className="text-xs font-bold text-[#71817B] dark:text-[#8FA9A0] uppercase mb-1.5 block">
+                <label className="text-xs font-bold text-[#857D70] dark:text-[#A39A8B] uppercase mb-1.5 block">
                   Traveler Message
                 </label>
-                <div className="bg-[#F8FCFA] dark:bg-[var(--surface)] p-4 rounded-2xl border border-[#DDEBE5] dark:border-[var(--border-subtle)] text-sm text-[#10231D] dark:text-white whitespace-pre-wrap leading-relaxed">
+                <div className="bg-[#FAF7F2] dark:bg-[var(--surface)] p-4 rounded-2xl border border-[#E8E0D2] dark:border-[var(--border-subtle)] text-sm text-[#1A1814] dark:text-white whitespace-pre-wrap leading-relaxed">
                   {selectedInquiry.message}
                 </div>
               </div>
 
               {/* Quick Reply Form */}
               <div>
-                <label className="text-xs font-bold text-[#71817B] dark:text-[#8FA9A0] uppercase mb-1.5 block">
+                <label className="text-xs font-bold text-[#857D70] dark:text-[#A39A8B] uppercase mb-1.5 block">
                   Compose Dispatch Reply
                 </label>
                 {replySuccess && (
                   <div className="mb-3 p-3 bg-emerald-50 text-emerald-800 rounded-xl text-xs font-bold flex items-center gap-2 border border-emerald-200">
-                    <CheckCircle2 className="w-4 h-4 text-[#0F9D72]" /> Reply dispatched to traveler email address!
+                    <CheckCircle2 className="w-4 h-4 text-[#A97F3E]" /> Reply dispatched to traveler email address!
                   </div>
                 )}
                 <form onSubmit={handleSendReply} className="space-y-3">
@@ -349,13 +349,13 @@ export const InboxManager: React.FC = () => {
                     value={replyText}
                     onChange={(e) => setReplyText(e.target.value)}
                     placeholder={`Dear ${selectedInquiry.name},\nThank you for reaching out to Ceylon Premier Concierge...`}
-                    className="w-full p-3 bg-white dark:bg-[var(--surface)] border border-[#DDEBE5] dark:border-[var(--border-subtle)] rounded-2xl text-xs text-[#10231D] dark:text-white focus:outline-none focus:border-[#0F9D72]"
+                    className="w-full p-3 bg-white dark:bg-[var(--surface)] border border-[#E8E0D2] dark:border-[var(--border-subtle)] rounded-2xl text-xs text-[#1A1814] dark:text-white focus:outline-none focus:border-[#A97F3E]"
                   />
                   <div className="flex justify-end gap-2">
                     <button
                       type="submit"
                       disabled={sendingReply || !replyText.trim()}
-                      className="px-5 py-2.5 bg-[#0F9D72] hover:bg-[#0B7D5A] disabled:opacity-50 text-white rounded-xl text-xs font-bold flex items-center gap-2 transition-colors shadow-sm"
+                      className="px-5 py-2.5 bg-[#A97F3E] hover:bg-[#8A6530] disabled:opacity-50 text-white rounded-xl text-xs font-bold flex items-center gap-2 transition-colors shadow-sm"
                     >
                       <Send className="w-4 h-4" />
                       {sendingReply ? 'Sending...' : 'Send Email Reply'}
@@ -365,7 +365,7 @@ export const InboxManager: React.FC = () => {
               </div>
             </div>
 
-            <div className="p-4 border-t border-[#DDEBE5] dark:border-[var(--border-subtle)] flex justify-between items-center shrink-0">
+            <div className="p-4 border-t border-[#E8E0D2] dark:border-[var(--border-subtle)] flex justify-between items-center shrink-0">
               <button
                 type="button"
                 onClick={() => handleDelete(selectedInquiry.id)}
@@ -376,7 +376,7 @@ export const InboxManager: React.FC = () => {
               <button
                 type="button"
                 onClick={() => setSelectedInquiry(null)}
-                className="px-5 py-2 text-xs font-bold text-[#71817B] hover:bg-slate-100 dark:hover:bg-[#13372B] rounded-xl transition-colors"
+                className="px-5 py-2 text-xs font-bold text-[#857D70] hover:bg-slate-100 dark:hover:bg-[#211E19] rounded-xl transition-colors"
               >
                 Close
               </button>

@@ -46,7 +46,7 @@ export const StarRating: React.FC<StarRatingProps> = ({
             className={`${currentSize} ${
               star <= displayValue
                 ? 'fill-amber-400 text-amber-400 drop-shadow-sm'
-                : 'fill-slate-200 text-slate-200 dark:fill-[#104D39] dark:text-[#104D39]'
+                : 'fill-slate-200 text-slate-200 dark:fill-[#2C2720] dark:text-[#2C2720]'
             }`}
           />
         </motion.button>

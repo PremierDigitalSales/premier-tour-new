@@ -24,7 +24,7 @@ export const BankDetailsCard: React.FC<BankDetailsCardProps> = ({
   };
 
   return (
-    <div id="bank-transfer-details-card" className={`glass-card bg-emerald-50/80 dark:bg-[#073126]/80 text-[var(--text)] dark:text-emerald-50 rounded-2xl p-6 border border-emerald-100 dark:border-[var(--border-subtle)] shadow-xl relative overflow-hidden ${className}`}>
+    <div id="bank-transfer-details-card" className={`glass-card bg-emerald-50/80 dark:bg-[#161412]/80 text-[var(--text)] dark:text-emerald-50 rounded-2xl p-6 border border-emerald-100 dark:border-[var(--border-subtle)] shadow-xl relative overflow-hidden ${className}`}>
       {/* Subtle purple accent aura */}
       <div className="absolute top-0 right-0 w-64 h-64 bg-[var(--primary)]/10 rounded-full blur-3xl pointer-events-none" />
       
