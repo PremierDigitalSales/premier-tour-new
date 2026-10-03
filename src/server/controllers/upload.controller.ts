@@ -68,7 +68,7 @@ export const uploadMiddleware = (req: Request, res: Response, next: (err?: any) 
   multerInstance.fields([
     { name: 'image', maxCount: 1 },
     { name: 'file', maxCount: 1 },
-  ])(req, res, (err) => {
+  ])(req as any, res as any, (err) => {
     if (err) {
       return next(err);
     }

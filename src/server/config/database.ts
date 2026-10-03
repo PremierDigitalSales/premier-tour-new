@@ -8,6 +8,8 @@ const DEFAULT_MONGODB_URI = 'mongodb+srv://kumudevops_db_user:tncvBxik2FwUrgel@c
 // Global cache for serverless environments
 let cachedConnection: typeof mongoose | null = null;
 let connectionPromise: Promise<typeof mongoose | null> | null = null;
+let lastFailedAttempt = 0;
+const RETRY_COOLDOWN_MS = 20000;
 
 export async function connectDatabase(): Promise<typeof mongoose | null> {
   // If already connected, reuse existing connection immediately
@@ -19,6 +21,11 @@ export async function connectDatabase(): Promise<typeof mongoose | null> {
   // If a connection attempt is currently in flight, await it
   if (connectionPromise && mongoose.connection.readyState === 2) {
     return connectionPromise;
+  }
+
+  // If failed recently, fail fast without stalling requests
+  if (Date.now() - lastFailedAttempt < RETRY_COOLDOWN_MS) {
+    return null;
   }
 
   let uri = process.env.MONGODB_URI || DEFAULT_MONGODB_URI;
@@ -34,8 +41,8 @@ export async function connectDatabase(): Promise<typeof mongoose | null> {
       console.log('[MongoDB] Connecting to MongoDB Atlas (premier_tours)...');
       
       await mongoose.connect(uri, {
-        serverSelectionTimeoutMS: 8000,
-        socketTimeoutMS: 45000,
+        serverSelectionTimeoutMS: 4000,
+        socketTimeoutMS: 30000,
         maxPoolSize: 10,
       });
 
@@ -44,6 +51,7 @@ export async function connectDatabase(): Promise<typeof mongoose | null> {
       return mongoose;
     } catch (err: any) {
       console.error('❌ [MongoDB Atlas Connection Error]:', err.message);
+      lastFailedAttempt = Date.now();
       connectionPromise = null;
       return null;
     }

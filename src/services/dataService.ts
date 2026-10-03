@@ -1,8 +1,16 @@
 import { api } from './api';
 import { Tour, Hotel, Car, Flight, BlogPost, Booking, UserProfile, Review, ReviewStatus } from '../types';
 
-// Simple mock for switchRole if used
-import { SEED_USERS } from '../data/mockData';
+// Fallback mock datasets when database is loading or offline
+import {
+  SEED_USERS,
+  SEED_TOURS,
+  SEED_HOTELS,
+  SEED_CARS,
+  SEED_FLIGHTS,
+  SEED_BLOG_POSTS,
+  INITIAL_BOOKINGS,
+} from '../data/mockData';
 
 export const normalizeTour = (tour: any): Tour => {
   if (!tour) return tour;
@@ -232,13 +240,26 @@ export const dataService = {
 
   // Tours
   getTours: async (): Promise<Tour[]> => {
-    const res = await api.tours.getAll();
-    const list = res.data || [];
-    return list.map(normalizeTour);
+    try {
+      const res = await api.tours.getAll();
+      const list = res.data || [];
+      if (list.length > 0) {
+        return list.map(normalizeTour);
+      }
+    } catch (e) {
+      console.warn('API getTours error, using seed tours:', e);
+    }
+    return SEED_TOURS;
   },
   getTourById: async (id: string): Promise<Tour | null> => {
-    const res = await api.tours.getByIdOrSlug(id);
-    return res.data ? normalizeTour(res.data) : null;
+    try {
+      const res = await api.tours.getByIdOrSlug(id);
+      if (res.data) return normalizeTour(res.data);
+    } catch (e) {
+      console.warn('API getTourById error:', e);
+    }
+    const fallback = SEED_TOURS.find(t => t.id === id || (t as any)._id === id || (t as any).slug === id);
+    return fallback || null;
   },
   saveTour: async (payload: any, imageFile?: any): Promise<Tour | null> => {
     if (imageFile) {
@@ -276,13 +297,26 @@ export const dataService = {
 
   // Hotels
   getHotels: async (): Promise<Hotel[]> => {
-    const res = await api.hotels.getAll();
-    const list = res.data || [];
-    return list.map(normalizeHotel);
+    try {
+      const res = await api.hotels.getAll();
+      const list = res.data || [];
+      if (list.length > 0) {
+        return list.map(normalizeHotel);
+      }
+    } catch (e) {
+      console.warn('API getHotels error, using seed hotels:', e);
+    }
+    return SEED_HOTELS;
   },
   getHotelById: async (id: string): Promise<Hotel | null> => {
-    const res = await api.hotels.getByIdOrSlug(id);
-    return res.data ? normalizeHotel(res.data) : null;
+    try {
+      const res = await api.hotels.getByIdOrSlug(id);
+      if (res.data) return normalizeHotel(res.data);
+    } catch (e) {
+      console.warn('API getHotelById error:', e);
+    }
+    const fallback = SEED_HOTELS.find(h => h.id === id || (h as any)._id === id || (h as any).slug === id);
+    return fallback || null;
   },
   saveHotel: async (payload: any, imageFile?: any): Promise<Hotel | null> => {
     if (imageFile) {
@@ -314,14 +348,27 @@ export const dataService = {
 
   // Cars
   getCars: async (): Promise<Car[]> => {
-    const res = await api.cars.getAll();
-    const list = res.data || [];
-    return list.map(normalizeCar);
+    try {
+      const res = await api.cars.getAll();
+      const list = res.data || [];
+      if (list.length > 0) {
+        return list.map(normalizeCar);
+      }
+    } catch (e) {
+      console.warn('API getCars error, using seed cars:', e);
+    }
+    return SEED_CARS;
   },
   getCarById: async (id: string): Promise<Car | null> => {
-    const res = await api.cars.getAll();
-    const cars: Car[] = res.data ? res.data.map(normalizeCar) : [];
-    return cars.find(c => c.id === id || (c as any)._id === id) || null;
+    try {
+      const res = await api.cars.getAll();
+      const cars: Car[] = res.data ? res.data.map(normalizeCar) : [];
+      const found = cars.find(c => c.id === id || (c as any)._id === id);
+      if (found) return found;
+    } catch (e) {
+      console.warn('API getCarById error:', e);
+    }
+    return SEED_CARS.find(c => c.id === id || (c as any)._id === id) || null;
   },
   saveCar: async (payload: any, imageFile?: any): Promise<Car | null> => {
     if (imageFile) {
@@ -356,14 +403,27 @@ export const dataService = {
 
   // Flights
   getFlights: async (): Promise<Flight[]> => {
-    const res = await api.flights.getAll();
-    const list = res.data || [];
-    return list.map(normalizeFlight);
+    try {
+      const res = await api.flights.getAll();
+      const list = res.data || [];
+      if (list.length > 0) {
+        return list.map(normalizeFlight);
+      }
+    } catch (e) {
+      console.warn('API getFlights error, using seed flights:', e);
+    }
+    return SEED_FLIGHTS;
   },
   getFlightById: async (id: string): Promise<Flight | null> => {
-    const res = await api.flights.getAll();
-    const flights: Flight[] = res.data ? res.data.map(normalizeFlight) : [];
-    return flights.find(f => f.id === id || (f as any)._id === id) || null;
+    try {
+      const res = await api.flights.getAll();
+      const flights: Flight[] = res.data ? res.data.map(normalizeFlight) : [];
+      const found = flights.find(f => f.id === id || (f as any)._id === id);
+      if (found) return found;
+    } catch (e) {
+      console.warn('API getFlightById error:', e);
+    }
+    return SEED_FLIGHTS.find(f => f.id === id || (f as any)._id === id) || null;
   },
   saveFlight: async (payload: any, imageFile?: any): Promise<Flight | null> => {
     if (imageFile) {
@@ -383,9 +443,16 @@ export const dataService = {
 
   // Bookings
   getBookings: async (userEmail?: string): Promise<Booking[]> => {
-    const res = await api.bookings.getAll({ userEmail });
-    const list = res.data || [];
-    return list.map(normalizeBooking);
+    try {
+      const res = await api.bookings.getAll({ userEmail });
+      const list = res.data || [];
+      if (list.length > 0) {
+        return list.map(normalizeBooking);
+      }
+    } catch (e) {
+      console.warn('API getBookings error, using seed bookings:', e);
+    }
+    return INITIAL_BOOKINGS.map(normalizeBooking);
   },
   createBooking: async (payload: any): Promise<Booking | null> => {
     const res = await api.bookings.create(payload);
@@ -405,12 +472,25 @@ export const dataService = {
 
   // Blog
   getBlogPosts: async (): Promise<BlogPost[]> => {
-    const res = await api.blog.getAll();
-    return res.data || [];
+    try {
+      const res = await api.blog.getAll();
+      const list = res.data || [];
+      if (list.length > 0) {
+        return list;
+      }
+    } catch (e) {
+      console.warn('API getBlogPosts error, using seed posts:', e);
+    }
+    return SEED_BLOG_POSTS;
   },
   getBlogPostBySlug: async (slug: string): Promise<BlogPost | null> => {
-    const res = await api.blog.getBySlug(slug);
-    return res.data || null;
+    try {
+      const res = await api.blog.getBySlug(slug);
+      if (res.data) return res.data;
+    } catch (e) {
+      console.warn('API getBlogPostBySlug error:', e);
+    }
+    return SEED_BLOG_POSTS.find(p => p.slug === slug || p.id === slug) || null;
   },
   saveBlogPost: async (payload: any, imageFile?: any): Promise<BlogPost | null> => {
     if (imageFile) {

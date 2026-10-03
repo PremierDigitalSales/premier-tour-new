@@ -14,41 +14,75 @@ A modern luxury travel and booking platform crafted with React, TypeScript, Tail
 
 ---
 
-## 📁 Directory Structure
+## 📁 Project Structure & Organization Guide
 
 ```
-├── public/                     # Static Web Assets
+├── public/                     # Static Web Assets (served directly by web server)
 │   ├── .htaccess              # Hostinger LiteSpeed / Apache SPA Routing & Security Rules
 │   ├── robots.txt             # Search Engine Directives
 │   ├── sitemap.xml            # SEO Sitemap
-│   └── assets/                # Canonical Media Assets
-│       ├── brand/             # Official Logos (premier-tours-logo.webp)
-│       ├── heroes/            # Banner Imagery (.webp)
-│       └── fallback/          # Fallback Images
-├── src/
-│   ├── components/            # Reusable UI & Business Components
-│   │   ├── admin/             # Admin Management Modals & Dashboards
-│   │   ├── common/            # OptimizedImage & Common Utilities
-│   │   ├── dashboard/         # Customer Profile & Dashboard Components
-│   │   ├── reviews/           # Review Cards, Lists & Modals
-│   │   └── ui/                # UI Wrappers & SafeImage
-│   ├── context/               # Auth, Currency, Language & UI Contexts
-│   ├── data/                  # Seed & Fallback Mock Data
-│   ├── hooks/                 # Data Fetching & UI Custom Hooks
-│   ├── i18n/                  # Multi-Language Localization Files
-│   ├── pages/                 # Route Pages (Home, Tours, Hotels, Flights, Cars, Blog, etc.)
-│   ├── server/                # Express API Backend & MongoDB Layer
-│   │   ├── config/            # Database Connection (db.ts)
-│   │   ├── controllers/       # Business Logic Controllers
-│   │   ├── middleware/        # JWT Authentication & Upload Middleware
-│   │   ├── models/            # Mongoose Schemas (Tour, Hotel, Car, Flight, Review, etc.)
-│   │   └── routes/            # REST API Route Handlers
-│   ├── services/              # Client-Side REST API Consumer (api.ts)
-│   ├── types/                 # Global TypeScript Interfaces
-│   └── utils/                 # Image URL Helpers & Utilities
-├── scripts/                   # Verification & Database Seeding Scripts
-├── server.ts                  # Application Server Entry Point
-└── package.json               # Dependencies & Build Pipeline
+│   └── assets/                # Local Image Fallbacks and Brand Assets
+│       ├── brand/             # Official Logos (logo.jpg)
+│       ├── banners/           # Banner Imagery (.webp)
+│       └── heroes/            # Hero Imagery (.webp)
+├── src/                        # Main Application Source Code
+│   ├── components/            # React UI Components
+│   │   ├── admin/             # Admin portal modals, tables & managers
+│   │   ├── common/            # ErrorBoundary, OptimizedImage
+│   │   ├── dashboard/         # Customer profile, recent activity, stats
+│   │   ├── reviews/           # StarRating, ReviewCard, ReviewCarousel
+│   │   ├── ui/                # Base UI primitives (SafeImage)
+│   │   ├── Navbar.tsx         # Primary responsive navigation bar
+│   │   ├── Footer.tsx         # Universal footer with legal links & licensing
+│   │   ├── WhatsAppConcierge.tsx # 24/7 WhatsApp customer support overlay
+│   │   ├── HeroSearchEngine.tsx  # Multi-tab search bar (Tours, Hotels, Cars, Flights)
+│   │   ├── TourPackageCard.tsx   # Tour card with price, rating & duration
+│   │   ├── SriLankaInteractiveMap.tsx # Leaflet interactive island map
+│   │   └── ...                # Modals, SEO helpers & cards
+│   ├── context/               # React Context Providers (Global State)
+│   │   ├── AuthContext.tsx    # JWT login, registration & session management
+│   │   ├── CurrencyContext.tsx # Multi-currency exchange rate conversions
+│   │   ├── LanguageContext.tsx # 10-language switching & persistence
+│   │   └── ThemeContext.tsx   # Dark / Light theme toggle
+│   ├── data/                  # Seed catalogs & in-memory fallbacks
+│   │   ├── mockData.ts        # Comprehensive tours, hotels, cars, flights data
+│   │   └── seedReviews.ts     # Curated initial reviews
+│   ├── hooks/                 # Custom React Hooks
+│   │   ├── useCatalogData.ts  # Catalog data fetching with offline fallback
+│   │   └── useLocalizedContent.ts # Dynamic content translation hook
+│   ├── i18n/                  # Multi-Language Localization System
+│   │   ├── index.ts           # Central translation helper
+│   │   └── translations/      # Language dictionaries (en, si, ae, cn, de, fr, etc.)
+│   ├── pages/                 # Full Page Views (React Router Routes)
+│   │   ├── HomePage.tsx       # Landing page with hero & featured packages
+│   │   ├── ToursPage.tsx      # Tour package search & filter catalog
+│   │   ├── TourDetailPage.tsx # Tour itinerary, highlights & booking modal
+│   │   ├── HotelsPage.tsx     # Luxury hotel & villa catalog
+│   │   ├── HotelDetailPage.tsx # Hotel amenities, rooms & gallery
+│   │   ├── CarsPage.tsx       # Fleet rental & chauffeur services
+│   │   ├── FlightsPage.tsx    # Domestic charters & sea plane routes
+│   │   ├── BlogPage.tsx       # Travel guides & articles
+│   │   ├── CheckoutPage.tsx   # Bank transfer checkout & receipt upload
+│   │   ├── CustomerDashboard.tsx # Customer bookings, vouchers & profile
+│   │   ├── AdminDashboard.tsx # Administrator management console
+│   │   └── ContactUsPage.tsx  # Direct inquiry form & office details
+│   ├── server/                # Backend API Server (Express + MongoDB)
+│   │   ├── app.ts             # Express application setup, CORS & routes
+│   │   ├── config/            # Database (database.ts) & JWT configurations
+│   │   ├── controllers/       # Route controllers (tour, hotel, booking, auth, upload)
+│   │   ├── middleware/        # Authentication & admin authorization guards
+│   │   ├── models/            # Mongoose schemas (Tour, Hotel, Car, Flight, User, Review)
+│   │   ├── routes/            # Express route endpoints (/api/tours, /api/auth, etc.)
+│   │   └── scripts/           # Server-side seeding scripts
+│   ├── services/              # Client-Side API Clients
+│   │   ├── api.ts             # Typed fetch wrapper for all REST endpoints
+│   │   └── dataService.ts     # Data access layer with offline catalog fallback
+│   ├── types/                 # TypeScript interfaces and type definitions
+│   └── utils/                 # Helpers (imageUrl, imageUtils, localization)
+├── scripts/                   # Verification, seeding & maintenance scripts
+├── server.ts                  # Production & dev server entry point (port 3000)
+├── vite.config.ts             # Vite build & plugin configuration
+└── package.json               # Dependencies, scripts & project metadata
 ```
 
 ---

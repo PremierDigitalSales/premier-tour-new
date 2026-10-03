@@ -35,7 +35,7 @@ export function useCatalogData<T extends { id: string }>(
           case 'flights': res = await api.flights.getAll(); break;
         }
         
-        if (res && res.success && Array.isArray(res.data) && isMounted) {
+        if (res && res.success && Array.isArray(res.data) && res.data.length > 0 && isMounted) {
           let normalized: any[] = [];
           switch (tableName) {
             case 'tours': normalized = res.data.map(normalizeTour); break;
